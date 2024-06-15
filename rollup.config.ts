@@ -19,13 +19,13 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
-        interop: "compat",
+        interop: "auto",
       },
       {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
-        interop: "compat",
+        interop: "auto",
       },
     ],
     plugins: [
