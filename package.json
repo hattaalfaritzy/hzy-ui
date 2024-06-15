@@ -4,14 +4,21 @@
   "author": "Muhammad Hatta Alfaritzy",
   "description": "My custom design system tailored for my thesis project.",
   "license": "ISC",
-  "scripts": {},
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/hattaalfaritzy"
+  },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-image": "^3.0.3",
@@ -28,6 +35,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.77.5",
     "tailwindcss": "^3.4.4",
+    "tslib": "^2.6.3",
     "typescript": "^5.4.5"
   },
   "dependencies": {
