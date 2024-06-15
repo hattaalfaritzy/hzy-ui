@@ -35,7 +35,17 @@ export default [
       typescript({
         tsconfig: "./tsconfig.json",
       }),
-      postcss({ extensions: [".css"], inject: true, extract: false }),
+      postcss({
+        config: {
+          ctx: null,
+          path: "./postcss.config.ts",
+        },
+        extensions: [".css"],
+        minimize: true,
+        inject: {
+          insertAt: "top",
+        },
+      }),
       terser(),
       image(),
       peerDepsExternal(),
@@ -43,7 +53,7 @@ export default [
   },
   {
     input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    output: [{ file: packageJson.types, format: "esm" }],
     plugins: [dts()],
     external: [/\.css$/],
   },

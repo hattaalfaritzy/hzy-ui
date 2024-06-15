@@ -15,6 +15,7 @@
       "@hzy-commons/*": ["./src/components/commons/*"],
       "@hzy-forms/*": ["./src/components/forms/*"],
       "@hzy-hooks/*": ["./src/hooks/*"],
+      "@/*": ["./src/*"],
     },
 
     /* Emit */
