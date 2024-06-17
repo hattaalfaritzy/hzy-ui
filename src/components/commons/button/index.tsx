@@ -1,4 +1,5 @@
 import { cn } from "@/utils/cn";
+import { getClassNames } from "@/utils/get-classname";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import type { TypeAligns, TypeSizes, TypeVariant } from "./button-styles";
 import { buttonStyles } from "./button-styles";
@@ -37,7 +38,7 @@ export const Button = ({
 }: IButtonProps) => {  
   return (
     <button
-      className={buttonStyles.getClassNames([
+      className={getClassNames([
         buttonStyles.getSizeStyle(size),
         buttonStyles.getVariantStyle(variant, outline),
         className,

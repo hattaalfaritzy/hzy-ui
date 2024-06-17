@@ -1,18 +1,8 @@
-import { cn } from "@/utils/cn";
-
 export type TypeVariant = "primary" | "light" | "error" | "transparent";
 export type TypeAligns = "start" | "center" | "end";
 export type TypeSizes = "sm" | "md";
 
-export const buttonStyles = {
-    getClassNames: (classNames: (string | undefined)[]) => {
-        return cn(
-          "text-white font-normal border-2",
-          ...classNames.filter(Boolean)
-        );
-      },
-
-      
+export const buttonStyles = {      
     getSizeStyle: (size: TypeSizes) => {
       return {
         sm: "text-xxs py-2 px-3",
