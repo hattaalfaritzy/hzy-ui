@@ -6,8 +6,8 @@
   "license": "ISC",
   "scripts": {
     "dev": "rollup -c --watch",
-    "build": "node prepare-build.js & tsc --noEmit false --emitDeclarationOnly --outDir dist/lib --declaration --declarationDir dist/types && rollup -c rollup.config.js --bundleConfigAsCjs",
-    "build-production": "yarn build & node after-build.js",
+    "build": "node prepare-build.mjs & tsc --noEmit false --emitDeclarationOnly --outDir dist/lib --declaration --declarationDir dist/types && rollup -c rollup.config.mjs --bundleConfigAsCjs",
+    "build-production": "yarn build & node after-build.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "tsc": "tsc --noEmit true",
