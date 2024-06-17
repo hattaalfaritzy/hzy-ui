@@ -1,6 +1,8 @@
 import { cn } from "@/utils/cn";
 
 export type TypeVariant = "primary" | "light" | "error" | "transparent";
+export type TypeAligns = "start" | "center" | "end";
+export type TypeSizes = "sm" | "md";
 
 export const buttonStyles = {
     getClassNames: (classNames: (string | undefined)[]) => {
@@ -11,7 +13,7 @@ export const buttonStyles = {
       },
 
       
-    getSizeStyle: (size: string) => {
+    getSizeStyle: (size: TypeSizes) => {
       return {
         sm: "text-xxs py-2 px-3",
         md: "text-sm py-3 px-4",
@@ -29,7 +31,7 @@ export const buttonStyles = {
       }[variant];
     },
   
-    getAlignStyle: (align: string) => {
+    getAlignStyle: (align: TypeAligns) => {
       return {
         start: "justify-start items-center",
         center: "justify-center items-center",

@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
-import type { TypeVariant } from "./button-styles";
+import type { TypeAligns, TypeSizes, TypeVariant } from "./button-styles";
 import { buttonStyles } from "./button-styles";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,8 +14,8 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   loading?: boolean;
   variant?: TypeVariant;
-  align?: string;
-  size?: string;
+  align?: TypeAligns;
+  size?: TypeSizes;
   rounded?: boolean;
 }
 
