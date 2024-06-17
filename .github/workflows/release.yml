@@ -14,7 +14,7 @@ jobs:
       issues: write
       pull-requests: write
       id-token: write
-      
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install and build dependencies
         run: npm install && npm run build
@@ -35,7 +35,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.github_token }}
-          output-file: 'CHANGELOG.md'
+          output-file: "CHANGELOG.md"
           create-summary: true
           skip-ci: false
           skip-on-empty: false
@@ -55,8 +55,3 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-
-      - name: Publish on NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
