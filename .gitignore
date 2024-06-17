@@ -1,5 +1,6 @@
 dist
 
+.node-version
 .vscode/*
 node_modules/
 *.log
