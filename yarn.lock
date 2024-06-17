@@ -3964,7 +3964,7 @@ check-error@^1.0.3:
   dependencies:
     get-func-name "^2.0.2"
 
-"chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.3, chokidar@^3.6.0:
+chokidar@^3.5.3, chokidar@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.6.0.tgz#197c6cc669ef2a8dc5e7b4d97ee4e092c3eb0d5b"
   integrity sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==
@@ -4268,6 +4268,13 @@ conventional-changelog-angular@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/conventional-changelog-angular/-/conventional-changelog-angular-8.0.0.tgz#5701386850f0e0c2e630b43ee7821d322d87e7a6"
   integrity sha512-CLf+zr6St0wIxos4bmaKHRXWAcsCXrJU6F4VdNDrGRK3B8LDLKoX3zuMV5GhtbGkVR/LohZ6MT6im43vZLSjmA==
+  dependencies:
+    compare-func "^2.0.0"
+
+conventional-changelog-conventionalcommits@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-8.0.0.tgz#3fa2857c878701e7f0329db5a1257cb218f166fe"
+  integrity sha512-eOvlTO6OcySPyyyk8pKz2dP4jjElYunj9hn9/s0OB+gapTO8zwS9UQWrZ1pmF2hFs3vw1xhonOLGcGjy/zgsuA==
   dependencies:
     compare-func "^2.0.0"
 
@@ -5993,11 +6000,6 @@ ignore@^5.2.4:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.1.tgz#5073e554cd42c5b33b394375f538b8593e34d4ef"
   integrity sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==
-
-immutable@^4.0.0:
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.6.tgz#6a05f7858213238e587fb83586ffa3b4b27f0447"
-  integrity sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==
 
 import-cwd@^3.0.0:
   version "3.0.0"
@@ -9075,15 +9077,6 @@ safe-regex-test@^1.0.3:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.77.5:
-  version "1.77.5"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.77.5.tgz#5f9009820297521356e962c0bed13ee36710edfe"
-  integrity sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
-    immutable "^4.0.0"
-    source-map-js ">=0.6.2 <2.0.0"
-
 scheduler@^0.23.2:
   version "0.23.2"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.2.tgz#414ba64a3b282892e944cf2108ecc078d115cdc3"
@@ -9339,7 +9332,7 @@ socks@^2.7.1:
     ip-address "^9.0.5"
     smart-buffer "^4.2.0"
 
-"source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.2.0:
+source-map-js@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.0.tgz#16b809c162517b5b8c3e7dcd315a2a5c2612b2af"
   integrity sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==
