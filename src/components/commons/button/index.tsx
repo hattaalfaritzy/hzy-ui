@@ -1,15 +1,15 @@
-import clsx from "clsx";
-import type { ButtonHTMLAttributes } from "react";
-
-type TypeVariant = "primary" | "light" | "error" | "transparent";
+import { cn } from "@/utils/cn";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { TypeVariant } from "./button-styles";
+import { buttonStyles } from "./button-styles";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   classNameLabel?: string;
   outline?: boolean;
   label?: string;
-  iconLeft?: React.ReactNode;
-  iconRight?: React.ReactNode;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
@@ -19,9 +19,9 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   rounded?: boolean;
 }
 
-export default function Button({
+export const Button = ({
   onClick = () => {},
-  disabled,
+  disabled = false,
   loading,
   size = "md",
   label,
@@ -34,38 +34,16 @@ export default function Button({
   classNameLabel,
   rounded,
   ...props
-}: IButtonProps) {
-  const styleBySize = {
-    sm: "btn-sm",
-    md: "btn-md",
-    none: "btn-remove-size",
-  }[size];
-
-  const styleByVariant = {
-    primary: outline
-      ? "btn-outline-primary"
-      : "btn-primary border-primary bg-primary",
-    light: outline ? "btn-outline-light" : "btn-light",
-    error: outline ? "btn-outline-error" : "btn-error",
-    transparent: "btn-transparent",
-  }[variant];
-
-  const styleByAlign = {
-    start: "justify-start items-center",
-    center: "justify-center items-center",
-    end: "justify-end items-center",
-  }[align];
+}: IButtonProps) => {  
   return (
     <button
-      className={clsx(
-        "btn",
-        styleBySize,
-        styleByVariant,
+      className={buttonStyles.getClassNames([
+        buttonStyles.getSizeStyle(size),
+        buttonStyles.getVariantStyle(variant, outline),
         className,
-        disabled && !outline && "bg-opacity-70 border-opacity-0 cursor-default",
-        disabled && outline && "bg-opacity-30 border-opacity-30 cursor-default",
-        rounded ? "rounded-full" : ""
-      )}
+        buttonStyles.getDisabledClass(disabled, outline),
+        rounded ? "rounded-full" : "",
+      ])}
       disabled={loading || disabled}
       onClick={(e) => {
         e.stopPropagation();
@@ -74,13 +52,13 @@ export default function Button({
       {...props}
     >
       {loading ? (
-        <div className={clsx("flex", styleByAlign)}>loading</div>
+        <div className={cn("flex", buttonStyles.getAlignStyle(align))}>Loading</div>
       ) : (
-        <div className={clsx("flex", styleByAlign)}>
+        <div className={cn("flex", buttonStyles.getAlignStyle(align))}>
           {iconLeft && iconLeft}
           {label && (
             <span
-              className={clsx(
+              className={cn(
                 classNameLabel,
                 iconLeft && "pl-2",
                 iconRight && "pr-2"
@@ -94,4 +72,6 @@ export default function Button({
       )}
     </button>
   );
-}
+};
+
+export default Button;

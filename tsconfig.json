@@ -12,10 +12,7 @@
     "allowJs": false /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
     "maxNodeModuleJsDepth": 1 /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */,
     "paths": {
-      "@hzy-commons/*": ["./src/components/commons/*"],
-      "@hzy-forms/*": ["./src/components/forms/*"],
-      "@hzy-hooks/*": ["./src/hooks/*"],
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     },
 
     /* Emit */

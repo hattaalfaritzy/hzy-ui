@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
@@ -9,7 +10,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 import dts from "rollup-plugin-dts";
 
-import packageJson from "./package.json" assert { type: "json" };
+const packageJson = JSON.parse(fs.readFileSync('./package.json'));
 
 export default [
   {
