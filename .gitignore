@@ -1,6 +1,5 @@
 dist
 
-.github/*
 .vscode/*
 node_modules/
 *.log
