@@ -1,6 +1,5 @@
-import Dashboard from "./libs/dashboard";
-import Icons, { icons } from "./_icon";
+import Icons, { icons, IconName } from "./_icon";
 
-export { Dashboard, icons };
+export { icons, IconName };
 
 export default Icons;

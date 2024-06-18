@@ -1,8 +1,8 @@
 import { cn } from "./cn";
 
-export const getClassNames = (classNames: (string | undefined)[]) => {
-    return cn(
-        "text-white font-normal border-2",
-        ...classNames.filter(Boolean)
-    );  
-}
+export const getClassNames = (
+  baseClassNames: string,
+  classNames: (string | undefined)[]
+) => {
+  return cn(baseClassNames, ...classNames.filter(Boolean));
+};

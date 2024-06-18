@@ -5,19 +5,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#212121",
-          50: "#7D7D7D",
-          100: "#737373",
-          200: "#5E5E5E",
-          300: "#4A4A4A",
-          400: "#353535",
-          500: "#212121",
-          600: "#050505",
-          700: "#000000",
-          800: "#000000",
-          900: "#000000",
-          950: "#000000",
+        dark: {
+          DEFAULT: "#4E555F",
+          200: "#F7F8F8",
+          300: "#E6E7E8",
+          400: "#CCCED1",
+          500: "#4E555F",
+          600: "#28303D",
+          700: "#020C1B",
+        },
+        light: {
+          DEFAULT: "#F0F0F5",
+          200: "#FEFEFF",
+          300: "#FDFDFE",
+          400: "#FBFBFC",
+          500: "#F0F0F5",
+          600: "#EDEDF3",
+          700: "#EAEAF1",
         },
         informative: {
           DEFAULT: "#00AEEB",
@@ -57,7 +61,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ["Poppins", "sans-serif"],
       },
       fontSize: {
         xxxs: ".5rem",
