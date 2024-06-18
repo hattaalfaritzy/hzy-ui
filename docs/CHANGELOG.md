@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.1.0...v1.1.1) (2024-06-18)
+
+
+### Bug Fixes
+
+* remove unused file ([7671c70](https://github.com/hattaalfaritzy/hzy-ui/commit/7671c706bf0cea02aa2d1250118074ec0d7dde8e))
+
+
+
 # [1.1.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.0.2...v1.1.0) (2024-06-18)
 
 
