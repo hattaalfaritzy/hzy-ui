@@ -56,6 +56,9 @@ const config: Config = {
           700: "#7A2515",
         },
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
       fontSize: {
         xxxs: ".5rem",
         xxs: ".625rem",
