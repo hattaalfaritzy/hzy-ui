@@ -1,8 +1,13 @@
-export default function Setting({ width = 20, ...props }: Props) {
+import { convertWidth } from "@/utils/convert-width";
+import type { ISvgIconProps } from "../_icon";
+
+export default function Setting({ width = 20, ...props }: ISvgIconProps) {
+  const numericWidth = convertWidth(width);
   return (
     <svg
-      width={width}
-      height={width}
+      width={numericWidth}
+      height={numericWidth}
+      {...props}
       viewBox="0 0 26 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +16,3 @@ export default function Setting({ width = 20, ...props }: Props) {
     </svg>
   );
 }
-
-type Props = {
-  width?: any;
-} & React.ComponentPropsWithRef<"svg">;

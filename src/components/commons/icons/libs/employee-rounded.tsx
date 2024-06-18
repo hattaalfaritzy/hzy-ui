@@ -1,8 +1,15 @@
-export default function EmployeeRounded({ width = 20, ...props }: Props) {
+import { convertWidth } from "@/utils/convert-width";
+import type { ISvgIconProps } from "../_icon";
+
+export default function EmployeeRounded({
+  width = 20,
+  ...props
+}: ISvgIconProps) {
+  const numericWidth = convertWidth(width);
   return (
     <svg
-      width={width}
-      height={width}
+      width={numericWidth}
+      height={numericWidth}
       {...props}
       viewBox="0 0 20 20"
       fill="none"
@@ -12,7 +19,3 @@ export default function EmployeeRounded({ width = 20, ...props }: Props) {
     </svg>
   );
 }
-
-type Props = {
-  width?: any;
-} & React.ComponentPropsWithRef<"svg">;

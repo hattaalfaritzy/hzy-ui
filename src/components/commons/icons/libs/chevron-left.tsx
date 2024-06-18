@@ -1,8 +1,12 @@
-export default function ChevronLeft({ width = 20, ...props }: Props) {
+import { convertWidth } from "@/utils/convert-width";
+import type { ISvgIconProps } from "../_icon";
+
+export default function ChevronLeft({ width = 20, ...props }: ISvgIconProps) {
+  const numericWidth = convertWidth(width);
   return (
     <svg
-      width={width}
-      height={width * 2}
+      width={numericWidth}
+      height={numericWidth * 2}
       {...props}
       viewBox="0 0 8 14"
       fill="none"
@@ -12,7 +16,3 @@ export default function ChevronLeft({ width = 20, ...props }: Props) {
     </svg>
   );
 }
-
-type Props = {
-  width?: any;
-} & React.ComponentPropsWithRef<"svg">;
