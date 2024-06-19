@@ -1,10 +1,6 @@
 import { convertWidth } from "@/utils/convert-width";
-import type { ISvgIconProps } from "../_icon";
 
-export default function EmployeeRounded({
-  width = 20,
-  ...props
-}: ISvgIconProps) {
+export default function EmployeeRounded({ width = 20, ...props }: ISvgProps) {
   const numericWidth = convertWidth(width);
   return (
     <svg

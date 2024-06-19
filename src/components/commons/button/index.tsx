@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { buttonStyles } from "./button-styles";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -29,11 +29,17 @@ export const Button = ({
   variant = "informative",
   align = "center",
   size = "md",
-  onClick,
+  onClick = () => {},
   iconLeft,
   iconRight,
   ...props
 }: IButtonProps) => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    if (loading) return;
+    e.stopPropagation();
+    onClick();
+  };
+
   return (
     <button
       className={cn(
@@ -45,10 +51,7 @@ export const Button = ({
         className
       )}
       disabled={loading || disabled}
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick;
-      }}
+      onClick={handleClick}
       {...props}
     >
       {loading ? (

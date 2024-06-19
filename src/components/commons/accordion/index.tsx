@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/utils/cn";
 import type {
   HTMLAttributes,
   KeyboardEvent,
@@ -53,7 +53,7 @@ export const Accordion = ({
   return (
     <div
       ref={rootRef}
-      className={clsx(
+      className={cn(
         "flex flex-col w-full bg-white p-4 rounded shadow",
         classNameWrapper
       )}
@@ -63,13 +63,13 @@ export const Accordion = ({
       {...props}
     >
       <div
-        className={clsx(
+        className={cn(
           "flex flex-row justify-start items-center w-full",
           className
         )}
       >
         <div
-          className={clsx(
+          className={cn(
             "flex flex-row justify-start items-center w-full",
             withIcon && "space-x-4"
           )}
@@ -77,21 +77,21 @@ export const Accordion = ({
           onKeyDown={handleKeyDown}
         >
           {withIcon && withIcon}
-          <span className={clsx(classNameTitle || "text-xs lg:text-base")}>
+          <span className={cn(classNameTitle || "text-xs lg:text-base")}>
             {title}
           </span>
         </div>
         <Icon
           name="chevron-down"
           width={16}
-          className={clsx(
+          className={cn(
             "fill-black cursor-pointer",
             isOpen && "transform rotate-180"
           )}
         />
       </div>
       {isOpen && (
-        <div className={clsx(classNameContent || "pt-4")}>{children}</div>
+        <div className={cn(classNameContent || "pt-4")}>{children}</div>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import type { ComponentType, MouseEventHandler, SVGAttributes } from "react";
+import type { SVGAttributes } from "react";
 import InfoOutline from "./libs/info-outline";
 import Bell from "./libs/bell";
 import BrokenImage from "./libs/broken-image";
@@ -25,40 +25,6 @@ import Search from "./libs/search";
 import Wallet from "./libs/wallet";
 import Form from "./libs/form";
 import Info from "./libs/info";
-
-export interface ISvgIconProps extends SVGAttributes<SVGElement> {
-  width?: number | string;
-  onClick?: MouseEventHandler;
-}
-
-type IconComponent = ComponentType<ISvgIconProps>;
-
-export type IconName =
-  | "dashboard"
-  | "employee"
-  | "employee-rounded"
-  | "enrollment"
-  | "claim-management"
-  | "search"
-  | "bell"
-  | "wallet"
-  | "menu"
-  | "caret-down"
-  | "chevron-up"
-  | "chevron-down"
-  | "chevron-left"
-  | "chevron-right"
-  | "favorite"
-  | "info-outline"
-  | "clip"
-  | "download"
-  | "close"
-  | "file"
-  | "broken-image"
-  | "check-circle"
-  | "error"
-  | "info"
-  | "form";
 
 export const icons: Record<string, IconComponent> = {
   dashboard: Dashboard,
@@ -88,15 +54,15 @@ export const icons: Record<string, IconComponent> = {
   info: Info,
 };
 
+export interface IIconProps extends SVGAttributes<SVGElement> {
+  className?: string;
+  name?: IconName;
+}
+
 export default function Icons({ className, name, ...props }: IIconProps) {
   const Component = icons[name as IconName];
 
   if (!Component) return null;
 
   return <Component className={cn(className || "fill-[#A0A8B6]")} {...props} />;
-}
-
-export interface IIconProps extends SVGAttributes<SVGElement> {
-  className?: string;
-  name?: IconName;
 }

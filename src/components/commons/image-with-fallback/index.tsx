@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/utils/cn";
 import { useEffect, useState } from "react";
 import type { ImgHTMLAttributes, ReactNode } from "react";
 import Icons from "../icons";
@@ -31,15 +31,12 @@ export const ImageWithFallback = ({
   if (isError || !src || src.trim() === "") {
     return (
       <div
-        className={clsx(
-          "flex justify-center bg-light p-6 rounded-md",
-          className
-        )}
+        className={cn("flex justify-center bg-light p-6 rounded-md", className)}
       >
         {iconFallback || (
           <Icons
             name="broken-image"
-            className={clsx("fill-black text-3xl m-auto")}
+            className={cn("fill-black text-3xl m-auto")}
           />
         )}
       </div>
@@ -53,8 +50,8 @@ export const ImageWithFallback = ({
       alt={alt}
       className={className}
       loading="lazy"
-      {...props}
       onError={() => setIsError(true)}
+      {...props}
     />
   );
 };
