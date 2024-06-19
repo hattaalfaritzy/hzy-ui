@@ -19,7 +19,7 @@ const Template: StoryFn<typeof Icons> = (args) => {
 
 export const Base = Template.bind({});
 
-const ListIcons = () => {
+const List = () => {
   const iconsNames = Object.keys(icons);
   return (
     <div className="flex flex-col space-y-6 mix-blend-difference p-20">
@@ -33,7 +33,7 @@ const ListIcons = () => {
             className="flex flex-col justify-center items-center py-6 border-2 border-white/70 rounded-lg space-y-3"
           >
             <Icon className="fill-white/70" width={20} />
-            <div className="text-xs truncate text-white/70">
+            <div className="text-xxs truncate text-white/70">
               {iconsNames[index]}
             </div>
           </div>
@@ -43,4 +43,4 @@ const ListIcons = () => {
   );
 };
 
-export const ListColors: StoryFn<typeof Icons> = () => <ListIcons />;
+export const ListIcons: StoryFn<typeof Icons> = () => <List />;

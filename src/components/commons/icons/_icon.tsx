@@ -25,6 +25,8 @@ import Search from "./libs/search";
 import Wallet from "./libs/wallet";
 import Form from "./libs/form";
 import Info from "./libs/info";
+import Eye from "./libs/eye";
+import EyeSlash from "./libs/eye-slash";
 
 export const icons: Record<string, IconComponent> = {
   dashboard: Dashboard,
@@ -52,6 +54,8 @@ export const icons: Record<string, IconComponent> = {
   "check-circle": CheckCircle,
   error: Error,
   info: Info,
+  eye: Eye,
+  "eye-slash": EyeSlash,
 };
 
 export interface IIconProps extends SVGAttributes<SVGElement> {

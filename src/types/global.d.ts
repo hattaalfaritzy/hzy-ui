@@ -32,6 +32,8 @@ declare global {
     | "check-circle"
     | "error"
     | "info"
+    | "eye"
+    | "eye-slash"
     | "form";
 
   interface ISvgProps extends SVGAttributes<SVGElement> {
