@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.3.0...v1.4.0) (2024-06-19)
+
+
+### Features
+
+* create comps form inputtext n inputpassword, add aditional icons ([a32ba80](https://github.com/hattaalfaritzy/hzy-ui/commit/a32ba808f089b0ec86f9dc808bd4fe6596c070c8))
+
+
+
 # [1.3.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.2.1...v1.3.0) (2024-06-19)
 
 
@@ -37,20 +46,6 @@
 ### Bug Fixes
 
 * remove unused file ([7671c70](https://github.com/hattaalfaritzy/hzy-ui/commit/7671c706bf0cea02aa2d1250118074ec0d7dde8e))
-
-
-
-# [1.1.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.0.2...v1.1.0) (2024-06-18)
-
-
-### Bug Fixes
-
-* import n types on list icons ([ec5ab25](https://github.com/hattaalfaritzy/hzy-ui/commit/ec5ab25cb617885101bbcb9ace89f83c622bb3a8))
-
-
-### Features
-
-* create new list icons, accordion, n fix release changelog ([e5f51ea](https://github.com/hattaalfaritzy/hzy-ui/commit/e5f51ea92a0733c1cfe4481eda96ac07bfa33b79))
 
 
 
