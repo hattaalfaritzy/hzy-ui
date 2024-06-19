@@ -2,6 +2,8 @@ import { cn } from "@/utils/cn";
 import type { ButtonHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { buttonStyles } from "./button-styles";
 
+export type ButtonSizes = "sm" | "md";
+
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   classNameLabel?: string;
@@ -12,7 +14,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   variant?: TypeVariant;
   align?: TypeAligns;
-  size?: TypeSizes;
+  size?: ButtonSizes;
   onClick?: () => void;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;

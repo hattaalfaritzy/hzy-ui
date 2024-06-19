@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import type { HTMLAttributes } from "react";
-import Icons, { type IconName } from "../icons";
+import Icons from "../icons";
 import { messageStyles } from "./message-styles";
 
 export interface IMessageProps extends HTMLAttributes<HTMLDivElement> {

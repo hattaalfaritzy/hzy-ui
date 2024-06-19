@@ -1,5 +1,5 @@
-import Icons, { icons, IconName } from "./_icon";
+import Icons, { icons } from "./_icon";
 
-export { icons, IconName };
+export { icons };
 
 export default Icons;

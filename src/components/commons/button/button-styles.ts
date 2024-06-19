@@ -1,5 +1,7 @@
+import type { ButtonSizes } from ".";
+
 export const buttonStyles = {
-  getSizeStyle: (size: TypeSizes) => {
+  getSizeStyle: (size: ButtonSizes) => {
     return {
       sm: "text-[.625rem] py-2 px-3",
       md: "text-sm py-3 px-4",
