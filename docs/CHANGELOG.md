@@ -1,3 +1,12 @@
+## [1.6.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.7...v1.6.8) (2024-06-20)
+
+
+### Bug Fixes
+
+* remove storybook-static ([017c00c](https://github.com/hattaalfaritzy/hzy-ui/commit/017c00c3fa815de4ea670d3cae58ea76daca77c9))
+
+
+
 ## [1.6.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.6...v1.6.7) (2024-06-20)
 
 
@@ -35,15 +44,6 @@
 ### Bug Fixes
 
 * update packagejson ([9b9e564](https://github.com/hattaalfaritzy/hzy-ui/commit/9b9e564cb38dc7cdc9321a33d45fe5293f3f010d))
-
-
-
-## [1.6.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.2...v1.6.3) (2024-06-20)
-
-
-### Bug Fixes
-
-* update packagejson ([afa153b](https://github.com/hattaalfaritzy/hzy-ui/commit/afa153b9eed23b6810f3dc63fb40e4291d677e5d))
 
 
 
