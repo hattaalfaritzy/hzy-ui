@@ -5,3 +5,4 @@ export * from "./icons";
 export * from "./image-with-fallback";
 export * from "./message";
 export * from "./modal";
+export * from "./skeletons";
