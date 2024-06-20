@@ -1,3 +1,12 @@
+## [1.7.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.8...v1.7.9) (2024-06-20)
+
+
+### Bug Fixes
+
+* fix import icons ([16fb16b](https://github.com/hattaalfaritzy/hzy-ui/commit/16fb16b8a8a85a4647ef74b23060b6b1c7352d94))
+
+
+
 ## [1.7.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.7...v1.7.8) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * output rollup ([e5228c5](https://github.com/hattaalfaritzy/hzy-ui/commit/e5228c55ed88bd4272ebd1e8d782eb5031e064ef))
-
-
-
-## [1.7.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.3...v1.7.4) (2024-06-20)
-
-
-### Bug Fixes
-
-* remove unused code n file ([a4c5c5f](https://github.com/hattaalfaritzy/hzy-ui/commit/a4c5c5f50b53369a227748e1f48a9ec46dd4eb83))
 
 
 
