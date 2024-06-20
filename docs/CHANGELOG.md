@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.5.0...v1.6.0) (2024-06-20)
+
+
+### Features
+
+* create comps common skeletons ([1b9f5e2](https://github.com/hattaalfaritzy/hzy-ui/commit/1b9f5e2193183dfe18bf4e4a44c77888a4014a30))
+
+
+
 # [1.5.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.4.0...v1.5.0) (2024-06-20)
 
 
@@ -37,15 +46,6 @@
 ### Bug Fixes
 
 * import commons comps ([69d4d17](https://github.com/hattaalfaritzy/hzy-ui/commit/69d4d1746eae9439a7677d115b82b52fc65ec4db))
-
-
-
-# [1.2.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.1.1...v1.2.0) (2024-06-18)
-
-
-### Features
-
-* create new comps card, image with fallback, message n some icons, n fix button styles ([0fa9cdb](https://github.com/hattaalfaritzy/hzy-ui/commit/0fa9cdbdc3c2e87e6bddd00e9235f1e2c185b4d6))
 
 
 
