@@ -1,31 +1,30 @@
 import { cn } from "@/utils/cn";
-import { Message } from "../../commons";
-import type { InputHTMLAttributes, ReactNode } from "react";
+import type { TextareaHTMLAttributes } from "react";
+import { Message } from "@/components/commons";
 
-export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface IInputTextarea
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   classNameLabel?: string;
   label?: string;
   error?: string;
+  maxLength?: number;
   rounded?: boolean;
-  iconLeft?: ReactNode;
-  iconRight?: ReactNode;
   important?: boolean;
   disabled?: boolean;
 }
 
-export const InputText = ({
+export const InputTextarea = ({
   className,
   classNameLabel,
   label,
   error,
+  maxLength = 200,
   rounded = false,
-  iconLeft,
-  iconRight,
-  important = false,
+  important,
   disabled,
   ...props
-}: IInputTextProps) => {
+}: IInputTextarea) => {
   return (
     <div className={cn("flex flex-col w-full", className)}>
       {label && (
@@ -40,35 +39,27 @@ export const InputText = ({
       )}
       <div
         className={cn(
-          "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2] focus:border-2 focus:border-dark read-only:focus:ring-0 read-only:focus:border-light",
+          "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2] rounded",
           !disabled ? "bg-white" : "bg-black/10",
           rounded && "rounded-full",
           error && "border-error focus:border-error focus:ring-0"
         )}
       >
-        {iconLeft && (
-          <div className={cn("absolute", rounded ? "left-4" : "left-3")}>
-            {iconLeft}
-          </div>
-        )}
-        <input
+        <textarea
+          rows={3}
           disabled={disabled}
           className={cn(
             "w-full bg-transparent p-2.5 px-3",
             rounded && "rounded-full px-4",
             !disabled && "cursor-pointer"
           )}
+          maxLength={maxLength}
           {...props}
         />
-        {iconRight && (
-          <div className={cn("absolute", rounded ? "right-4" : "right-3")}>
-            {iconRight}
-          </div>
-        )}
       </div>
       {error && <Message className="mt-2" label={error} />}
     </div>
   );
 };
 
-export default InputText;
+export default InputTextarea;

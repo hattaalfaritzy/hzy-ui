@@ -1,9 +1,9 @@
-import { useState } from "react";
-import InputText, { type ITextFieldProps } from "../input-text";
-import Icons from "@/components/commons/icons";
 import { cn } from "@/utils/cn";
+import { useState } from "react";
+import InputText, { type IInputTextProps } from "../input-text";
+import Icons from "@/components/commons/icons";
 
-export const InputPassword = ({ ...props }: ITextFieldProps) => {
+export const InputPassword = ({ ...props }: IInputTextProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
