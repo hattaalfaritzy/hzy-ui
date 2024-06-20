@@ -1,3 +1,12 @@
+## [1.6.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.1...v1.6.2) (2024-06-20)
+
+
+### Bug Fixes
+
+* remove unused props ([64638d8](https://github.com/hattaalfaritzy/hzy-ui/commit/64638d89e8ef1ce4c4d8fc7ae0068652ec6a03d9))
+
+
+
 ## [1.6.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.0...v1.6.1) (2024-06-20)
 
 
@@ -31,21 +40,6 @@
 ### Features
 
 * create comps form inputtext n inputpassword, add aditional icons ([a32ba80](https://github.com/hattaalfaritzy/hzy-ui/commit/a32ba808f089b0ec86f9dc808bd4fe6596c070c8))
-
-
-
-# [1.3.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.2.1...v1.3.0) (2024-06-19)
-
-
-### Bug Fixes
-
-* import types global ([1d039e2](https://github.com/hattaalfaritzy/hzy-ui/commit/1d039e2c84f002f457c758389ca44ccc77405484))
-* remove unused import ([1f52611](https://github.com/hattaalfaritzy/hzy-ui/commit/1f526116e74cbde872f5f023d6a01a240128ed6d))
-
-
-### Features
-
-* create modal comps n fix import, etc ([57092d1](https://github.com/hattaalfaritzy/hzy-ui/commit/57092d11d0569315f479445890086fb2ad7a4011))
 
 
 
