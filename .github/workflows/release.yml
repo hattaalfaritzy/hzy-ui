@@ -30,6 +30,13 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
+      - id: build-publish
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          install_command: npm install && npm run build
+          build_command: npm run build-storybook
+          path: storybook-static
+
       - name: Create changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
