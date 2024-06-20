@@ -1,3 +1,12 @@
+## [1.7.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.3...v1.7.4) (2024-06-20)
+
+
+### Bug Fixes
+
+* remove unused code n file ([a4c5c5f](https://github.com/hattaalfaritzy/hzy-ui/commit/a4c5c5f50b53369a227748e1f48a9ec46dd4eb83))
+
+
+
 ## [1.7.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.2...v1.7.3) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add license n readme ([30f6838](https://github.com/hattaalfaritzy/hzy-ui/commit/30f6838ffbbc347e88da63d2c8eca0af7cae28b1))
-
-
-
-## [1.6.10](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.9...v1.6.10) (2024-06-20)
-
-
-### Bug Fixes
-
-* fix workflows ([6952a07](https://github.com/hattaalfaritzy/hzy-ui/commit/6952a07934ee83d99ae291cd487417e19b0e7add))
 
 
 
