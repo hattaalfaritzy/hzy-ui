@@ -3,8 +3,6 @@ import { useState } from "react";
 export default function useModal() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  console.log(isOpen, "isOpen");
-
   const openModal = () => {
     setIsOpen(true);
   };
