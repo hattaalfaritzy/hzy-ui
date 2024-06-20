@@ -29,12 +29,3 @@ jobs:
 
       - name: Build Storybook
         run: npm run build-storybook
-
-      - name: Deploy to GitHub Pages
-        id: build-publish
-        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          install_command: npm install && npm run build
-          build_command: npm run build-storybook
-          path: storybook-static
