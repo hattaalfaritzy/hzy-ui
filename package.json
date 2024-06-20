@@ -3,7 +3,7 @@
   "version": "1.7.0",
   "author": "Muhammad Hatta Alfaritzy <muh.hara16@gmail.com>",
   "description": "My custom design system tailored for my thesis project.",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "node prepare-build.mjs & tsc --noEmit false --emitDeclarationOnly --outDir dist/lib --declaration --declarationDir dist/types && rollup -c rollup.config.mjs --bundleConfigAsCjs",
