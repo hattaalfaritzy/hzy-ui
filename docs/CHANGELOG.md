@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.4.0...v1.5.0) (2024-06-20)
+
+
+### Features
+
+* create comps form inputcheckbox, inputsearch, n inputtextarea ([e36e6f5](https://github.com/hattaalfaritzy/hzy-ui/commit/e36e6f5aa4b4f5590545e2023521a7d159dfe65a))
+
+
+
 # [1.4.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.3.0...v1.4.0) (2024-06-19)
 
 
@@ -37,15 +46,6 @@
 ### Features
 
 * create new comps card, image with fallback, message n some icons, n fix button styles ([0fa9cdb](https://github.com/hattaalfaritzy/hzy-ui/commit/0fa9cdbdc3c2e87e6bddd00e9235f1e2c185b4d6))
-
-
-
-## [1.1.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.1.0...v1.1.1) (2024-06-18)
-
-
-### Bug Fixes
-
-* remove unused file ([7671c70](https://github.com/hattaalfaritzy/hzy-ui/commit/7671c706bf0cea02aa2d1250118074ec0d7dde8e))
 
 
 
