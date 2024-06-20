@@ -1,3 +1,12 @@
+## [1.7.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.7...v1.7.8) (2024-06-20)
+
+
+### Bug Fixes
+
+* fix rollup import css ([9f63adb](https://github.com/hattaalfaritzy/hzy-ui/commit/9f63adb4087ed4e48a2929bce4ea5cb7b0bf7344))
+
+
+
 ## [1.7.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.6...v1.7.7) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove unused code n file ([a4c5c5f](https://github.com/hattaalfaritzy/hzy-ui/commit/a4c5c5f50b53369a227748e1f48a9ec46dd4eb83))
-
-
-
-## [1.7.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.2...v1.7.3) (2024-06-20)
-
-
-### Bug Fixes
-
-* fix readme ([cc75152](https://github.com/hattaalfaritzy/hzy-ui/commit/cc75152cd6633e38eb5fd1310fdae73b9030b91f))
 
 
 
