@@ -1,3 +1,12 @@
+## [1.6.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.2...v1.6.3) (2024-06-20)
+
+
+### Bug Fixes
+
+* update packagejson ([afa153b](https://github.com/hattaalfaritzy/hzy-ui/commit/afa153b9eed23b6810f3dc63fb40e4291d677e5d))
+
+
+
 ## [1.6.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.1...v1.6.2) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create comps form inputcheckbox, inputsearch, n inputtextarea ([e36e6f5](https://github.com/hattaalfaritzy/hzy-ui/commit/e36e6f5aa4b4f5590545e2023521a7d159dfe65a))
-
-
-
-# [1.4.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.3.0...v1.4.0) (2024-06-19)
-
-
-### Features
-
-* create comps form inputtext n inputpassword, add aditional icons ([a32ba80](https://github.com/hattaalfaritzy/hzy-ui/commit/a32ba808f089b0ec86f9dc808bd4fe6596c070c8))
 
 
 
