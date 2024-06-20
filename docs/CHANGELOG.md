@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.0...v1.6.1) (2024-06-20)
+
+
+### Bug Fixes
+
+* import comps ([ebc393c](https://github.com/hattaalfaritzy/hzy-ui/commit/ebc393c63e7ad246608425ce73744acb3516209a))
+
+
+
 # [1.6.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.5.0...v1.6.0) (2024-06-20)
 
 
@@ -37,15 +46,6 @@
 ### Features
 
 * create modal comps n fix import, etc ([57092d1](https://github.com/hattaalfaritzy/hzy-ui/commit/57092d11d0569315f479445890086fb2ad7a4011))
-
-
-
-## [1.2.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.2.0...v1.2.1) (2024-06-18)
-
-
-### Bug Fixes
-
-* import commons comps ([69d4d17](https://github.com/hattaalfaritzy/hzy-ui/commit/69d4d1746eae9439a7677d115b82b52fc65ec4db))
 
 
 
