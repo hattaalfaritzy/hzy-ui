@@ -1,3 +1,12 @@
+## [1.7.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.2...v1.7.3) (2024-06-20)
+
+
+### Bug Fixes
+
+* fix readme ([cc75152](https://github.com/hattaalfaritzy/hzy-ui/commit/cc75152cd6633e38eb5fd1310fdae73b9030b91f))
+
+
+
 ## [1.7.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.1...v1.7.2) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fix workflows ([6952a07](https://github.com/hattaalfaritzy/hzy-ui/commit/6952a07934ee83d99ae291cd487417e19b0e7add))
-
-
-
-## [1.6.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.8...v1.6.9) (2024-06-20)
-
-
-### Bug Fixes
-
-* remove story static ([864f006](https://github.com/hattaalfaritzy/hzy-ui/commit/864f00663bf679459676fd2e99450812b033e770))
 
 
 
