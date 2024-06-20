@@ -1,3 +1,12 @@
+## [1.6.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.3...v1.6.4) (2024-06-20)
+
+
+### Bug Fixes
+
+* update packagejson ([9b9e564](https://github.com/hattaalfaritzy/hzy-ui/commit/9b9e564cb38dc7cdc9321a33d45fe5293f3f010d))
+
+
+
 ## [1.6.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.2...v1.6.3) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create comps common skeletons ([1b9f5e2](https://github.com/hattaalfaritzy/hzy-ui/commit/1b9f5e2193183dfe18bf4e4a44c77888a4014a30))
-
-
-
-# [1.5.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.4.0...v1.5.0) (2024-06-20)
-
-
-### Features
-
-* create comps form inputcheckbox, inputsearch, n inputtextarea ([e36e6f5](https://github.com/hattaalfaritzy/hzy-ui/commit/e36e6f5aa4b4f5590545e2023521a7d159dfe65a))
 
 
 
