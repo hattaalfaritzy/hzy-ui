@@ -1,5 +1,3 @@
-import { cn } from "@/utils/cn";
-import type { SVGAttributes } from "react";
 import InfoOutline from "./libs/info-outline";
 import Bell from "./libs/bell";
 import BrokenImage from "./libs/broken-image";
@@ -57,16 +55,3 @@ export const icons: Record<string, IconComponent> = {
   eye: Eye,
   "eye-slash": EyeSlash,
 };
-
-export interface IIconProps extends SVGAttributes<SVGElement> {
-  className?: string;
-  name?: IconName;
-}
-
-export default function Icons({ className, name, ...props }: IIconProps) {
-  const Component = icons[name as IconName];
-
-  if (!Component) return null;
-
-  return <Component className={cn(className || "fill-[#A0A8B6]")} {...props} />;
-}
