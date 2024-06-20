@@ -1,3 +1,12 @@
+## [1.7.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.6...v1.7.7) (2024-06-20)
+
+
+### Bug Fixes
+
+* remove import css ([b001c76](https://github.com/hattaalfaritzy/hzy-ui/commit/b001c76128c268048a88b7f3ee84d0f2e1675476))
+
+
+
 ## [1.7.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.5...v1.7.6) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fix readme ([cc75152](https://github.com/hattaalfaritzy/hzy-ui/commit/cc75152cd6633e38eb5fd1310fdae73b9030b91f))
-
-
-
-## [1.7.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.1...v1.7.2) (2024-06-20)
-
-
-### Bug Fixes
-
-* update lisence ([cf9e12d](https://github.com/hattaalfaritzy/hzy-ui/commit/cf9e12d81dc690dd20f05aea5f44a3f611f93b6f))
 
 
 
