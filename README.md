@@ -28,10 +28,10 @@ This lib provides ready-to-use, accessible, reusable, and composable
 
 ## 📦 Installation
 
-To get started with Hzy UI, you can install it using either Yarn or npm:
+To get started with Hzy UI, you can install it using either yarn or npm:
 
 ```sh
-# with Yarn
+# with yarn
 $ yarn add @hattaalfaritzy/hzy-ui
 
 # with npm
