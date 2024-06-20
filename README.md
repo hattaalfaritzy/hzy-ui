@@ -7,11 +7,11 @@
   <br />
 
   <p align="center">
-    <a href="https://github.com/hattaalfaritzy/hzy-ui/blob/main/LICENSE">
+    <a href="https://github.com/hattaalfaritzy/hzy-ui/blob/master/LICENSE">
       <img alt="GitHub License" src="https://img.shields.io/github/license/hattaalfaritzy/hzy-ui">
     </a>
     <a href="https://github.com/hattaalfaritzy/hzy-ui/actions/workflows/main.yml">
-      <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/hattaalfaritzy/hzy-ui/main.yml">
+      <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/hattaalfaritzy/hzy-ui/release.yml">
     </a>
     <a href="https://github.com/hattaalfaritzy/hzy-ui/releases">
       <img alt="GitHub Release" src="https://img.shields.io/github/v/release/hattaalfaritzy/hzy-ui">
@@ -72,9 +72,4 @@ For detailed usage and examples, check out the full [documentation](https://hatt
 
 ## 📝 License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-<div align="center">
-  <br />
-  <img src="https://raw.githubusercontent.com/hattaalfaritzy/hzy-ui/main/assets/footer.png" alt="Hzy UI Footer" width="50%">
-</div>
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/hattaalfaritzy/hzy-ui/blob/main/LICENSE) file for more details.
