@@ -87,6 +87,15 @@ const config: Config = {
         6: "6px",
         8: "8px",
       },
+      keyframes: {
+        skeletons: {
+          "0%": { opacity: "0", transform: "translateX(-100%)" },
+          "100%": { opacity: "1", transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        skeletons: "skeletons 1.5s infinite",
+      },
     },
   },
   plugins: [],
