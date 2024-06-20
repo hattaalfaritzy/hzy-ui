@@ -1,3 +1,14 @@
+## [1.6.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.4...v1.6.5) (2024-06-20)
+
+
+### Bug Fixes
+
+* fix release ([2a3e948](https://github.com/hattaalfaritzy/hzy-ui/commit/2a3e9482bd677677a41bd5e4e417ccf57f956fd2))
+* fix release ([81e7527](https://github.com/hattaalfaritzy/hzy-ui/commit/81e752702a2a1d533eb9ffb14b6598ac10679c97))
+* update release ([df1d20a](https://github.com/hattaalfaritzy/hzy-ui/commit/df1d20a228ce691d15e9eb97af01c33ab3e3cd71))
+
+
+
 ## [1.6.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.3...v1.6.4) (2024-06-20)
 
 
@@ -31,15 +42,6 @@
 ### Bug Fixes
 
 * import comps ([ebc393c](https://github.com/hattaalfaritzy/hzy-ui/commit/ebc393c63e7ad246608425ce73744acb3516209a))
-
-
-
-# [1.6.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.5.0...v1.6.0) (2024-06-20)
-
-
-### Features
-
-* create comps common skeletons ([1b9f5e2](https://github.com/hattaalfaritzy/hzy-ui/commit/1b9f5e2193183dfe18bf4e4a44c77888a4014a30))
 
 
 
