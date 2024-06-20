@@ -4,6 +4,7 @@ dist
 .vscode/*
 node_modules/
 *.log
+storybook-static
 .parcel-cache
 coverage
 *storybook.log
