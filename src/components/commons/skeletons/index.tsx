@@ -1,11 +1,8 @@
 import { cn } from "@/utils/cn";
 import { HTMLAttributes } from "react";
 
-type SkeletonVariantType = "circular" | "rectangular" | "rounded" | "text";
-
 export interface ISkeletonProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
-  variant?: SkeletonVariantType;
   width?: number;
   height?: number;
   rounded?: boolean;
@@ -13,7 +10,6 @@ export interface ISkeletonProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Skeletons = ({
   className,
-  variant = "text",
   width,
   height,
   rounded = false,
