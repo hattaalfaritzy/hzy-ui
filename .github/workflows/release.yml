@@ -6,21 +6,15 @@ on:
 
 jobs:
   release:
-    name: Release
-    runs-on: ubuntu-latest
-    env:
-      CI: true
-
-    environment:
-      name: github-pages
-      url: ${{ steps.build-publish.outputs.page_url }}
-
     permissions:
       contents: write
       issues: write
       pull-requests: write
-      id-token: write
-      pages: write
+
+    name: Release
+    runs-on: ubuntu-latest
+    env:
+      CI: true
 
     steps:
       - name: Checkout
@@ -30,6 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          registry-url: https://registry.npmjs.org
 
       - name: Install and build dependencies
         run: npm install && npm run build
@@ -37,15 +32,7 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-      - name: Deploy to GitHub Pages
-        id: build-publish
-        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          install_command: npm install && npm run build
-          build_command: npm run build-storybook
-          path: storybook-static
-
+        # create release CHANGELOG
       - name: Create changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
@@ -56,6 +43,7 @@ jobs:
           skip-ci: false
           skip-on-empty: false
 
+      # create release new tag
       - name: Create release
         uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
@@ -66,8 +54,14 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
+      # publish package to NPM after create release new version and tag
+      - name: Publish on NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
       - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKE: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release

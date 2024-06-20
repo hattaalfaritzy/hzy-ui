@@ -1,0 +1,40 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+
+      - name: Install dependencies
+        run: npm install && npm run build
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Deploy to GitHub Pages
+        id: build-publish
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          install_command: npm install && npm run build
+          build_command: npm run build-storybook
+          path: storybook-static
