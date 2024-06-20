@@ -1,3 +1,12 @@
+## [1.6.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.8...v1.6.9) (2024-06-20)
+
+
+### Bug Fixes
+
+* remove story static ([864f006](https://github.com/hattaalfaritzy/hzy-ui/commit/864f00663bf679459676fd2e99450812b033e770))
+
+
+
 ## [1.6.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.7...v1.6.8) (2024-06-20)
 
 
@@ -35,15 +44,6 @@
 * fix release ([2a3e948](https://github.com/hattaalfaritzy/hzy-ui/commit/2a3e9482bd677677a41bd5e4e417ccf57f956fd2))
 * fix release ([81e7527](https://github.com/hattaalfaritzy/hzy-ui/commit/81e752702a2a1d533eb9ffb14b6598ac10679c97))
 * update release ([df1d20a](https://github.com/hattaalfaritzy/hzy-ui/commit/df1d20a228ce691d15e9eb97af01c33ab3e3cd71))
-
-
-
-## [1.6.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.6.3...v1.6.4) (2024-06-20)
-
-
-### Bug Fixes
-
-* update packagejson ([9b9e564](https://github.com/hattaalfaritzy/hzy-ui/commit/9b9e564cb38dc7cdc9321a33d45fe5293f3f010d))
 
 
 
