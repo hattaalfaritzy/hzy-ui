@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.6...v1.9.0) (2024-06-21)
+
+
+### Features
+
+* add variant on button n message ([a809d9f](https://github.com/hattaalfaritzy/hzy-ui/commit/a809d9f102168458ef8e93c4f81f178602e1f3a2))
+
+
+
 ## [1.8.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.5...v1.8.6) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fix push ([c2b6a8a](https://github.com/hattaalfaritzy/hzy-ui/commit/c2b6a8a90ead98dbf8f1fe3bc31e57c06d6e60e3))
-
-
-
-## [1.8.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.1...v1.8.2) (2024-06-21)
-
-
-### Bug Fixes
-
-* remove unused icons ([4a34d21](https://github.com/hattaalfaritzy/hzy-ui/commit/4a34d21428b89027d5ad6374152aad4fdbca7703))
 
 
 
