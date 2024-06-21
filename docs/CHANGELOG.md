@@ -1,3 +1,12 @@
+## [1.8.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.3...v1.8.4) (2024-06-21)
+
+
+### Bug Fixes
+
+* update yarn lock ([56d6007](https://github.com/hattaalfaritzy/hzy-ui/commit/56d6007cd8507aba61f1c34f91f4ee21e203588d))
+
+
+
 ## [1.8.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.2...v1.8.3) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add gear n user icons ([df6c9c1](https://github.com/hattaalfaritzy/hzy-ui/commit/df6c9c1979dc3e298a1ecfdc5befcf0bcd4f5037))
-
-
-
-## [1.7.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.8...v1.7.9) (2024-06-20)
-
-
-### Bug Fixes
-
-* fix import icons ([16fb16b](https://github.com/hattaalfaritzy/hzy-ui/commit/16fb16b8a8a85a4647ef74b23060b6b1c7352d94))
 
 
 
