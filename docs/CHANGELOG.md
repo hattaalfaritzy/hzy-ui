@@ -1,3 +1,12 @@
+## [1.8.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.2...v1.8.3) (2024-06-21)
+
+
+### Bug Fixes
+
+* fix push ([c2b6a8a](https://github.com/hattaalfaritzy/hzy-ui/commit/c2b6a8a90ead98dbf8f1fe3bc31e57c06d6e60e3))
+
+
+
 ## [1.8.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.1...v1.8.2) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fix import icons ([16fb16b](https://github.com/hattaalfaritzy/hzy-ui/commit/16fb16b8a8a85a4647ef74b23060b6b1c7352d94))
-
-
-
-## [1.7.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.7...v1.7.8) (2024-06-20)
-
-
-### Bug Fixes
-
-* fix rollup import css ([9f63adb](https://github.com/hattaalfaritzy/hzy-ui/commit/9f63adb4087ed4e48a2929bce4ea5cb7b0bf7344))
 
 
 
