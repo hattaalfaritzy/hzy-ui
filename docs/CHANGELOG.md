@@ -1,3 +1,12 @@
+## [1.8.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.5...v1.8.6) (2024-06-21)
+
+
+### Bug Fixes
+
+* update yarn lock ([67dab16](https://github.com/hattaalfaritzy/hzy-ui/commit/67dab16225a6e0c2b9269990ce3b0636a81ee3cb))
+
+
+
 ## [1.8.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.4...v1.8.5) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove unused icons ([4a34d21](https://github.com/hattaalfaritzy/hzy-ui/commit/4a34d21428b89027d5ad6374152aad4fdbca7703))
-
-
-
-## [1.8.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.0...v1.8.1) (2024-06-21)
-
-
-### Bug Fixes
-
-* fix things ([e21bae9](https://github.com/hattaalfaritzy/hzy-ui/commit/e21bae9147204254c5daa6b21d708a30736bb1f5))
 
 
 
