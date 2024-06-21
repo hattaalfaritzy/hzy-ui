@@ -7,13 +7,11 @@ import ChevronDown from "./libs/chevron-down";
 import ChevronLeft from "./libs/chevron-left";
 import ChevronRight from "./libs/chevron-right";
 import ChevronUp from "./libs/chevron-up";
-import ClaimManagement from "./libs/claim-management";
 import Clip from "./libs/clip";
 import Close from "./libs/close";
 import Dashboard from "./libs/dashboard";
 import Download from "./libs/download";
 import Employee from "./libs/employee";
-import EmployeeRounded from "./libs/employee-rounded";
 import Enrollment from "./libs/enrollment";
 import Error from "./libs/error";
 import Favorite from "./libs/favorite";
@@ -31,9 +29,7 @@ import User from "./libs/user";
 export const icons: Record<string, IconComponent> = {
   dashboard: Dashboard,
   employee: Employee,
-  "employee-rounded": EmployeeRounded,
   enrollment: Enrollment,
-  "claim-management": ClaimManagement,
   search: Search,
   bell: Bell,
   wallet: Wallet,

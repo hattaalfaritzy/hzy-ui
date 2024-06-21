@@ -10,9 +10,7 @@ declare global {
   type IconName =
     | "dashboard"
     | "employee"
-    | "employee-rounded"
     | "enrollment"
-    | "claim-management"
     | "search"
     | "bell"
     | "wallet"
