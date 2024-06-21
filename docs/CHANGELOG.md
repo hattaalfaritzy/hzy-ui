@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.0...v1.8.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* fix things ([e21bae9](https://github.com/hattaalfaritzy/hzy-ui/commit/e21bae9147204254c5daa6b21d708a30736bb1f5))
+
+
+
 # [1.8.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.9...v1.8.0) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove import css ([b001c76](https://github.com/hattaalfaritzy/hzy-ui/commit/b001c76128c268048a88b7f3ee84d0f2e1675476))
-
-
-
-## [1.7.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.5...v1.7.6) (2024-06-20)
-
-
-### Bug Fixes
-
-* import css ([4724f0d](https://github.com/hattaalfaritzy/hzy-ui/commit/4724f0d7aece568d882f038ee8b171eda617104c))
 
 
 
