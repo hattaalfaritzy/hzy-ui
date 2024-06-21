@@ -1,3 +1,12 @@
+# [1.8.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.9...v1.8.0) (2024-06-21)
+
+
+### Features
+
+* add gear n user icons ([df6c9c1](https://github.com/hattaalfaritzy/hzy-ui/commit/df6c9c1979dc3e298a1ecfdc5befcf0bcd4f5037))
+
+
+
 ## [1.7.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.8...v1.7.9) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * import css ([4724f0d](https://github.com/hattaalfaritzy/hzy-ui/commit/4724f0d7aece568d882f038ee8b171eda617104c))
-
-
-
-## [1.7.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.4...v1.7.5) (2024-06-20)
-
-
-### Bug Fixes
-
-* output rollup ([e5228c5](https://github.com/hattaalfaritzy/hzy-ui/commit/e5228c55ed88bd4272ebd1e8d782eb5031e064ef))
 
 
 
