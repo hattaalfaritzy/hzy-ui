@@ -34,6 +34,8 @@ declare global {
     | "info"
     | "eye"
     | "eye-slash"
+    | "gear"
+    | "user"
     | "form";
 
   interface ISvgProps extends SVGAttributes<SVGElement> {

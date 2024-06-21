@@ -25,6 +25,8 @@ import Form from "./libs/form";
 import Info from "./libs/info";
 import Eye from "./libs/eye";
 import EyeSlash from "./libs/eye-slash";
+import Gear from "./libs/gear";
+import User from "./libs/user";
 
 export const icons: Record<string, IconComponent> = {
   dashboard: Dashboard,
@@ -54,4 +56,6 @@ export const icons: Record<string, IconComponent> = {
   info: Info,
   eye: Eye,
   "eye-slash": EyeSlash,
+  gear: Gear,
+  user: User,
 };
