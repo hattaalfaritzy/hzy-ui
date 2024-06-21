@@ -1,7 +1,13 @@
 import type { ComponentType, MouseEventHandler, SVGAttributes } from "react";
 
 declare global {
-  type TypeVariant = "informative" | "success" | "warning" | "error";
+  type TypeVariant =
+    | "dark"
+    | "light"
+    | "informative"
+    | "success"
+    | "warning"
+    | "error";
 
   type TypeAligns = "start" | "center" | "end";
 

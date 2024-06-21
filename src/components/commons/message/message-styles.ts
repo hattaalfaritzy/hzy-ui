@@ -1,6 +1,8 @@
 export const messageStyles = {
   getIconType: (type: TypeVariant): IconName => {
     return {
+      dark: "info",
+      light: "info",
       informative: "info",
       success: "check-circle",
       warning: "error",
@@ -10,6 +12,14 @@ export const messageStyles = {
 
   getStylesType: (variant: TypeVariant) => {
     return {
+      dark: {
+        container: "bg-dark text-dark",
+        iconColor: "fill-dark",
+      },
+      light: {
+        container: "bg-light text-light",
+        iconColor: "fill-light",
+      },
       success: {
         container: "bg-success text-success",
         iconColor: "fill-success",

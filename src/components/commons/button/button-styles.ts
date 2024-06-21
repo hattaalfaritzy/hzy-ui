@@ -10,6 +10,12 @@ export const buttonStyles = {
 
   getVariantStyle: (variant: TypeVariant, outline?: boolean) => {
     return {
+      dark: outline
+        ? "border-dark focus:outline-none focus:ring-2 focus:ring-dark focus:ring-opacity-30 bg-transparent text-dark"
+        : "border-dark focus:outline-none focus:ring-2 focus:ring-dark focus:ring-opacity-30 bg-dark",
+      light: outline
+        ? "border-light focus:outline-none focus:ring-2 focus:ring-light focus:ring-opacity-30 bg-transparent text-light"
+        : "border-light focus:outline-none focus:ring-2 focus:ring-light focus:ring-opacity-30 bg-light text-dark",
       informative: outline
         ? "border-informative focus:outline-none focus:ring-2 focus:ring-informative focus:ring-opacity-30 bg-transparent text-informative"
         : "border-informative focus:outline-none focus:ring-2 focus:ring-informative focus:ring-opacity-30 bg-informative",

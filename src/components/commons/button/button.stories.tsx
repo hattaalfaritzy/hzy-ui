@@ -16,7 +16,7 @@ const meta: Meta<typeof Button> = {
   },
   argTypes: {
     variant: {
-      options: ["informative", "success", "warning", "error"],
+      options: ["dark", "light", "informative", "success", "warning", "error"],
       control: { type: "radio" },
     },
     align: {

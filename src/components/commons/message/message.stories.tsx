@@ -8,7 +8,7 @@ const meta: Meta<typeof Message> = {
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      options: ["informative", "success", "warning", "error"],
+      options: ["dark", "light", "informative", "success", "warning", "error"],
       control: { type: "radio" },
     },
   },
