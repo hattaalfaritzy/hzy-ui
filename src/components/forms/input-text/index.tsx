@@ -5,6 +5,7 @@ import type { InputHTMLAttributes, ReactNode } from "react";
 export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   classNameLabel?: string;
+  classNameInput?: string;
   label?: string;
   error?: string;
   rounded?: boolean;
@@ -17,6 +18,7 @@ export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 export const InputText = ({
   className,
   classNameLabel,
+  classNameInput,
   label,
   error,
   rounded = false,
@@ -43,7 +45,8 @@ export const InputText = ({
           "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2] focus:border-2 focus:border-dark read-only:focus:ring-0 read-only:focus:border-light",
           !disabled ? "bg-white" : "bg-black/10",
           rounded && "rounded-full",
-          error && "border-error focus:border-error focus:ring-0"
+          error && "border-error focus:border-error focus:ring-0",
+          classNameInput
         )}
       >
         {iconLeft && (
