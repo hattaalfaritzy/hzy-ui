@@ -1,3 +1,12 @@
+## [1.8.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.4...v1.8.5) (2024-06-21)
+
+
+### Bug Fixes
+
+* update props for input ([f5169a3](https://github.com/hattaalfaritzy/hzy-ui/commit/f5169a3904eefa00e966f200776c67961f267eb8))
+
+
+
 ## [1.8.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.3...v1.8.4) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fix things ([e21bae9](https://github.com/hattaalfaritzy/hzy-ui/commit/e21bae9147204254c5daa6b21d708a30736bb1f5))
-
-
-
-# [1.8.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.7.9...v1.8.0) (2024-06-21)
-
-
-### Features
-
-* add gear n user icons ([df6c9c1](https://github.com/hattaalfaritzy/hzy-ui/commit/df6c9c1979dc3e298a1ecfdc5befcf0bcd4f5037))
 
 
 
