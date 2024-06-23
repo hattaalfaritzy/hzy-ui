@@ -1,3 +1,12 @@
+## [1.10.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.1...v1.10.3) (2024-06-23)
+
+
+### Bug Fixes
+
+* create new comps tooltip ([ef78341](https://github.com/hattaalfaritzy/hzy-ui/commit/ef783412556e478d779e2294eb74148bbf66689b))
+
+
+
 ## [1.10.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.0...v1.10.1) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update yarn lock ([67dab16](https://github.com/hattaalfaritzy/hzy-ui/commit/67dab16225a6e0c2b9269990ce3b0636a81ee3cb))
-
-
-
-## [1.8.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.4...v1.8.5) (2024-06-21)
-
-
-### Bug Fixes
-
-* update props for input ([f5169a3](https://github.com/hattaalfaritzy/hzy-ui/commit/f5169a3904eefa00e966f200776c67961f267eb8))
 
 
 
