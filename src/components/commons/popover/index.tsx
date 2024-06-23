@@ -38,11 +38,11 @@ export const Popover = ({
   const rootPopover = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.style.overflow = openPopover ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isOpen]);
+  }, [openPopover]);
 
   const handleBackdropClick = () => {
     setOpenPopover(false);
