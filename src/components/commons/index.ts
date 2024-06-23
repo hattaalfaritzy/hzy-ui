@@ -8,4 +8,5 @@ export * from "./message";
 export * from "./modal";
 export * from "./popover";
 export * from "./skeletons";
+export * from "./table";
 export * from "./tooltip";
