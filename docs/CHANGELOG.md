@@ -1,3 +1,12 @@
+## [1.10.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.0...v1.10.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* bug scroll popover ([88f75ce](https://github.com/hattaalfaritzy/hzy-ui/commit/88f75cec3b8ed8a50699717d095488c47311b9c3))
+
+
+
 # [1.10.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.9.0...v1.10.0) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update props for input ([f5169a3](https://github.com/hattaalfaritzy/hzy-ui/commit/f5169a3904eefa00e966f200776c67961f267eb8))
-
-
-
-## [1.8.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.3...v1.8.4) (2024-06-21)
-
-
-### Bug Fixes
-
-* update yarn lock ([56d6007](https://github.com/hattaalfaritzy/hzy-ui/commit/56d6007cd8507aba61f1c34f91f4ee21e203588d))
 
 
 
