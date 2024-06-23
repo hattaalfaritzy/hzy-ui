@@ -26,6 +26,16 @@
 Hzy UI is a library of ready-to-use, accessible, reusable, and composable React UI components built with the [Tailwind CSS](https://tailwindcss.com/) framework. It aims to simplify the development of modern web applications by providing a set of high-quality, customizable components that adhere to the latest web standards.
 This lib provides ready-to-use, accessible, reusable, and composable
 
+**Note:** This project is currently under active development. Features and APIs are subject to change. Contributions and feedback are welcome!
+
+## 📋 Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Customization](#customization)
+- [License](#license)
+
 ## 📦 Installation
 
 To get started with Hzy UI, you can install it using either yarn or npm:
@@ -40,7 +50,15 @@ $ npm i @hattaalfaritzy/hzy-ui
 
 ## 🚀 Usage
 
-Start using the components in your application by importing them:
+1. To start using the components, on your application entry point, import the CSS file.
+
+```jsx
+// Do this at the root of your application
+import '@hattaalfaritzy/hzy-ui/dist/index.css';
+```
+
+2. Start using the components in your application
+Here's a quick example to get you started:
 
 ```jsx
 import { Button } from '@hattaalfaritzy/hzy-ui';
@@ -66,9 +84,22 @@ export default App;
 
 ```
 
-## 📚 Documentation
+## 📚 Components
+
+Explore our comprehensive set of components that are designed to be flexible and easy to use.
+
+- **Button**: Highly customizable buttons with multiple variants and sizes.
+- **Input**: Text inputs, checkboxes, radio buttons, and more.
+- **Modal**: Beautiful and accessible modals for dialogs and popups.
+- **Dropdown**: Feature-rich dropdown menus with support for custom items.
+- ...and many more!
 
 For detailed usage and examples, check out the full [documentation](https://hattaalfaritzy.github.io/hzy-ui/).
+
+## 🎨 Customization
+
+Hzy-UI is built with Tailwind CSS, making it incredibly easy to customize components to match your design system. 
+You can override default styles or extend them using Tailwind's utility classes.
 
 ## 📝 License
 

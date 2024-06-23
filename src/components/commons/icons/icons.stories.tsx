@@ -7,7 +7,7 @@ const meta: Meta<typeof Icons> = {
   component: Icons as Meta<typeof Icons>["component"],
   tags: ["autodocs"],
   args: {
-    name: "dashboard",
+    name: "info",
   },
 };
 

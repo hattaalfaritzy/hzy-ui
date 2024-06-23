@@ -1,17 +1,18 @@
-import { convertWidth } from "@/utils/convert-width";
+import type { ISvgProps } from "../_icon";
+import { convertSizes } from "@/utils/convert-sizes";
 
 export default function ChevronLeft({ width = 20, ...props }: ISvgProps) {
-  const numericWidth = convertWidth(width);
+  const sizes = convertSizes(width);
   return (
     <svg
-      width={numericWidth}
-      height={numericWidth * 2}
+      width={sizes}
+      height={sizes}
       {...props}
-      viewBox="0 0 8 14"
       fill="none"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M2.82795 6.99999L7.77795 11.95L6.36395 13.364L-4.60545e-05 6.99999L6.36395 0.635986L7.77795 2.04999L2.82795 6.99999Z" />
+      <path d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
     </svg>
   );
 }

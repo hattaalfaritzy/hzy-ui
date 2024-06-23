@@ -1,4 +1,4 @@
-export function convertWidth(
+export function convertSizes(
   width: number | string | undefined,
   defaultValue: number = 20
 ): number {

@@ -58,6 +58,7 @@ export const Modal = ({
       <div
         className={cn(
           "fixed z-[1300] w-full h-full top-0 left-0",
+          "animate-fade-in",
           classNameWrapper
         )}
         {...props}
@@ -83,6 +84,7 @@ export const Modal = ({
               <Card
                 className={cn(
                   "relative flex flex-col w-full box-border",
+                  "animate-fade-in",
                   sizeModal
                 )}
               >

@@ -55,3 +55,5 @@ export const ImageWithFallback = ({
     />
   );
 };
+
+export default ImageWithFallback;

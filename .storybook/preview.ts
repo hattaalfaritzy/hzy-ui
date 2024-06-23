@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
-import "../dist/index.css";
+import "@/styles/index.css";
 
 const preview: Preview = {
   parameters: {

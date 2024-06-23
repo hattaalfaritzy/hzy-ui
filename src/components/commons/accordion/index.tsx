@@ -1,11 +1,11 @@
 import { cn } from "@/utils/cn";
+import { useRef, useState } from "react";
 import type {
   HTMLAttributes,
   KeyboardEvent,
   MouseEvent,
   ReactNode,
 } from "react";
-import { useRef, useState } from "react";
 import Icon from "../icons";
 
 export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
@@ -65,6 +65,7 @@ export const Accordion = ({
       <div
         className={cn(
           "flex flex-row justify-start items-center w-full",
+          isOpen && "border-b border-light pb-4",
           className
         )}
       >
@@ -77,13 +78,10 @@ export const Accordion = ({
           onKeyDown={handleKeyDown}
         >
           {withIcon && withIcon}
-          <span className={cn(classNameTitle || "text-xs lg:text-base")}>
-            {title}
-          </span>
+          <span className={cn(classNameTitle || "text-sm")}>{title}</span>
         </div>
         <Icon
           name="chevron-down"
-          width={16}
           className={cn(
             "fill-black cursor-pointer",
             isOpen && "transform rotate-180"

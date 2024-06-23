@@ -1,11 +1,12 @@
-import { convertWidth } from "@/utils/convert-width";
+import type { ISvgProps } from "../_icon";
+import { convertSizes } from "@/utils/convert-sizes";
 
 export default function Setting({ width = 20, ...props }: ISvgProps) {
-  const numericWidth = convertWidth(width);
+  const sizes = convertSizes(width);
   return (
     <svg
-      width={numericWidth}
-      height={numericWidth}
+      width={sizes}
+      height={sizes}
       {...props}
       viewBox="0 0 26 28"
       fill="none"

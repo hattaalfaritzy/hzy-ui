@@ -1,17 +1,18 @@
-import { convertWidth } from "@/utils/convert-width";
+import type { ISvgProps } from "../_icon";
+import { convertSizes } from "@/utils/convert-sizes";
 
 export default function CaretDown({ width = 20, ...props }: ISvgProps) {
-  const numericWidth = convertWidth(width);
+  const sizes = convertSizes(width);
   return (
     <svg
-      width={numericWidth}
-      height={numericWidth / 2}
+      width={sizes}
+      height={sizes}
       {...props}
-      viewBox="0 0 8 4"
       fill="none"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M4 4L-1.74846e-07 0L8 -3.49691e-07L4 4Z" />
+      <path d="m7 10l5 5l5-5z" />
     </svg>
   );
 }

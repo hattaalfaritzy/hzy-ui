@@ -5,6 +5,7 @@ import { Message } from "@/components/commons";
 export interface IInputTextarea
   extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
+  classNameWrapper?: string;
   classNameLabel?: string;
   label?: string;
   error?: string;
@@ -16,6 +17,7 @@ export interface IInputTextarea
 
 export const InputTextarea = ({
   className,
+  classNameWrapper,
   classNameLabel,
   label,
   error,
@@ -26,7 +28,7 @@ export const InputTextarea = ({
   ...props
 }: IInputTextarea) => {
   return (
-    <div className={cn("flex flex-col w-full", className)}>
+    <div className={cn("flex flex-col w-full", classNameWrapper)}>
       {label && (
         <div
           className={cn(
@@ -42,7 +44,8 @@ export const InputTextarea = ({
           "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2] rounded",
           !disabled ? "bg-white" : "bg-black/10",
           rounded && "rounded-full",
-          error && "border-error focus:border-error focus:ring-0"
+          error && "border-error focus:border-error focus:ring-0",
+          className
         )}
       >
         <textarea

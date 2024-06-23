@@ -1,5 +1,6 @@
 import { cn } from "@/utils/cn";
 import type { HTMLAttributes } from "react";
+import type { IconName } from "../icons/_icon";
 import Icons from "../icons";
 import { messageStyles } from "./message-styles";
 

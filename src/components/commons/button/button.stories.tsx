@@ -23,17 +23,17 @@ const meta: Meta<typeof Button> = {
       options: ["start", "center", "end"],
       control: { type: "radio" },
     },
-    size: {
-      options: ["sm", "md"],
-      control: { type: "radio" },
-    },
   },
 };
 
 export default meta;
 
 const Template: StoryFn<typeof Button> = (args) => {
-  return <Button {...args} />;
+  return (
+    <Button {...args}>
+      asdasd123123
+    </Button>
+  );
 };
 
 export const Base = Template.bind({});

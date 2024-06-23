@@ -13,7 +13,7 @@ export default meta;
 const Template: StoryFn<typeof Accordion> = (args) => {
   return (
     <Accordion title="Accordion Title" {...args}>
-      <p>Accordion Content</p>
+      <span className="text-sm">Accordion Content</span>
     </Accordion>
   );
 };

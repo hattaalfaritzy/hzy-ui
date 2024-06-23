@@ -4,6 +4,7 @@ import type { InputHTMLAttributes } from "react";
 export interface IInputCheckboxProps
   extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
+  classNameWrapper?: string;
   classNameLabel?: string;
   label?: string;
   variant?: "default" | "reverse";
@@ -17,6 +18,7 @@ export interface IInputCheckboxProps
 
 export const InputCheckbox = ({
   className,
+  classNameWrapper,
   classNameLabel,
   label,
   variant = "default",
@@ -34,7 +36,7 @@ export const InputCheckbox = ({
   }[variant];
 
   return (
-    <div className={cn("flex flex-col max-w-fit", className)}>
+    <div className={cn("flex flex-col max-w-fit", classNameWrapper)}>
       <label
         className={cn(
           "flex",
@@ -48,6 +50,7 @@ export const InputCheckbox = ({
           disabled={disabled}
           onChange={onChange}
           checked={checked}
+          className={cn(className, "accent-dark")}
           {...props}
         />
         {label && (

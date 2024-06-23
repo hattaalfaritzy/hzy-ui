@@ -1,3 +1,5 @@
+import type { IconName } from "../icons/_icon";
+
 export const messageStyles = {
   getIconType: (type: TypeVariant): IconName => {
     return {

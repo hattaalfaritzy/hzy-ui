@@ -37,7 +37,7 @@ const Template: StoryFn<typeof Modal> = (args) => {
   const modal = useModal();
   return (
     <>
-      <Button label="Open Dialog" onClick={modal.openModal} />
+      <Button label="Open Modal" onClick={modal.openModal} />
       <Modal {...args} {...modal.props}>
         <span>Modal</span>
         <span>

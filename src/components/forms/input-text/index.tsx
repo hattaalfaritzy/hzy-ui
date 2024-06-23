@@ -5,7 +5,7 @@ import type { InputHTMLAttributes, ReactNode } from "react";
 export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   classNameLabel?: string;
-  classNameInput?: string;
+  classNameWrapper?: string;
   label?: string;
   error?: string;
   rounded?: boolean;
@@ -18,7 +18,7 @@ export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 export const InputText = ({
   className,
   classNameLabel,
-  classNameInput,
+  classNameWrapper,
   label,
   error,
   rounded = false,
@@ -29,7 +29,7 @@ export const InputText = ({
   ...props
 }: IInputTextProps) => {
   return (
-    <div className={cn("flex flex-col w-full", className)}>
+    <div className={cn("flex flex-col w-full", classNameWrapper)}>
       {label && (
         <div
           className={cn(
@@ -46,7 +46,7 @@ export const InputText = ({
           !disabled ? "bg-white" : "bg-black/10",
           rounded && "rounded-full",
           error && "border-error focus:border-error focus:ring-0",
-          classNameInput
+          className
         )}
       >
         {iconLeft && (
@@ -57,7 +57,7 @@ export const InputText = ({
         <input
           disabled={disabled}
           className={cn(
-            "w-full bg-transparent p-2.5 px-3",
+            "w-full h-full bg-transparent p-2.5 px-3",
             rounded && "rounded-full px-4",
             !disabled && "cursor-pointer"
           )}

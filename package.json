@@ -1,6 +1,6 @@
 {
   "name": "@hattaalfaritzy/hzy-ui",
-  "version": "1.8.6",
+  "version": "1.9.0",
   "author": "Muhammad Hatta Alfaritzy <muh.hara16@gmail.com>",
   "description": "My custom design system tailored for my thesis project.",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "dev": "rollup -c --watch",
     "build": "npm run clean && node prepare-build.mjs & tsc --noEmit false --emitDeclarationOnly --outDir dist/lib --declaration --declarationDir dist/types && rollup -c rollup.config.mjs --bundleConfigAsCjs && npm run build-tailwind",
     "build-production": "yarn build & node after-build.mjs",
+    "build-push": "yarn build & yalc push --private",
     "build-tailwind": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build --docs",

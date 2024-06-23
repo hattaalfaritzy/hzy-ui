@@ -1,10 +1,9 @@
 import { cn } from "@/utils/cn";
-import type { SVGAttributes } from "react";
-import { icons } from "./_icon";
+import { type IconName, icons, ISvgProps } from "./_icon";
 
-export interface IIconProps extends SVGAttributes<SVGElement> {
+export interface IIconProps extends ISvgProps {
   className?: string;
-  name?: IconName;
+  name: IconName;
 }
 
 export const Icons = ({ className, name, ...props }: IIconProps) => {

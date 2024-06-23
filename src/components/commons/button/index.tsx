@@ -1,6 +1,7 @@
 import { cn } from "@/utils/cn";
 import type { ButtonHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { buttonStyles } from "./button-styles";
+import Icons from "../icons";
 
 export type ButtonSizes = "sm" | "md";
 
@@ -18,13 +19,15 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
+  children?: ReactNode;
+  stopPropagation?: boolean;
 }
 
 export const Button = ({
   className,
   classNameLabel,
   label,
-  loading,
+  loading = false,
   outline,
   rounded,
   disabled = false,
@@ -34,19 +37,21 @@ export const Button = ({
   onClick = () => {},
   iconLeft,
   iconRight,
+  children,
+  stopPropagation = true,
   ...props
 }: IButtonProps) => {
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     if (loading) return;
-    e.stopPropagation();
+    stopPropagation && e.stopPropagation();
     onClick();
   };
 
   return (
     <button
       className={cn(
-        "text-white font-normal border-2",
-        buttonStyles.getDisabledClass(disabled, outline),
+        "text-white font-normal border",
+        buttonStyles.getDisabledClass(!!(disabled || loading), outline),
         buttonStyles.getVariantStyle(variant, outline),
         buttonStyles.getSizeStyle(size),
         rounded ? "rounded-full" : "",
@@ -58,22 +63,26 @@ export const Button = ({
     >
       {loading ? (
         <div className={cn("flex", buttonStyles.getAlignStyle(align))}>
-          Loading
+          <Icons
+            name="loading"
+            className={cn(buttonStyles.getLoadingColor(variant, outline))}
+          />
         </div>
       ) : (
         <div className={cn("flex", buttonStyles.getAlignStyle(align))}>
           {iconLeft && iconLeft}
-          {label && (
-            <span
-              className={cn(
-                classNameLabel,
-                iconLeft && "pl-2",
-                iconRight && "pr-2"
-              )}
-            >
-              {label}
-            </span>
-          )}
+          {children ||
+            (label && (
+              <span
+                className={cn(
+                  classNameLabel,
+                  iconLeft && "pl-2",
+                  iconRight && "pr-2"
+                )}
+              >
+                {label}
+              </span>
+            ))}
           {iconRight && iconRight}
         </div>
       )}
