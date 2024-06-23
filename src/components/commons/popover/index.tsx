@@ -83,7 +83,7 @@ export const Popover = ({
     <div className={cn("relative", classNameWrapper)}>
       <div
         ref={triggerRef}
-        className="inline-block bg-red-200"
+        className="inline-block"
         onClick={handleTriggerClick}
         onMouseEnter={handleTriggerHover}
         {...props}

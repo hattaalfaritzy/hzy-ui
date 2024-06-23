@@ -12,4 +12,9 @@ declare global {
   type TypeAligns = "start" | "center" | "end";
 
   type TypeSizes = "sm" | "md" | "lg";
+
+  type ArrowStyles = {
+    container?: string;
+    arrow?: string;
+  };
 }

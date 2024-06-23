@@ -1,4 +1,4 @@
-export type PlacementPopover =
+export type PlacementTooltip =
   | "top"
   | "right"
   | "bottom"
@@ -12,99 +12,99 @@ export type PlacementPopover =
   | "right-top"
   | "right-bottom";
 
-export const popoverStyles = {
+export const tooltipStyles = {
   calculatePositionStyles: (
     triggerRect: DOMRect,
     popoverRect: DOMRect,
-    placement: PlacementPopover
+    placement: PlacementTooltip
   ) => {
     const { top, left, width, height } = triggerRect;
     const { width: popoverWidth, height: popoverHeight } = popoverRect;
 
-    let popoverStyles: React.CSSProperties = {};
+    let tooltipStyles: React.CSSProperties = {};
 
     switch (placement) {
       case "top":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top - popoverHeight - 10}px`,
           left: `${left + width / 2 - popoverWidth / 2}px`,
         };
         break;
       case "right":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height / 2 - popoverHeight / 2}px`,
           left: `${left + width + 5}px`,
         };
         break;
       case "bottom":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height + 10}px`,
           left: `${left + width / 2 - popoverWidth / 2}px`,
         };
         break;
       case "left":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height / 2 - popoverHeight / 2}px`,
           left: `${left - popoverWidth - 5}px`,
         };
         break;
       case "top-left":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top - popoverHeight - 10}px`,
           left: `${left}px`,
         };
         break;
       case "top-right":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top - popoverHeight - 10}px`,
           left: `${left + width - popoverWidth}px`,
         };
         break;
       case "bottom-left":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height + 10}px`,
           left: `${left}px`,
         };
         break;
       case "bottom-right":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height + 10}px`,
           left: `${left + width - popoverWidth}px`,
         };
         break;
       case "left-top":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top}px`,
           left: `${left - popoverWidth}px`,
         };
         break;
       case "left-bottom":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height - popoverHeight}px`,
           left: `${left - popoverWidth}px`,
         };
         break;
       case "right-top":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top}px`,
           left: `${left + width}px`,
         };
         break;
       case "right-bottom":
-        popoverStyles = {
+        tooltipStyles = {
           top: `${top + height - popoverHeight}px`,
           left: `${left + width}px`,
         };
         break;
       default:
-        popoverStyles = {};
+        tooltipStyles = {};
         break;
     }
 
-    return popoverStyles;
+    return tooltipStyles;
   },
 
-  calculateArrowStyles: (placement: PlacementPopover) => {
+  calculateArrowStyles: (placement: PlacementTooltip) => {
     let arrowStyles: ArrowStyles = {};
 
     switch (placement) {
