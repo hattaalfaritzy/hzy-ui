@@ -1,3 +1,12 @@
+# [1.10.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.9.0...v1.10.0) (2024-06-23)
+
+
+### Features
+
+* create comp dropdown, popover, fix some bug, and add new icons ([df6db28](https://github.com/hattaalfaritzy/hzy-ui/commit/df6db28a0d881d2fa22a8ee6ec6d13c8fa4b50a0))
+
+
+
 # [1.9.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.6...v1.9.0) (2024-06-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update yarn lock ([56d6007](https://github.com/hattaalfaritzy/hzy-ui/commit/56d6007cd8507aba61f1c34f91f4ee21e203588d))
-
-
-
-## [1.8.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.2...v1.8.3) (2024-06-21)
-
-
-### Bug Fixes
-
-* fix push ([c2b6a8a](https://github.com/hattaalfaritzy/hzy-ui/commit/c2b6a8a90ead98dbf8f1fe3bc31e57c06d6e60e3))
 
 
 
