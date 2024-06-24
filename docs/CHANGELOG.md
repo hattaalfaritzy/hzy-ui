@@ -1,3 +1,12 @@
+## [1.10.15](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.14...v1.10.15) (2024-06-24)
+
+
+### Bug Fixes
+
+* fix release ([82aed71](https://github.com/hattaalfaritzy/hzy-ui/commit/82aed71059d49adfeb48edc925d064b957c549a2))
+
+
+
 ## [1.10.14](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.13...v1.10.14) (2024-06-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fix release ([1ebb230](https://github.com/hattaalfaritzy/hzy-ui/commit/1ebb230d5c6e14062fd33c4e77f45c763b6f90a6))
-
-
-
-## [1.10.10](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.9...v1.10.10) (2024-06-24)
-
-
-### Bug Fixes
-
-* fix release ([6665cf7](https://github.com/hattaalfaritzy/hzy-ui/commit/6665cf731dd212dc3c17ed9b2158354d336ac578))
 
 
 
