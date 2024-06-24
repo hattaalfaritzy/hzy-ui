@@ -1,3 +1,12 @@
+## [1.12.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.12.0...v1.12.1) (2024-06-24)
+
+
+### Bug Fixes
+
+* add close solid n outline icons ([1a96103](https://github.com/hattaalfaritzy/hzy-ui/commit/1a96103e40f82a245b58c5e23694414140b4d09d))
+
+
+
 # [1.12.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.11.0...v1.12.0) (2024-06-24)
 
 
@@ -31,18 +40,6 @@
 ### Bug Fixes
 
 * fix package ([c138826](https://github.com/hattaalfaritzy/hzy-ui/commit/c1388263b9b9baeb652561e05fd2654f7022d2ed))
-
-
-
-## [1.10.29](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.28...v1.10.29) (2024-06-24)
-
-
-### Bug Fixes
-
-* fix pagi ([f4150cb](https://github.com/hattaalfaritzy/hzy-ui/commit/f4150cb74922b658197a1cfd74c7616986ccf7b1))
-* fix release ([55f3f45](https://github.com/hattaalfaritzy/hzy-ui/commit/55f3f4571871c3c4a2f048ee29b208fa41c69be4))
-* fix release ([3b006f5](https://github.com/hattaalfaritzy/hzy-ui/commit/3b006f5a82e525fde75bc1520542d7efc059158b))
-* fix workflow ([48319f4](https://github.com/hattaalfaritzy/hzy-ui/commit/48319f43bd1dae958b9db5f84fb6478ad0d0c9b4))
 
 
 
