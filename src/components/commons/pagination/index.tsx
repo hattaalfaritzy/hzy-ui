@@ -1,4 +1,6 @@
 import { cn } from "@/utils/cn";
+import Button from "../button";
+import Icons from "../icons";
 
 interface PaginationProps {
   className?: string;
@@ -69,7 +71,7 @@ export const Pagination = ({
     <div className="flex flex-row justify-between items-center w-full">
       <span className="text-sm text-[#A5A5A5] font-regular">
         Showing <b className="text-dark">{`${startItem}-${endItem}`}</b> from{" "}
-        <b className="text-dark">{total}</b> data asdasd
+        <b className="text-dark">{total}</b> data
       </span>
       <div
         className={cn(
@@ -77,47 +79,63 @@ export const Pagination = ({
           className
         )}
       >
-        <button
+        <Button
+          variant="dark"
+          outline={currentPage === 1 ? false : true}
           className={cn(
-            "px-3 py-1 text-sm rounded-md border border-gray-300",
-            currentPage === 1 && "bg-gray-200",
-            "hover:bg-gray-300"
+            "group rounded-xl h-10 w-10",
+            currentPage !== 1 && "hover:bg-gray-200"
           )}
+          size="sm"
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          Prev
-        </button>
+          <Icons
+            name="chevron-left"
+            width={30}
+            className={cn(currentPage !== 1 ? "fill-dark" : "fill-white")}
+          />
+        </Button>
         {getPageNumbers().map((pageNumber, index) =>
           pageNumber === null ? (
             <span key={index} className="px-3 py-1">
               ...
             </span>
           ) : (
-            <button
+            <Button
               key={index}
+              variant="dark"
+              outline={pageNumber === currentPage ? false : true}
               className={cn(
-                "px-3 py-1 text-sm rounded-md border border-gray-300",
-                pageNumber === currentPage && "bg-gray-200",
-                "hover:bg-gray-300"
+                "rounded-xl h-10 w-10 text-sm p-0",
+                pageNumber === currentPage
+                  ? "hover:bg-dark/80"
+                  : "hover:bg-gray-200"
               )}
+              size="md"
+              label={String(pageNumber)}
               onClick={() => handlePageChange(pageNumber as number)}
-            >
-              {pageNumber}
-            </button>
+            />
           )
         )}
-        <button
+        <Button
+          variant="dark"
+          outline={currentPage === totalPages ? false : true}
           className={cn(
-            "px-3 py-1 text-sm rounded-md border border-gray-300",
-            currentPage === totalPages && "bg-gray-200",
-            "hover:bg-gray-300"
+            "group rounded-xl h-10 w-10",
+            currentPage !== totalPages && "hover:bg-gray-200"
           )}
+          size="sm"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          Next
-        </button>
+          <Icons
+            name="chevron-right"
+            className={cn(
+              currentPage !== totalPages ? "fill-dark" : "fill-white"
+            )}
+          />
+        </Button>
       </div>
     </div>
   );

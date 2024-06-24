@@ -54,7 +54,7 @@ export const buttonStyles = {
     if (disabled) {
       return outline
         ? "bg-opacity-30 border-opacity-30 cursor-default"
-        : "bg-opacity-70 border-opacity-0 cursor-default";
+        : "bg-opacity-90 border-opacity-0 cursor-default";
     }
     return "";
   },
