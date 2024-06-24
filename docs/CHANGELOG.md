@@ -1,3 +1,12 @@
+## [1.10.12](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.11...v1.10.12) (2024-06-24)
+
+
+### Bug Fixes
+
+* fix release ([ad277d4](https://github.com/hattaalfaritzy/hzy-ui/commit/ad277d4e4a1a2175f410ad0b6cb92b80e922df5b))
+
+
+
 ## [1.10.11](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.10...v1.10.11) (2024-06-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * packagejson ([5efa7e0](https://github.com/hattaalfaritzy/hzy-ui/commit/5efa7e090e4ea9d2d3b34c73b61615e9c22d1375))
-
-
-
-## [1.10.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.6...v1.10.7) (2024-06-24)
-
-
-### Bug Fixes
-
-* create new paginations on going ([0f4ea81](https://github.com/hattaalfaritzy/hzy-ui/commit/0f4ea817a28a601d44a1c16332130f244c31e71f))
 
 
 
