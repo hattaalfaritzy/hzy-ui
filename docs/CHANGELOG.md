@@ -1,3 +1,12 @@
+## [1.10.10](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.9...v1.10.10) (2024-06-24)
+
+
+### Bug Fixes
+
+* fix release ([6665cf7](https://github.com/hattaalfaritzy/hzy-ui/commit/6665cf731dd212dc3c17ed9b2158354d336ac578))
+
+
+
 ## [1.10.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.8...v1.10.9) (2024-06-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * create new comps table ([875d5d8](https://github.com/hattaalfaritzy/hzy-ui/commit/875d5d84142b610dfeb5acedac576656a114e84c))
-
-
-
-## [1.10.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.1...v1.10.3) (2024-06-23)
-
-
-### Bug Fixes
-
-* create new comps tooltip ([ef78341](https://github.com/hattaalfaritzy/hzy-ui/commit/ef783412556e478d779e2294eb74148bbf66689b))
 
 
 
