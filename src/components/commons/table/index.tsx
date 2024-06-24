@@ -4,11 +4,12 @@ import TableHeader, { type SortingTable } from "./table-header";
 import Icons from "../icons";
 
 type VariantTable = "default" | "sticky";
+type AlignColumns = "start" | "center" | "end";
 
-interface IColumnsProps {
+export interface IColumnsProps {
   label: string;
   key: string;
-  align?: "start" | "center" | "end";
+  align?: AlignColumns;
   sortable?: boolean;
   iconName?: string;
   action?: (data: any) => ReactNode;
@@ -23,6 +24,22 @@ export interface ITableProps extends TableHTMLAttributes<HTMLTableElement> {
   onSort?: (key: string, direction: SortingTable) => void;
   variant?: VariantTable;
 }
+
+const defaultColumnProps: Partial<IColumnsProps> = {
+  align: "start",
+  sortable: false,
+  iconName: undefined,
+  action: undefined,
+};
+
+const mergeWithDefaultColumnProps = (
+  columns: IColumnsProps[]
+): IColumnsProps[] => {
+  return columns.map((column) => ({
+    ...defaultColumnProps,
+    ...column,
+  }));
+};
 
 export const Table = ({
   classNameWrapper,
@@ -42,6 +59,8 @@ export const Table = ({
     sticky: "z-10 sticky top-0 shadow",
   }[variant];
 
+  const mergedColumns: IColumnsProps[] = mergeWithDefaultColumnProps(columns);
+
   return (
     <div
       className={cn(
@@ -50,7 +69,12 @@ export const Table = ({
         classNameWrapper
       )}
     >
-      <table className={cn("relative w-full min-w-full bg-white", className)}>
+      <table
+        className={cn(
+          "relative table-fixed w-full min-w-full bg-white",
+          className
+        )}
+      >
         <thead
           className={cn(
             "py-8 bg-white border-b border-[#F1F1F1]",
@@ -58,7 +82,7 @@ export const Table = ({
           )}
         >
           <tr>
-            {columns.map((column) => (
+            {mergedColumns.map((column) => (
               <TableHeader
                 key={column.key}
                 label={column.label}
@@ -73,7 +97,7 @@ export const Table = ({
         <tbody>
           {loading ? (
             <tr>
-              <td colSpan={columns.length} className="text-center py-20">
+              <td colSpan={mergedColumns.length} className="text-center py-20">
                 <div className="flex justify-center items-center w-full">
                   <Icons width={50} name="loading" className="fill-dark" />
                 </div>
@@ -85,7 +109,7 @@ export const Table = ({
                 key={index}
                 className={cn({ "border-b": index !== dataSource.length - 1 })}
               >
-                {columns.map((column) => (
+                {mergedColumns.map((column) => (
                   <td
                     key={column.key}
                     className={cn("px-4 py-6 font-normal text-sm", {

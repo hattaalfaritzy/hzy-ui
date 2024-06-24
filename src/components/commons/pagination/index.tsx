@@ -6,7 +6,7 @@ interface PaginationProps {
   className?: string;
   currentPage: number;
   total: number;
-  itemsPerPage: number;
+  itemsPerPage?: number;
   onPageChange: (pageNumber: number) => void;
 }
 
@@ -14,26 +14,22 @@ export const Pagination = ({
   className,
   currentPage,
   total,
-  itemsPerPage,
+  itemsPerPage = 10,
   onPageChange,
 }: PaginationProps) => {
   const totalPages = Math.ceil(total / itemsPerPage);
 
-  // Calculate display range based on current page position
   const displayRange = currentPage === 1 || currentPage === totalPages ? 2 : 1;
 
   const getPageNumbers = () => {
     const pages: (number | null)[] = [];
 
-    // Show first page
     pages.push(1);
 
-    // Show ... if currentPage is not near the start
     if (currentPage > displayRange + 2) {
       pages.push(null);
     }
 
-    // Show pages around the current page
     for (
       let i = currentPage - displayRange;
       i <= currentPage + displayRange;
@@ -44,12 +40,10 @@ export const Pagination = ({
       }
     }
 
-    // Show ... if currentPage is not near the end
     if (currentPage < totalPages - displayRange - 1) {
       pages.push(null);
     }
 
-    // Show last page
     if (totalPages > 1) {
       pages.push(totalPages);
     }
@@ -63,21 +57,22 @@ export const Pagination = ({
     }
   };
 
-  // Calculate current range of items being shown
   const startItem = (currentPage - 1) * itemsPerPage + 1;
   const endItem = Math.min(currentPage * itemsPerPage, total);
 
   return (
-    <div className="flex flex-row justify-between items-center w-full">
+    <div
+      className={cn(
+        "flex flex-row justify-between items-center w-full p-8 bg-white",
+        className
+      )}
+    >
       <span className="text-sm text-[#A5A5A5] font-regular">
         Showing <b className="text-dark">{`${startItem}-${endItem}`}</b> from{" "}
         <b className="text-dark">{total}</b> data
       </span>
       <div
-        className={cn(
-          "flex flex-row justify-center items-center space-x-2",
-          className
-        )}
+        className={cn("flex flex-row justify-center items-center space-x-2")}
       >
         <Button
           variant="dark"
