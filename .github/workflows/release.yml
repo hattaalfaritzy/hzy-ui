@@ -11,7 +11,6 @@ jobs:
   release:
     permissions:
       contents: read
-      packages: write
       issues: write
       pull-requests: write
       id-token: write
