@@ -1,3 +1,12 @@
+# [1.11.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.31...v1.11.0) (2024-06-24)
+
+
+### Features
+
+* create new comp pagination fix ([f1ce930](https://github.com/hattaalfaritzy/hzy-ui/commit/f1ce9304d10585375a3b79d688c1b31cdf1a2d9a))
+
+
+
 ## [1.10.31](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.30...v1.10.31) (2024-06-24)
 
 
@@ -34,15 +43,6 @@
 ### Bug Fixes
 
 * fix release ([450a2a6](https://github.com/hattaalfaritzy/hzy-ui/commit/450a2a6c8199f7851461767c3cc1e00dec88586a))
-
-
-
-## [1.10.27](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.26...v1.10.27) (2024-06-24)
-
-
-### Bug Fixes
-
-* fix release ([9df1161](https://github.com/hattaalfaritzy/hzy-ui/commit/9df1161ad2d7947158906c04a2ec20123bc0b090))
 
 
 
