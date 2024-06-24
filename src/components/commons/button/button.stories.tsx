@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
   component: Button as Meta<typeof Button>["component"],
   tags: ["autodocs"],
   args: {
-    label: "Lihat di olx.com",
+    label: "Button",
     className: "w-full",
     align: "center",
     size: "md",
@@ -29,11 +29,7 @@ const meta: Meta<typeof Button> = {
 export default meta;
 
 const Template: StoryFn<typeof Button> = (args) => {
-  return (
-    <Button {...args}>
-      asdasd123123
-    </Button>
-  );
+  return <Button {...args} />;
 };
 
 export const Base = Template.bind({});
