@@ -7,6 +7,8 @@ import ChevronDown from "./libs/chevron-down";
 import ChevronLeft from "./libs/chevron-left";
 import ChevronRight from "./libs/chevron-right";
 import ChevronUp from "./libs/chevron-up";
+import CloseCircleOutline from "./libs/close-circle-outline";
+import CloseCircle from "./libs/close-circle";
 import Error from "./libs/error";
 import EyeSlash from "./libs/eye-slash";
 import Eye from "./libs/eye";
@@ -31,6 +33,8 @@ export type IconName =
   | "chevron-left"
   | "chevron-right"
   | "chevron-up"
+  | "close-circle-outline"
+  | "close-circle"
   | "error"
   | "eye-slash"
   | "eye"
@@ -52,6 +56,8 @@ export const icons: Record<string, IconComponent> = {
   "chevron-left": ChevronLeft,
   "chevron-right": ChevronRight,
   "chevron-up": ChevronUp,
+  "close-circle-outline": CloseCircleOutline,
+  "close-circle": CloseCircle,
   error: Error,
   "eye-slash": EyeSlash,
   eye: Eye,
