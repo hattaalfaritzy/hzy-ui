@@ -6,6 +6,7 @@ export * from "./icons";
 export * from "./image-with-fallback";
 export * from "./message";
 export * from "./modal";
+export * from "./pagination";
 export * from "./popover";
 export * from "./skeletons";
 export * from "./table";
