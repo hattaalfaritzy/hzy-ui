@@ -1,6 +1,6 @@
 {
   "name": "@hattaalfaritzy/hzy-ui",
-  "version": "1.10.21",
+  "version": "1.10.20",
   "author": "Muhammad Hatta Alfaritzy <muh.hara16@gmail.com>",
   "description": "My custom design system tailored for my thesis project.",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "url": "git+https://github.com/hattaalfaritzy/hzy-ui.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/hattaalfaritzy"
+    "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
