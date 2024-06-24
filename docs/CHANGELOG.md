@@ -1,3 +1,12 @@
+## [1.10.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.7...v1.10.8) (2024-06-24)
+
+
+### Bug Fixes
+
+* packagejson ([5efa7e0](https://github.com/hattaalfaritzy/hzy-ui/commit/5efa7e090e4ea9d2d3b34c73b61615e9c22d1375))
+
+
+
 ## [1.10.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.6...v1.10.7) (2024-06-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * bug scroll popover ([88f75ce](https://github.com/hattaalfaritzy/hzy-ui/commit/88f75cec3b8ed8a50699717d095488c47311b9c3))
-
-
-
-# [1.10.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.9.0...v1.10.0) (2024-06-23)
-
-
-### Features
-
-* create comp dropdown, popover, fix some bug, and add new icons ([df6db28](https://github.com/hattaalfaritzy/hzy-ui/commit/df6db28a0d881d2fa22a8ee6ec6d13c8fa4b50a0))
 
 
 
