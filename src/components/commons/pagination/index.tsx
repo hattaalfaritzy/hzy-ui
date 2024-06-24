@@ -69,7 +69,7 @@ export const Pagination = ({
     <div className="flex flex-row justify-between items-center w-full">
       <span className="text-sm text-[#A5A5A5] font-regular">
         Showing <b className="text-dark">{`${startItem}-${endItem}`}</b> from{" "}
-        <b className="text-dark">{total}</b> data
+        <b className="text-dark">{total}</b> data asdasd
       </span>
       <div
         className={cn(
