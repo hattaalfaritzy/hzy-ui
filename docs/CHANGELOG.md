@@ -1,3 +1,12 @@
+# [1.12.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.11.0...v1.12.0) (2024-06-24)
+
+
+### Features
+
+* stories table pagination n fix paginations bugs ([e6e20e2](https://github.com/hattaalfaritzy/hzy-ui/commit/e6e20e29a953158516da6df4e05e03e78c5b0b1b))
+
+
+
 # [1.11.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.31...v1.11.0) (2024-06-24)
 
 
@@ -34,15 +43,6 @@
 * fix release ([55f3f45](https://github.com/hattaalfaritzy/hzy-ui/commit/55f3f4571871c3c4a2f048ee29b208fa41c69be4))
 * fix release ([3b006f5](https://github.com/hattaalfaritzy/hzy-ui/commit/3b006f5a82e525fde75bc1520542d7efc059158b))
 * fix workflow ([48319f4](https://github.com/hattaalfaritzy/hzy-ui/commit/48319f43bd1dae958b9db5f84fb6478ad0d0c9b4))
-
-
-
-## [1.10.28](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.27...v1.10.28) (2024-06-24)
-
-
-### Bug Fixes
-
-* fix release ([450a2a6](https://github.com/hattaalfaritzy/hzy-ui/commit/450a2a6c8199f7851461767c3cc1e00dec88586a))
 
 
 
