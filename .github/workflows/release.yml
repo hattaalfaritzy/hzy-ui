@@ -54,6 +54,12 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
+      # publish package to NPM after create release new version and tag
+      - name: Publish on NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
       - name: Release
         env:
           GITHUB_TOKE: ${{ secrets.GITHUB_TOKEN }}
