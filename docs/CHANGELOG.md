@@ -1,3 +1,12 @@
+## [1.10.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.3...v1.10.6) (2024-06-23)
+
+
+### Bug Fixes
+
+* create new comps table ([875d5d8](https://github.com/hattaalfaritzy/hzy-ui/commit/875d5d84142b610dfeb5acedac576656a114e84c))
+
+
+
 ## [1.10.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.1...v1.10.3) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add variant on button n message ([a809d9f](https://github.com/hattaalfaritzy/hzy-ui/commit/a809d9f102168458ef8e93c4f81f178602e1f3a2))
-
-
-
-## [1.8.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.5...v1.8.6) (2024-06-21)
-
-
-### Bug Fixes
-
-* update yarn lock ([67dab16](https://github.com/hattaalfaritzy/hzy-ui/commit/67dab16225a6e0c2b9269990ce3b0636a81ee3cb))
 
 
 
