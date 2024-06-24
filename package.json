@@ -24,8 +24,9 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hattaalfaritzy/hzy-ui.git"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
