@@ -57,7 +57,7 @@ jobs:
 
       # publish package to NPM after create release new version and tag
       - name: Publish on NPM
-        run: npm publish:npm --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
