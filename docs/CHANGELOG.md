@@ -1,3 +1,12 @@
+## [1.10.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.6...v1.10.7) (2024-06-24)
+
+
+### Bug Fixes
+
+* create new paginations on going ([0f4ea81](https://github.com/hattaalfaritzy/hzy-ui/commit/0f4ea817a28a601d44a1c16332130f244c31e71f))
+
+
+
 ## [1.10.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.3...v1.10.6) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create comp dropdown, popover, fix some bug, and add new icons ([df6db28](https://github.com/hattaalfaritzy/hzy-ui/commit/df6db28a0d881d2fa22a8ee6ec6d13c8fa4b50a0))
-
-
-
-# [1.9.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.8.6...v1.9.0) (2024-06-21)
-
-
-### Features
-
-* add variant on button n message ([a809d9f](https://github.com/hattaalfaritzy/hzy-ui/commit/a809d9f102168458ef8e93c4f81f178602e1f3a2))
 
 
 
