@@ -104,8 +104,7 @@ export const Dropdown = ({
             <div
               key={option.value}
               className={cn(
-                "px-4 py-2 cursor-pointer",
-                "hover:bg-light-300",
+                "px-4 py-2 cursor-pointer hover:bg-light-300",
                 selectedOption === option && "bg-dark/95 hover:bg-dark",
                 "rounded"
               )}

@@ -82,6 +82,36 @@ TableHeader.args = {
   defaultSort: "asc",
 };
 
+export const TableDataEmpty: StoryFn<typeof Table> = (args) => {
+  return <Table {...args} />;
+};
+
+TableDataEmpty.args = {
+  columns: [
+    {
+      label: "Name",
+      key: "name",
+      align: "center",
+      sortable: true,
+    },
+    {
+      label: "Age",
+      key: "age",
+      align: "center",
+      sortable: true,
+    },
+    {
+      label: "Address",
+      key: "address",
+      align: "center",
+      sortable: false,
+    },
+  ],
+  dataSource: [],
+  variant: "sticky",
+  classNameWrapper: "max-h-96",
+};
+
 export const TableSticky: StoryFn<typeof Table> = (args) => {
   return <Table {...args} />;
 };
@@ -147,7 +177,7 @@ TableWithAction.args = {
       label: "Action",
       key: "address",
       align: "center",
-      action: (data) => (
+      render: (data) => (
         <Button
           label="Action"
           onClick={() => alert(`Clicked on ${data.name}`)}
@@ -187,7 +217,7 @@ export const TableWithPagination: StoryFn<typeof Table> = (args) => {
     {
       label: "Action",
       key: "action",
-      action: (data) => (
+      render: (data) => (
         <Button
           label="Action"
           variant="dark"

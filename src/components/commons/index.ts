@@ -10,4 +10,7 @@ export * from "./pagination";
 export * from "./popover";
 export * from "./skeletons";
 export * from "./table";
+export * from "./tag";
 export * from "./tooltip";
+
+export type { IconName } from "./icons/_icon";

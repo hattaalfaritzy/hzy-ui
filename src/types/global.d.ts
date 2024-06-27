@@ -18,3 +18,5 @@ declare global {
     arrow?: string;
   };
 }
+
+export {};

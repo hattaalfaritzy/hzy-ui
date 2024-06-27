@@ -12,7 +12,9 @@ export interface IColumnsProps {
   align?: AlignColumns;
   sortable?: boolean;
   iconName?: string;
-  action?: (data: any) => ReactNode;
+  className?: string;
+  width?: string | number;
+  render?: (data: any) => ReactNode;
 }
 
 export interface ITableProps extends TableHTMLAttributes<HTMLTableElement> {
@@ -23,13 +25,16 @@ export interface ITableProps extends TableHTMLAttributes<HTMLTableElement> {
   loading?: boolean;
   onSort?: (key: string, direction: SortingTable) => void;
   variant?: VariantTable;
+  emptyMessage?: string;
 }
 
 const defaultColumnProps: Partial<IColumnsProps> = {
   align: "start",
   sortable: false,
   iconName: undefined,
-  action: undefined,
+  render: undefined,
+  className: undefined,
+  width: undefined,
 };
 
 const mergeWithDefaultColumnProps = (
@@ -49,6 +54,7 @@ export const Table = ({
   loading = false,
   onSort,
   variant = "default",
+  emptyMessage = "No data available", // Default message when dataSource is empty
 }: ITableProps) => {
   const handleSort = (key: string) => (direction: SortingTable) => {
     if (onSort) onSort(key, direction);
@@ -90,6 +96,8 @@ export const Table = ({
                 withSort={column.sortable}
                 align={column.align}
                 iconName={column.iconName as any}
+                className={column.className}
+                width={column.width}
               />
             ))}
           </tr>
@@ -103,6 +111,15 @@ export const Table = ({
                 </div>
               </td>
             </tr>
+          ) : dataSource.length === 0 ? (
+            <tr>
+              <td
+                colSpan={mergedColumns.length}
+                className="text-center py-20 text-dark"
+              >
+                {emptyMessage}
+              </td>
+            </tr>
           ) : (
             dataSource.map((data, index) => (
               <tr
@@ -112,13 +129,18 @@ export const Table = ({
                 {mergedColumns.map((column) => (
                   <td
                     key={column.key}
-                    className={cn("px-4 py-6 font-normal text-sm", {
-                      "text-left": column.align === "start",
-                      "text-center": column.align === "center",
-                      "text-right": column.align === "end",
-                    })}
+                    className={cn(
+                      "px-4 py-6 font-normal text-xs",
+                      {
+                        "text-left": column.align === "start",
+                        "text-center": column.align === "center",
+                        "text-right": column.align === "end",
+                      },
+                      column.className
+                    )}
+                    style={{ width: column.width }}
                   >
-                    {column.action ? column.action(data) : data[column.key]}
+                    {column.render ? column.render(data) : data[column.key]}
                   </td>
                 ))}
               </tr>

@@ -10,30 +10,33 @@ export interface ICardProps extends HTMLAttributes<HTMLDivElement> {
   onClick?: () => void;
 }
 
-const Card = forwardRef<HTMLDivElement, ICardProps>(
-  (
-    { className, withShadow, rounded = true, children, onClick, ...props },
-    ref
-  ) => {
-    return (
-      <div
-        ref={ref}
-        aria-hidden="true"
-        className={cn(
-          "flex bg-white p-3",
-          withShadow && "shadow",
-          rounded && "rounded-lg",
-          className
-        )}
-        onClick={onClick}
-        {...props}
-      >
-        {children}
-      </div>
-    );
-  }
-);
-
-Card.displayName = "Card";
+export const Card = forwardRef<HTMLDivElement, ICardProps>(function Card(
+  {
+    className,
+    withShadow,
+    rounded = true,
+    children,
+    onClick,
+    ...props
+  }: ICardProps,
+  ref
+) {
+  return (
+    <div
+      ref={ref}
+      aria-hidden="true"
+      className={cn(
+        "flex bg-white p-3",
+        withShadow && "shadow",
+        rounded && "rounded-lg",
+        className
+      )}
+      onClick={onClick}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+});
 
 export default Card;

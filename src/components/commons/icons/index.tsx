@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { type IconName, icons, ISvgProps } from "./_icon";
+import { type IconName, type ISvgProps, icons } from "./_icon";
 
 export interface IIconProps extends ISvgProps {
   className?: string;

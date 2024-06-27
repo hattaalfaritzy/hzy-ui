@@ -5,6 +5,7 @@
   "description": "My custom design system tailored for my thesis project.",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "npm run clean && node prepare-build.mjs & tsc --noEmit false --emitDeclarationOnly --outDir dist/lib --declaration --declarationDir dist/types && rollup -c rollup.config.mjs --bundleConfigAsCjs && npm run build-tailwind",

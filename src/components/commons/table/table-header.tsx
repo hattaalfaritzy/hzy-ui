@@ -7,6 +7,7 @@ export type SortingTable = "asc" | "desc";
 
 export interface ITableHeaderProps
   extends Omit<TableHTMLAttributes<HTMLTableCellElement>, "align"> {
+  className?: string;
   label: string;
   onSort?: (direction: SortingTable) => void;
   withSort?: boolean;
@@ -16,12 +17,14 @@ export interface ITableHeaderProps
 }
 
 export const TableHeader = ({
+  className,
   label,
   onSort,
   withSort = false,
   defaultSort = "asc",
   align = "center",
   iconName,
+  ...props
 }: ITableHeaderProps) => {
   const [sortDirection, setSortDirection] = useState<SortingTable>(defaultSort);
 
@@ -39,8 +42,9 @@ export const TableHeader = ({
 
   return (
     <th
-      className={cn("px-4 py-6 cursor-pointer font-semibold")}
+      className={cn("px-4 py-6 cursor-pointer font-semibold", className)}
       onClick={withSort ? handleSort : undefined}
+      {...props}
     >
       <div className={cn("flex items-center", styleByAlign)}>
         {iconName && (

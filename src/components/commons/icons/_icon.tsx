@@ -15,6 +15,7 @@ import Eye from "./libs/eye";
 import Gear from "./libs/gear";
 import InfoOutline from "./libs/info-outline";
 import Info from "./libs/info";
+import List from "./libs/list";
 import Loading from "./libs/loading";
 import Marker from "./libs/marker";
 import Search from "./libs/search";
@@ -41,6 +42,7 @@ export type IconName =
   | "gear"
   | "info-outline"
   | "info"
+  | "list"
   | "loading"
   | "marker"
   | "search"
@@ -64,6 +66,7 @@ export const icons: Record<string, IconComponent> = {
   gear: Gear,
   "info-outline": InfoOutline,
   info: Info,
+  list: List,
   loading: Loading,
   marker: Marker,
   search: Search,

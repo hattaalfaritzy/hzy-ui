@@ -57,7 +57,7 @@ export const InputText = ({
         <input
           disabled={disabled}
           className={cn(
-            "w-full h-full bg-transparent p-2.5 px-3",
+            "w-full h-full bg-transparent p-2.5 px-3 outline-none",
             rounded && "rounded-full px-4",
             !disabled && "cursor-pointer"
           )}

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "jsx": "react-jsx" /* Specify what JSX code is generated. */,
 
     /* Modules */
@@ -17,10 +17,11 @@
 
     /* Emit */
     "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
-    "emitDeclarationOnly": true /* Only output d.ts files and not JavaScript files. */,
+    // "emitDeclarationOnly": true /* Only output d.ts files and not JavaScript files. */,
     "sourceMap": true /* Create source map files for emitted JavaScript files. */,
     "outDir": "dist" /* Specify an output folder for all emitted files. */,
-    "declarationDir": "types" /* Specify the output directory for generated declaration files. */,
+    "declarationDir": "dist/types" /* Specify the output directory for generated declaration files. */,
+    "noEmit": true,
 
     /* Interop Constraints */
     "allowSyntheticDefaultImports": true /* Allow 'import x from y' when a module doesn't have a default export. */,
@@ -38,13 +39,15 @@
 
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+
+    /* Type Roots */
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "include": ["src/components/**/*","src/types/**/*", "src/index.ts"],
   "exclude": [
     "dist",
     "node_modules",
     "src/components/**/*.stories.tsx",
-    "src/components/**/*.test.tsx"
   ],
-  "types": ["node", "jest", "@testing-library/jest-dom"],
+  "types": ["node"],
 }

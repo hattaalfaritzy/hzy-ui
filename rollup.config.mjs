@@ -19,17 +19,22 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
-        interop: "auto",
+        interop: "compat",
+        exports: "named",
       },
       {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
-        interop: "auto",
+        interop: "compat",
+        exports: "named",
       },
     ],
     plugins: [
-      babel(),
+      babel({
+        babelHelpers: "bundled",
+        exclude: "node_modules/**",
+      }),  
       commonjs(),
       resolve(),
       typescript({
