@@ -1,3 +1,12 @@
+## [1.13.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.0...v1.13.1) (2024-06-30)
+
+
+### Bug Fixes
+
+* modal classname, n input text label, n btn rounded ([42bd99f](https://github.com/hattaalfaritzy/hzy-ui/commit/42bd99f8e0c8a18bc83f02019c0016e4fd37222a))
+
+
+
 # [1.13.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.12.1...v1.13.0) (2024-06-27)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create new comp pagination fix ([f1ce930](https://github.com/hattaalfaritzy/hzy-ui/commit/f1ce9304d10585375a3b79d688c1b31cdf1a2d9a))
-
-
-
-## [1.10.31](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.10.30...v1.10.31) (2024-06-24)
-
-
-### Bug Fixes
-
-* fix things ([c632e0b](https://github.com/hattaalfaritzy/hzy-ui/commit/c632e0b7c5079ee2041010dd1b1d634c081ab647))
 
 
 
