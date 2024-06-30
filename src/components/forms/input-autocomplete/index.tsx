@@ -4,12 +4,14 @@ import InputText, { IInputTextProps } from "../input-text";
 import useClickOutside from "@/hooks/useClickOutside";
 
 export interface IInputAutocompleteProps extends IInputTextProps {
+  classNameOption?: string;
   options: string[];
   onOptionSelect?: (value: string) => void;
   emptyMessage?: string;
 }
 
 export const InputAutocomplete = ({
+  classNameOption,
   options,
   onOptionSelect,
   emptyMessage = "No options available",
@@ -81,7 +83,12 @@ export const InputAutocomplete = ({
         onClick={handleInputClick}
       />
       {isOpen && (
-        <ul className="absolute z-fixed left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
+        <ul
+          className={cn(
+            "absolute z-fixed left-0 mt-2 w-full p-1.5 h-auto max-h-96 overflow-y-auto rounded bg-white shadow-lg border border-dark/10",
+            classNameOption
+          )}
+        >
           {filteredOptions.length > 0 ? (
             filteredOptions.map((option, index) => (
               <li
