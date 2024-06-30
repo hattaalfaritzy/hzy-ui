@@ -54,7 +54,7 @@ export const Button = ({
         buttonStyles.getDisabledClass(!!(disabled || loading), outline),
         buttonStyles.getVariantStyle(variant, outline),
         buttonStyles.getSizeStyle(size),
-        rounded ? "rounded-full" : "",
+        rounded ? "rounded-full" : "rounded-lg",
         className
       )}
       disabled={loading || disabled}

@@ -3,7 +3,9 @@ import { useState } from "react";
 import InputText, { type IInputTextProps } from "../input-text";
 import Icons from "@/components/commons/icons";
 
-export const InputPassword = ({ ...props }: IInputTextProps) => {
+export interface IInputPasswordProps extends IInputTextProps {}
+
+export const InputPassword = ({ ...props }: IInputPasswordProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -16,7 +18,7 @@ export const InputPassword = ({ ...props }: IInputTextProps) => {
             onClick={() => {
               setShowPassword(!showPassword);
             }}
-            className={cn(props.error && "fill-error")}
+            className={cn(props.errorMessage && "fill-error")}
           />
         ) : (
           <Icons
@@ -24,7 +26,7 @@ export const InputPassword = ({ ...props }: IInputTextProps) => {
             onClick={() => {
               setShowPassword(!showPassword);
             }}
-            className={cn(props.error && "fill-error")}
+            className={cn(props.errorMessage && "fill-error")}
           />
         )
       }

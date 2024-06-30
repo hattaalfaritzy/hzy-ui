@@ -57,11 +57,13 @@ export const InputCheckbox = ({
           <div
             className={cn(
               classNameLabel || "block text-sm text-dark",
-              important && "after:content-['*'] text-error",
               variant === "reverse" && "pr-2"
             )}
           >
             {label}
+            {label && important && (
+              <span className={cn("after:content-['*'] text-error")} />
+            )}
           </div>
         )}
       </label>

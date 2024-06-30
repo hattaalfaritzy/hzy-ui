@@ -8,7 +8,7 @@ export interface IInputTextarea
   classNameWrapper?: string;
   classNameLabel?: string;
   label?: string;
-  error?: string;
+  errorMessage?: string;
   maxLength?: number;
   rounded?: boolean;
   important?: boolean;
@@ -20,7 +20,7 @@ export const InputTextarea = ({
   classNameWrapper,
   classNameLabel,
   label,
-  error,
+  errorMessage,
   maxLength = 200,
   rounded = false,
   important,
@@ -32,19 +32,21 @@ export const InputTextarea = ({
       {label && (
         <div
           className={cn(
-            classNameLabel || "block font-semibold text-sm text-dark pb-1.5",
-            important && "after:content-['*'] text-error"
+            classNameLabel || "block font-semibold text-sm text-dark pb-1.5"
           )}
         >
           {label}
+          {label && important && (
+            <span className={cn("after:content-['*'] text-error")} />
+          )}
         </div>
       )}
       <div
         className={cn(
-          "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2] rounded",
+          "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2]",
           !disabled ? "bg-white" : "bg-black/10",
-          rounded && "rounded-full",
-          error && "border-error focus:border-error focus:ring-0",
+          rounded ? "rounded-full" : "rounded-lg",
+          errorMessage && "border-error focus:border-error focus:ring-0",
           className
         )}
       >
@@ -60,7 +62,7 @@ export const InputTextarea = ({
           {...props}
         />
       </div>
-      {error && <Message className="mt-2" label={error} />}
+      {errorMessage && <Message className="mt-2" label={errorMessage} />}
     </div>
   );
 };

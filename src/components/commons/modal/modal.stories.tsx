@@ -38,7 +38,7 @@ const Template: StoryFn<typeof Modal> = (args) => {
   return (
     <>
       <Button label="Open Modal" onClick={modal.openModal} />
-      <Modal {...args} {...modal.props}>
+      <Modal {...args} {...modal.props} className="p-10">
         <span>Modal</span>
         <span>
           Lorem Ipsum is simply dummy text of the printing and typesetting

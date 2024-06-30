@@ -7,7 +7,7 @@ export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   classNameLabel?: string;
   classNameWrapper?: string;
   label?: string;
-  error?: string;
+  errorMessage?: string;
   rounded?: boolean;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
@@ -20,7 +20,7 @@ export const InputText = ({
   classNameLabel,
   classNameWrapper,
   label,
-  error,
+  errorMessage,
   rounded = false,
   iconLeft,
   iconRight,
@@ -33,43 +33,45 @@ export const InputText = ({
       {label && (
         <div
           className={cn(
-            classNameLabel || "block font-semibold text-sm text-dark pb-1.5",
-            important && "after:content-['*'] text-error"
+            classNameLabel || "block font-semibold text-sm text-dark pb-1.5"
           )}
         >
           {label}
+          {label && important && (
+            <span className={cn("after:content-['*'] text-error")} />
+          )}
         </div>
       )}
       <div
         className={cn(
           "relative flex justify-between items-center w-full text-dark text-sm border border-[#D9DDE2] focus:border-2 focus:border-dark read-only:focus:ring-0 read-only:focus:border-light",
           !disabled ? "bg-white" : "bg-black/10",
-          rounded && "rounded-full",
-          error && "border-error focus:border-error focus:ring-0",
+          rounded ? "rounded-full" : "rounded-lg",
+          errorMessage && "border-error focus:border-error focus:ring-0",
           className
         )}
       >
         {iconLeft && (
-          <div className={cn("absolute", rounded ? "left-4" : "left-3")}>
+          <div className={cn("flex", rounded ? "pl-4" : "pl-3")}>
             {iconLeft}
           </div>
         )}
         <input
           disabled={disabled}
           className={cn(
-            "w-full h-full bg-transparent p-2.5 px-3 outline-none",
-            rounded && "rounded-full px-4",
+            "w-full h-full bg-transparent p-2.5 px-3 outline-none rounded-l",
+            rounded ? "rounded-full px-4" : "rounded-lg",
             !disabled && "cursor-pointer"
           )}
           {...props}
         />
         {iconRight && (
-          <div className={cn("absolute", rounded ? "right-4" : "right-3")}>
+          <div className={cn("flex", rounded ? "pr-4" : "pr-3")}>
             {iconRight}
           </div>
         )}
       </div>
-      {error && <Message className="mt-2" label={error} />}
+      {errorMessage && <Message className="mt-2" label={errorMessage} />}
     </div>
   );
 };

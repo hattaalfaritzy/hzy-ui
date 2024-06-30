@@ -75,16 +75,13 @@ export const Modal = ({
           <div className="inline-block align-middle overflow-y-auto w-full h-full">
             <div
               ref={rootModal}
-              className={cn(
-                "flex justify-center items-center w-full h-full",
-                className
-              )}
+              className={cn("flex justify-center items-center w-full h-full")}
               onClick={handleClickRootModal}
             >
               <Card
                 className={cn(
-                  "relative flex flex-col w-full box-border",
-                  "animate-fade-in",
+                  "relative flex flex-col w-full box-border animate-fade-in",
+                  className,
                   sizeModal
                 )}
               >
