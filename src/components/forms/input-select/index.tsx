@@ -1,6 +1,7 @@
 import { cn } from "@/utils/cn";
 import { useState, type ChangeEvent, type KeyboardEvent } from "react";
 import InputText, { type IInputTextProps } from "../input-text";
+import useClickOutside from "@/hooks/useClickOutside";
 
 export interface IInputSelectProps extends IInputTextProps {
   options: string[];
@@ -40,8 +41,10 @@ export const InputSelect = ({
     }
   };
 
+  const ref = useClickOutside(() => setIsOpen(false));
+
   return (
-    <div className={cn("relative w-full")}>
+    <div ref={ref} className={cn("relative w-full")}>
       <InputText
         {...props}
         value={inputValue}
@@ -51,7 +54,7 @@ export const InputSelect = ({
         readOnly
       />
       {isOpen && (
-        <ul className="absolute left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
+        <ul className="absolute z-fixed left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
           {options.map((option, index) => (
             <li
               key={index}

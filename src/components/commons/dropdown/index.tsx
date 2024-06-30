@@ -99,7 +99,7 @@ export const Dropdown = ({
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
+        <div className="absolute z-fixed left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
           {options.map((option) => (
             <div
               key={option.value}

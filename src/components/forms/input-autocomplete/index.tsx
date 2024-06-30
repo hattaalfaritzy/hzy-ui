@@ -1,15 +1,18 @@
 import { cn } from "@/utils/cn";
 import { useState, ChangeEvent, KeyboardEvent } from "react";
 import InputText, { IInputTextProps } from "../input-text";
+import useClickOutside from "@/hooks/useClickOutside";
 
 export interface IInputAutocompleteProps extends IInputTextProps {
   options: string[];
   onOptionSelect?: (value: string) => void;
+  emptyMessage?: string;
 }
 
 export const InputAutocomplete = ({
   options,
   onOptionSelect,
+  emptyMessage = "No options available",
   ...props
 }: IInputAutocompleteProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,8 +67,10 @@ export const InputAutocomplete = ({
     }
   };
 
+  const ref = useClickOutside(() => setIsOpen(false));
+
   return (
-    <div className={cn("relative w-full")}>
+    <div ref={ref} className={cn("relative w-full")}>
       <InputText
         {...props}
         value={inputValue}
@@ -76,26 +81,32 @@ export const InputAutocomplete = ({
         onClick={handleInputClick}
       />
       {isOpen && (
-        <ul className="absolute left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
-          {filteredOptions.map((option, index) => (
-            <li
-              key={index}
-              className={cn(
-                "px-4 py-2 cursor-pointer hover:bg-light-300 rounded",
-                inputValue === option && "bg-dark/95 hover:bg-dark"
-              )}
-              onClick={() => handleOptionClick(option)}
-            >
-              <span
+        <ul className="absolute z-fixed left-0 mt-2 w-full p-1.5 rounded bg-white shadow-lg border border-dark/10">
+          {filteredOptions.length > 0 ? (
+            filteredOptions.map((option, index) => (
+              <li
+                key={index}
                 className={cn(
-                  "text-sm",
-                  inputValue === option ? "text-light" : "text-dark"
+                  "px-4 py-2 cursor-pointer hover:bg-light-300 rounded",
+                  inputValue === option && "bg-dark/95 hover:bg-dark"
                 )}
+                onClick={() => handleOptionClick(option)}
               >
-                {option}
-              </span>
+                <span
+                  className={cn(
+                    "text-sm",
+                    inputValue === option ? "text-light" : "text-dark"
+                  )}
+                >
+                  {option}
+                </span>
+              </li>
+            ))
+          ) : (
+            <li className="px-4 py-2 text-sm text-center text-dark">
+              {emptyMessage}
             </li>
-          ))}
+          )}
         </ul>
       )}
     </div>
