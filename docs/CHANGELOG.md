@@ -1,3 +1,12 @@
+## [1.14.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.2...v1.14.3) (2024-07-01)
+
+
+### Bug Fixes
+
+* release ([24766f6](https://github.com/hattaalfaritzy/hzy-ui/commit/24766f6ca18bd210b722280959e114738cf15bed))
+
+
+
 ## [1.14.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.1...v1.14.2) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * onchange fix ([7d82d7d](https://github.com/hattaalfaritzy/hzy-ui/commit/7d82d7d0acde77bc1ab6ab662a9025e9e9e9af97))
-
-
-
-## [1.13.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.2...v1.13.3) (2024-06-30)
-
-
-### Bug Fixes
-
-* scrolling input select n autocomplete ([d3d83c2](https://github.com/hattaalfaritzy/hzy-ui/commit/d3d83c23cd6f8b4d7eb5e292beb3c541c66321b5))
 
 
 
