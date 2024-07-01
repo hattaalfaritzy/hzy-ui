@@ -32,7 +32,7 @@ const List = () => {
             key={index}
             className="flex flex-col justify-center items-center py-6 border-2 border-white/70 rounded-lg space-y-3"
           >
-            <Icon className="fill-white/70" width={20} />
+            <Icon className="fill-white/70 stroke-white/70" width={20} />
             <div className="text-xxs truncate text-white/70">
               {iconsNames[index]}
             </div>

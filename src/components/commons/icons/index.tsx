@@ -11,7 +11,16 @@ export const Icons = ({ className, name, ...props }: IIconProps) => {
 
   if (!Component) return null;
 
-  return <Component className={cn(className || "fill-[#A0A8B6]")} {...props} />;
+  return (
+    <Component
+      className={cn(
+        "fill-white",
+        name === "activity" && "stroke-white",
+        className
+      )}
+      {...props}
+    />
+  );
 };
 
 export { icons };

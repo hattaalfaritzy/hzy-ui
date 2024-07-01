@@ -1,5 +1,6 @@
 import type { ComponentType, MouseEventHandler, SVGAttributes } from "react";
 
+import Activity from "./libs/activity";
 import BrokenImage from "./libs/broken-image";
 import BusStop from "./libs/bus-stop";
 import CaretDown from "./libs/caret-down";
@@ -18,6 +19,7 @@ import EyeSlashOutline from "./libs/eye-slash-outline";
 import EyeSlash from "./libs/eye-slash";
 import Eye from "./libs/eye";
 import Gear from "./libs/gear";
+import Home from "./libs/home";
 import InfoOutline from "./libs/info-outline";
 import Info from "./libs/info";
 import List from "./libs/list";
@@ -35,6 +37,7 @@ export interface ISvgProps extends SVGAttributes<SVGElement> {
 }
 
 export type IconName =
+  | "activity"
   | "broken-image"
   | "bus-stop"
   | "caret-down"
@@ -53,6 +56,7 @@ export type IconName =
   | "eye-slash"
   | "eye"
   | "gear"
+  | "home"
   | "info-outline"
   | "info"
   | "list"
@@ -67,6 +71,7 @@ export type IconName =
 type IconComponent = ComponentType<ISvgProps>;
 
 export const icons: Record<string, IconComponent> = {
+  activity: Activity,
   "broken-image": BrokenImage,
   "bus-stop": BusStop,
   "caret-down": CaretDown,
@@ -85,6 +90,7 @@ export const icons: Record<string, IconComponent> = {
   "eye-slash": EyeSlash,
   eye: Eye,
   gear: Gear,
+  home: Home,
   "info-outline": InfoOutline,
   info: Info,
   list: List,
@@ -92,7 +98,7 @@ export const icons: Record<string, IconComponent> = {
   marker: Marker,
   search: Search,
   train: Train,
-  "user-multiple": Trash,
-  trash: UserMultiple,
+  trash: Trash,
+  "user-multiple": UserMultiple,
   user: User,
 };
