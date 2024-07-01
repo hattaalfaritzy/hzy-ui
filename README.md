@@ -16,6 +16,9 @@
     <a href="https://github.com/hattaalfaritzy/hzy-ui/releases">
       <img alt="GitHub Release" src="https://img.shields.io/github/v/release/hattaalfaritzy/hzy-ui">
     </a>
+    <a href="https://www.npmjs.com/package/@hattaalfaritzy/hzy-ui">
+      <img src="https://img.shields.io/npm/v/@hattaalfaritzy/hzy-ui?logo=npm">
+    </a>
   </p>
 </div>
 
@@ -54,17 +57,17 @@ $ npm i @hattaalfaritzy/hzy-ui
 
 ```jsx
 // Do this at the root of your application
-import '@hattaalfaritzy/hzy-ui/dist/index.css';
+import "@hattaalfaritzy/hzy-ui/dist/index.css";
 ```
 
 2. Start using the components in your application
-Here's a quick example to get you started:
+   Here's a quick example to get you started:
 
 ```jsx
-import { Button } from '@hattaalfaritzy/hzy-ui';
+import { Button } from "@hattaalfaritzy/hzy-ui";
 
 const App = () => {
-  const handleClick = () => alert('Button Clicked!');
+  const handleClick = () => alert("Button Clicked!");
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -81,7 +84,6 @@ const App = () => {
 };
 
 export default App;
-
 ```
 
 ## 📚 Components
@@ -98,7 +100,7 @@ For detailed usage and examples, check out the full [documentation](https://hatt
 
 ## 🎨 Customization
 
-Hzy-UI is built with Tailwind CSS, making it incredibly easy to customize components to match your design system. 
+Hzy-UI is built with Tailwind CSS, making it incredibly easy to customize components to match your design system.
 You can override default styles or extend them using Tailwind's utility classes.
 
 ## 📝 License
