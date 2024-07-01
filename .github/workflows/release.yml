@@ -62,17 +62,17 @@ jobs:
 
       # authenticate to npm package
       - name: Authenticate to npm package
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}" > ~/.npmrc
 
       # publish package to npm after create release new version and tag
       - name: Publish package to npm package
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}
 
       # create semantic release
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}
         run: npx semantic-release
