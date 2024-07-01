@@ -1,3 +1,12 @@
+# [1.15.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.13...v1.15.0) (2024-07-01)
+
+
+### Features
+
+* add new variants for icons ([ccddba5](https://github.com/hattaalfaritzy/hzy-ui/commit/ccddba5c3540a707181d139cff7b2bc579d5fed5))
+
+
+
 ## [1.14.13](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.12...v1.14.13) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * semantic ([cca4323](https://github.com/hattaalfaritzy/hzy-ui/commit/cca43234c1e83578975eef6b118bf60920380c4e))
-
-
-
-## [1.14.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.8...v1.14.9) (2024-07-01)
-
-
-### Bug Fixes
-
-* packagejson ([5b12c3b](https://github.com/hattaalfaritzy/hzy-ui/commit/5b12c3b013a2eba0e7bcd1e389e07c2ac64f40ed))
 
 
 
