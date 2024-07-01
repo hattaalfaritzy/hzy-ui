@@ -62,6 +62,9 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
+      - name: Authenticate to GitHub Packages
+        run: echo "//https://registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       # publish package to npm after create release new version and tag
       - name: Publish package to npm package
         run: npm publish --access public
