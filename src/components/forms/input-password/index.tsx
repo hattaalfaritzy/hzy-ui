@@ -14,7 +14,7 @@ export const InputPassword = ({ ...props }: IInputPasswordProps) => {
       iconRight={
         showPassword ? (
           <Icons
-            name="eye"
+            name="eye-outline"
             onClick={() => {
               setShowPassword(!showPassword);
             }}
@@ -22,7 +22,7 @@ export const InputPassword = ({ ...props }: IInputPasswordProps) => {
           />
         ) : (
           <Icons
-            name="eye-slash"
+            name="eye-outline-slash"
             onClick={() => {
               setShowPassword(!showPassword);
             }}
