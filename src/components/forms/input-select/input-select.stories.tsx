@@ -21,7 +21,7 @@ const Template: StoryFn<typeof InputSelect> = (args) => {
     <InputSelect
       {...args}
       value={selectedOption}
-      onOptionSelect={handleOptionSelect}
+      onChange={handleOptionSelect}
     />
   );
 };

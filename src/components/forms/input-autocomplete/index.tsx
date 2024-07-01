@@ -3,17 +3,18 @@ import { useState, ChangeEvent, KeyboardEvent } from "react";
 import InputText, { IInputTextProps } from "../input-text";
 import useClickOutside from "@/hooks/useClickOutside";
 
-export interface IInputAutocompleteProps extends IInputTextProps {
+export interface IInputAutocompleteProps
+  extends Omit<IInputTextProps, "onChange"> {
   classNameOption?: string;
   options: string[];
-  onOptionSelect?: (value: string) => void;
+  onChange?: (value: string) => void;
   emptyMessage?: string;
 }
 
 export const InputAutocomplete = ({
   classNameOption,
   options,
-  onOptionSelect,
+  onChange,
   emptyMessage = "No options available",
   ...props
 }: IInputAutocompleteProps) => {
@@ -35,8 +36,8 @@ export const InputAutocomplete = ({
   const handleOptionClick = (option: string) => {
     setInputValue(option);
     setIsOpen(false);
-    if (onOptionSelect) {
-      onOptionSelect(option);
+    if (onChange) {
+      onChange(option);
     }
   };
 

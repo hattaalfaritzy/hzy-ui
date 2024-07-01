@@ -1,35 +1,48 @@
 import { cn } from "@/utils/cn";
-import { useState, type ChangeEvent, type KeyboardEvent } from "react";
+import {
+  useState,
+  type ChangeEvent,
+  type KeyboardEvent,
+  useEffect,
+} from "react";
 import InputText, { type IInputTextProps } from "../input-text";
 import useClickOutside from "@/hooks/useClickOutside";
 
-export interface IInputSelectProps extends IInputTextProps {
+export interface IInputSelectProps extends Omit<IInputTextProps, "onChange"> {
   classNameOption?: string;
   options: string[];
-  onOptionSelect?: (value: string) => void;
   emptyMessage?: string;
+  onChange?: (value: string) => void;
 }
 
 export const InputSelect = ({
   classNameOption,
   options,
-  onOptionSelect,
   emptyMessage = "No options available",
+  value,
+  onChange,
   ...props
 }: IInputSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>(value?.toString() || "");
+
+  useEffect(() => {
+    setInputValue(value?.toString() || "");
+  }, [value]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setInputValue(value);
+    const newValue = event.target.value;
+    setInputValue(newValue);
+    if (onChange) {
+      onChange(newValue);
+    }
   };
 
   const handleOptionClick = (option: string) => {
     setInputValue(option);
     setIsOpen(false);
-    if (onOptionSelect) {
-      onOptionSelect(option);
+    if (onChange) {
+      onChange(option);
     }
   };
 
@@ -39,8 +52,8 @@ export const InputSelect = ({
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && options.includes(inputValue)) {
-      if (onOptionSelect) {
-        onOptionSelect(inputValue);
+      if (onChange) {
+        onChange(inputValue);
       }
     }
   };

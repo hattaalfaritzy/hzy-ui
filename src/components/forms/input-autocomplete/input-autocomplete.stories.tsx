@@ -20,7 +20,7 @@ const Template: StoryFn<typeof InputAutocomplete> = (args) => {
     <InputAutocomplete
       {...args}
       value={selectedOption}
-      onOptionSelect={handleOptionSelect}
+      onChange={handleOptionSelect}
     />
   );
 };
