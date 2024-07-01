@@ -80,12 +80,8 @@
                 "changelogFile": "docs/CHANGELOG.md"
             }
         ],
-        [
-            "@semantic-release/npm",
-            {
-              "tarballDir": "dist"
-            }
-        ],
+        "@semantic-release/npm",
+        "@semantic-release/github",
         [
             "@semantic-release/git",
             {
