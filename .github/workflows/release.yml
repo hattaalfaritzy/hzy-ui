@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
-          registry-url: "https://npm.pkg.github.com"
+          registry-url: "https://registry.npmjs.org"
           scope: "@hattaalfaritzy"
 
       - name: Install and build dependencies
@@ -38,7 +38,7 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-        # create release CHANGELOG
+      # create release CHANGELOG
       - name: Create changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
@@ -60,11 +60,11 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
-      - name: Authenticate to GitHub Packages
-        run: echo "//https://registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Authenticate to npm
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      # publish package to NPM after create release new version and tag
-      - name: Publish package to NPM Package
+      # publish package to npm after create release new version and tag
+      - name: Publish package to npm
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
