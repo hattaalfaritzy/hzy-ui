@@ -4,7 +4,6 @@
   "author": "Muhammad Hatta Alfaritzy <muh.hara16@gmail.com>",
   "description": "My custom design system tailored for my thesis project.",
   "license": "MIT",
-  "private": false,
   "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
