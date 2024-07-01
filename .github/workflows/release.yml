@@ -63,7 +63,7 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
       - name: Authenticate to GitHub Packages
-        run: echo "//https://registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.G_TOKEN }}" > ~/.npmrc
 
       # publish package to npm after create release new version and tag
       - name: Publish package to npm package
