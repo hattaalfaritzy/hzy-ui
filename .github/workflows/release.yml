@@ -43,7 +43,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.G_TOKEN }}
           output-file: "docs/CHANGELOG.md"
           create-summary: true
           skip-ci: false
@@ -54,8 +54,7 @@ jobs:
         uses: actions/create-release@v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
@@ -73,6 +72,6 @@ jobs:
       # create semantic release
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
         run: npx semantic-release
