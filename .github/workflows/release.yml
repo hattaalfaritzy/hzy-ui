@@ -60,10 +60,6 @@ jobs:
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
-      # authenticate to npm package
-      - name: Authenticate to npm package
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}" > ~/.npmrc
-
       # publish package to npm after create release new version and tag
       - name: Publish package to npm package
         run: npm publish --access public
