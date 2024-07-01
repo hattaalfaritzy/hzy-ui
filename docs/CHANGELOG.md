@@ -1,3 +1,12 @@
+# [1.16.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.11...v1.16.0) (2024-07-01)
+
+
+### Features
+
+* add new icons ([ac9a3b4](https://github.com/hattaalfaritzy/hzy-ui/commit/ac9a3b4fdfd37691a3c93fbec00c0ef40db92a78))
+
+
+
 ## [1.15.11](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.10...v1.15.11) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * auth release ([228c945](https://github.com/hattaalfaritzy/hzy-ui/commit/228c945e29808bd1acfccdd047daf66480112411))
-
-
-
-## [1.15.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.6...v1.15.7) (2024-07-01)
-
-
-### Bug Fixes
-
-* auth release ([a15704a](https://github.com/hattaalfaritzy/hzy-ui/commit/a15704afa37af4a086747089a89e38af73a6963d))
 
 
 
