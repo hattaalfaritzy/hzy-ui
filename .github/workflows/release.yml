@@ -1,8 +1,8 @@
 name: Release
+
 on:
   release:
     types: [published]
-
   push:
     branches:
       - master
@@ -24,8 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Setup NodeJS
         uses: actions/setup-node@v4
@@ -35,10 +33,20 @@ jobs:
           scope: "@hattaalfaritzy"
 
       - name: Install and build dependencies
-        run: npm install && npm run build
+        run: |
+          npm install
+          npm run build
 
       - name: Build Storybook
         run: npm run build-storybook
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "muh.hara16@gmail.com"
+          git config --global user.name "Hatta Alfaritzy"
+
+      - name: Check Git Status
+        run: git status
 
       # create release CHANGELOG
       - name: Create changelog
@@ -66,7 +74,7 @@ jobs:
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.G_TOKEN }}" > ~/.npmrc
 
       # publish package to npm after create release new version and tag
-      - name: Publish package to npm package
+      - name: Publish package to npm
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
