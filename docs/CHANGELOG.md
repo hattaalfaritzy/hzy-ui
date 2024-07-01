@@ -1,3 +1,12 @@
+## [1.14.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.0...v1.14.1) (2024-07-01)
+
+
+### Bug Fixes
+
+* release ([488d823](https://github.com/hattaalfaritzy/hzy-ui/commit/488d82316749c8bfa59d9628a231db6646e85bab))
+
+
+
 # [1.14.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.4...v1.14.0) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * outside click select n autocomplete ([c192d01](https://github.com/hattaalfaritzy/hzy-ui/commit/c192d01a350b96b9be771d548eab9d28d6c12f37))
-
-
-
-## [1.13.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.0...v1.13.1) (2024-06-30)
-
-
-### Bug Fixes
-
-* modal classname, n input text label, n btn rounded ([42bd99f](https://github.com/hattaalfaritzy/hzy-ui/commit/42bd99f8e0c8a18bc83f02019c0016e4fd37222a))
 
 
 
