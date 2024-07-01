@@ -1,3 +1,12 @@
+## [1.15.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.5...v1.15.6) (2024-07-01)
+
+
+### Bug Fixes
+
+* auth release ([bc9bbd1](https://github.com/hattaalfaritzy/hzy-ui/commit/bc9bbd1857316886f3e065e1bc809bc68ae67413))
+
+
+
 ## [1.15.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.4...v1.15.5) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * workflows n conventional changelog ([2f8d3f8](https://github.com/hattaalfaritzy/hzy-ui/commit/2f8d3f82e14c1e7ec7e92745c716ee114b713c2b))
-
-
-
-## [1.15.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.0...v1.15.1) (2024-07-01)
-
-
-### Bug Fixes
-
-* workflows ([ac68721](https://github.com/hattaalfaritzy/hzy-ui/commit/ac6872133189f5d24c52272d65a8874f862b23c3))
 
 
 
