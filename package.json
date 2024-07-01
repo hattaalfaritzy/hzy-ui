@@ -30,8 +30,7 @@
     "url": "https://github.com/hattaalfaritzy/hzy-ui.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "tag": "latest"
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
