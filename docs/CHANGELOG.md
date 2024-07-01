@@ -1,3 +1,12 @@
+## [1.15.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.4...v1.15.5) (2024-07-01)
+
+
+### Bug Fixes
+
+* remove hugo ([617c5c6](https://github.com/hattaalfaritzy/hzy-ui/commit/617c5c6d4b939a6749cab133459bffcf8517a23d))
+
+
+
 ## [1.15.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.3...v1.15.4) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * workflows ([ac68721](https://github.com/hattaalfaritzy/hzy-ui/commit/ac6872133189f5d24c52272d65a8874f862b23c3))
-
-
-
-# [1.15.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.13...v1.15.0) (2024-07-01)
-
-
-### Features
-
-* add new variants for icons ([ccddba5](https://github.com/hattaalfaritzy/hzy-ui/commit/ccddba5c3540a707181d139cff7b2bc579d5fed5))
 
 
 
