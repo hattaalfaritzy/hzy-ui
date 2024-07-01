@@ -1,3 +1,12 @@
+## [1.13.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.2...v1.13.3) (2024-06-30)
+
+
+### Bug Fixes
+
+* scrolling input select n autocomplete ([d3d83c2](https://github.com/hattaalfaritzy/hzy-ui/commit/d3d83c23cd6f8b4d7eb5e292beb3c541c66321b5))
+
+
+
 ## [1.13.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.1...v1.13.2) (2024-06-30)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * add close solid n outline icons ([1a96103](https://github.com/hattaalfaritzy/hzy-ui/commit/1a96103e40f82a245b58c5e23694414140b4d09d))
-
-
-
-# [1.12.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.11.0...v1.12.0) (2024-06-24)
-
-
-### Features
-
-* stories table pagination n fix paginations bugs ([e6e20e2](https://github.com/hattaalfaritzy/hzy-ui/commit/e6e20e29a953158516da6df4e05e03e78c5b0b1b))
 
 
 
