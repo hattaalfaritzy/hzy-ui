@@ -1,3 +1,12 @@
+## [1.14.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.4...v1.14.5) (2024-07-01)
+
+
+### Bug Fixes
+
+* release ([a7c909e](https://github.com/hattaalfaritzy/hzy-ui/commit/a7c909e0919c9f76958943ba4ccc7101c0386646))
+
+
+
 ## [1.14.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.3...v1.14.4) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * release ([488d823](https://github.com/hattaalfaritzy/hzy-ui/commit/488d82316749c8bfa59d9628a231db6646e85bab))
-
-
-
-# [1.14.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.4...v1.14.0) (2024-07-01)
-
-
-### Features
-
-* publish to npm package ([37c051e](https://github.com/hattaalfaritzy/hzy-ui/commit/37c051ec9850f62e1ae63ab53f275fbd2ae85b24))
 
 
 
