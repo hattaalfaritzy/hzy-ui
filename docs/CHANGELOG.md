@@ -1,3 +1,12 @@
+## [1.15.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.0...v1.15.1) (2024-07-01)
+
+
+### Bug Fixes
+
+* workflows ([ac68721](https://github.com/hattaalfaritzy/hzy-ui/commit/ac6872133189f5d24c52272d65a8874f862b23c3))
+
+
+
 # [1.15.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.13...v1.15.0) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * semantic ([0ff30c1](https://github.com/hattaalfaritzy/hzy-ui/commit/0ff30c193672781b827b982f0922c0c2818d3517))
-
-
-
-## [1.14.10](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.14.9...v1.14.10) (2024-07-01)
-
-
-### Bug Fixes
-
-* semantic ([cca4323](https://github.com/hattaalfaritzy/hzy-ui/commit/cca43234c1e83578975eef6b118bf60920380c4e))
 
 
 
