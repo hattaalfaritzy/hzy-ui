@@ -1,3 +1,12 @@
+## [1.13.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.3...v1.13.4) (2024-07-01)
+
+
+### Bug Fixes
+
+* onchange fix ([7d82d7d](https://github.com/hattaalfaritzy/hzy-ui/commit/7d82d7d0acde77bc1ab6ab662a9025e9e9e9af97))
+
+
+
 ## [1.13.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.13.2...v1.13.3) (2024-06-30)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create comps autocomplete n input select, and bug fix ([61ab7a3](https://github.com/hattaalfaritzy/hzy-ui/commit/61ab7a3e271f65e825c4fcc6c5b7bfaa6f61911b))
-
-
-
-## [1.12.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.12.0...v1.12.1) (2024-06-24)
-
-
-### Bug Fixes
-
-* add close solid n outline icons ([1a96103](https://github.com/hattaalfaritzy/hzy-ui/commit/1a96103e40f82a245b58c5e23694414140b4d09d))
 
 
 
