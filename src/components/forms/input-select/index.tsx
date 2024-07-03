@@ -7,6 +7,7 @@ import {
 } from "react";
 import InputText, { type IInputTextProps } from "../input-text";
 import useClickOutside from "@/hooks/useClickOutside";
+import { Icons } from "@/components/commons";
 
 export interface IInputSelectProps extends Omit<IInputTextProps, "onChange"> {
   classNameOption?: string;
@@ -68,6 +69,16 @@ export const InputSelect = ({
         onChange={handleInputChange}
         onFocus={toggleDropdown}
         onKeyDown={handleKeyDown}
+        iconRight={
+          <Icons
+            name="caret-down"
+            className={cn(
+              "fill-[#C4C4C4] cursor-pointer",
+              isOpen && "transform rotate-180",
+              props.errorMessage && "fill-error"
+            )}
+          />
+        }
         readOnly
       />
       {isOpen && (

@@ -1,7 +1,13 @@
 import { cn } from "@/utils/cn";
-import { useState, ChangeEvent, KeyboardEvent } from "react";
-import InputText, { IInputTextProps } from "../input-text";
+import {
+  useState,
+  type ChangeEvent,
+  type KeyboardEvent,
+  useEffect,
+} from "react";
+import InputText, { type IInputTextProps } from "../input-text";
 import useClickOutside from "@/hooks/useClickOutside";
+import { Icons } from "@/components/commons";
 
 export interface IInputAutocompleteProps
   extends Omit<IInputTextProps, "onChange"> {
@@ -14,27 +20,38 @@ export interface IInputAutocompleteProps
 export const InputAutocomplete = ({
   classNameOption,
   options,
-  onChange,
   emptyMessage = "No options available",
+  value,
+  onChange,
   ...props
 }: IInputAutocompleteProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-  const [filteredOptions, setFilteredOptions] = useState<string[]>(options);
+  const [inputValue, setInputValue] = useState<string>(value?.toString() || "");
+  const [filteredOptions, setFilteredOptions] = useState<string[]>([]);
+
+  useEffect(() => {
+    setInputValue(value?.toString() || "");
+  }, [value, options]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setInputValue(value);
 
+    if (onChange) {
+      onChange(value);
+    }
+
     const newFilteredOptions = options.filter((option) =>
       option.toLowerCase().includes(value.toLowerCase())
     );
+
     setFilteredOptions(newFilteredOptions);
     setIsOpen(true);
   };
 
   const handleOptionClick = (option: string) => {
     setInputValue(option);
+    setFilteredOptions([option]);
     setIsOpen(false);
     if (onChange) {
       onChange(option);
@@ -46,7 +63,9 @@ export const InputAutocomplete = ({
   };
 
   const handleInputBlur = () => {
-    setTimeout(() => setIsOpen(false), 100);
+    if (!isOpen) {
+      setIsOpen(false);
+    }
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -63,6 +82,7 @@ export const InputAutocomplete = ({
       const newFilteredOptions = options.filter((option) =>
         option.toLowerCase().includes(inputValue.toLowerCase())
       );
+
       setFilteredOptions(newFilteredOptions);
       setIsOpen(true);
     } else {
@@ -82,6 +102,16 @@ export const InputAutocomplete = ({
         onBlur={handleInputBlur}
         onKeyDown={handleKeyDown}
         onClick={handleInputClick}
+        iconRight={
+          <Icons
+            name="caret-down"
+            className={cn(
+              "fill-[#C4C4C4] cursor-pointer",
+              isOpen && "transform rotate-180",
+              props.errorMessage && "fill-error"
+            )}
+          />
+        }
       />
       {isOpen && (
         <ul

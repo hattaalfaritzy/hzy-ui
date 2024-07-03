@@ -52,7 +52,7 @@ export const InputText = ({
         )}
       >
         {iconLeft && (
-          <div className={cn("flex", rounded ? "pl-4" : "pl-3")}>
+          <div className={cn("absolute", rounded ? "left-4" : "left-3")}>
             {iconLeft}
           </div>
         )}
@@ -61,12 +61,14 @@ export const InputText = ({
           className={cn(
             "w-full h-full bg-transparent p-2.5 px-3 outline-none rounded-l",
             rounded ? "rounded-full px-4" : "rounded-lg",
+            iconRight ? (rounded ? "pr-12" : "pr-10") : "",
+            iconLeft ? (rounded ? "pl-12" : "pl-10") : "",
             !disabled && "cursor-pointer"
           )}
           {...props}
         />
         {iconRight && (
-          <div className={cn("flex", rounded ? "pr-4" : "pr-3")}>
+          <div className={cn("absolute", rounded ? "right-4" : "right-3")}>
             {iconRight}
           </div>
         )}

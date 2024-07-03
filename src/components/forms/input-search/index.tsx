@@ -11,7 +11,7 @@ export const InputSearch = ({ ...props }: IInputSearchProps) => {
       iconRight={
         <Icons
           name="search"
-          className={cn(props.errorMessage && "fill-error")}
+          className={cn("fill-[#C4C4C4]", props.errorMessage && "fill-error")}
         />
       }
       {...props}
