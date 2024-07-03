@@ -1,3 +1,12 @@
+## [1.16.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.1...v1.16.2) (2024-07-03)
+
+
+### Bug Fixes
+
+* autocomplete change data, n icons autocomplete, select, n search ([b968b07](https://github.com/hattaalfaritzy/hzy-ui/commit/b968b0787302438a4add090157f80a20961664f4))
+
+
+
 ## [1.16.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.0...v1.16.1) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove tags ([9c80b1f](https://github.com/hattaalfaritzy/hzy-ui/commit/9c80b1f7d90c7c9d68b95ca80e747a1792c02ac6))
-
-
-
-## [1.15.9](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.8...v1.15.9) (2024-07-01)
-
-
-### Bug Fixes
-
-* semantic ([39e9d93](https://github.com/hattaalfaritzy/hzy-ui/commit/39e9d93f28cf878f1b8e9915289f0bd2c50df06f))
 
 
 
