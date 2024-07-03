@@ -1,3 +1,12 @@
+## [1.16.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.0...v1.16.1) (2024-07-01)
+
+
+### Bug Fixes
+
+* icons attribute ([ce4a9e3](https://github.com/hattaalfaritzy/hzy-ui/commit/ce4a9e3e247355102d3c31bc5c41ce8b12d90b85))
+
+
+
 # [1.16.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.11...v1.16.0) (2024-07-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * semantic ([39e9d93](https://github.com/hattaalfaritzy/hzy-ui/commit/39e9d93f28cf878f1b8e9915289f0bd2c50df06f))
-
-
-
-## [1.15.8](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.7...v1.15.8) (2024-07-01)
-
-
-### Bug Fixes
-
-* auth release ([228c945](https://github.com/hattaalfaritzy/hzy-ui/commit/228c945e29808bd1acfccdd047daf66480112411))
 
 
 
