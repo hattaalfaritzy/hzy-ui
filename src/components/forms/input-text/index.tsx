@@ -32,9 +32,10 @@ export const InputText = ({
     <div className={cn("flex flex-col w-full", classNameWrapper)}>
       {label && (
         <div
-          className={
-            (cn("block font-semibold text-sm text-dark pb-1.5"), classNameLabel)
-          }
+          className={cn(
+            "block font-semibold text-sm text-dark pb-1.5",
+            classNameLabel
+          )}
         >
           {label}
           {label && important && (

@@ -32,7 +32,7 @@ export const InputCheckbox = ({
 }: IInputCheckboxProps) => {
   const styleByVariant = {
     default: "flex-row justify-center space-x-2",
-    reverse: "flex-row flex-row-reverse justify-center",
+    reverse: "flex-row-reverse justify-center",
   }[variant];
 
   return (
