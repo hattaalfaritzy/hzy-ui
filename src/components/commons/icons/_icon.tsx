@@ -2,6 +2,7 @@ import type { ComponentType, MouseEventHandler, SVGAttributes } from "react";
 
 import Activity from "./libs/activity";
 import BrokenImage from "./libs/broken-image";
+import BusMarker from "./libs/bus-marker";
 import BusStop from "./libs/bus-stop";
 import CaretDown from "./libs/caret-down";
 import CaretUp from "./libs/caret-up";
@@ -18,14 +19,19 @@ import EyeOutline from "./libs/eye-outline";
 import EyeSlashOutline from "./libs/eye-slash-outline";
 import EyeSlash from "./libs/eye-slash";
 import Eye from "./libs/eye";
+import FilterList from "./libs/filter-list";
 import Gear from "./libs/gear";
 import Home from "./libs/home";
 import InfoOutline from "./libs/info-outline";
 import Info from "./libs/info";
 import List from "./libs/list";
 import Loading from "./libs/loading";
+import LRT from "./libs/lrt";
 import Marker from "./libs/marker";
+import MRT from "./libs/mrt";
 import Search from "./libs/search";
+import StoreMarker from "./libs/store-marker";
+import Store from "./libs/store";
 import Train from "./libs/train";
 import Trash from "./libs/trash";
 import UserMultiple from "./libs/user-multiple";
@@ -39,6 +45,7 @@ export interface ISvgProps extends SVGAttributes<SVGElement> {
 export type IconName =
   | "activity"
   | "broken-image"
+  | "bus-marker"
   | "bus-stop"
   | "caret-down"
   | "caret-up"
@@ -55,14 +62,19 @@ export type IconName =
   | "eye-outline-slash"
   | "eye-slash"
   | "eye"
+  | "filter-list"
   | "gear"
   | "home"
   | "info-outline"
   | "info"
   | "list"
   | "loading"
+  | "lrt"
   | "marker"
+  | "mrt"
   | "search"
+  | "store-marker"
+  | "store"
   | "train"
   | "trash"
   | "user-multiple"
@@ -73,6 +85,7 @@ type IconComponent = ComponentType<ISvgProps>;
 export const icons: Record<string, IconComponent> = {
   activity: Activity,
   "broken-image": BrokenImage,
+  "bus-marker": BusMarker,
   "bus-stop": BusStop,
   "caret-down": CaretDown,
   "caret-up": CaretUp,
@@ -89,14 +102,19 @@ export const icons: Record<string, IconComponent> = {
   "eye-outline": EyeOutline,
   "eye-slash": EyeSlash,
   eye: Eye,
+  "filter-list": FilterList,
   gear: Gear,
   home: Home,
   "info-outline": InfoOutline,
   info: Info,
   list: List,
   loading: Loading,
+  lrt: LRT,
   marker: Marker,
+  mrt: MRT,
   search: Search,
+  "store-marker": StoreMarker,
+  store: Store,
   train: Train,
   trash: Trash,
   "user-multiple": UserMultiple,
