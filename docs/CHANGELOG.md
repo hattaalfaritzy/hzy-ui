@@ -1,3 +1,12 @@
+## [1.17.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.1...v1.17.2) (2024-07-08)
+
+
+### Bug Fixes
+
+* import forms ([da4839b](https://github.com/hattaalfaritzy/hzy-ui/commit/da4839b65e73cead7cfc35819dad16307a0ae016))
+
+
+
 ## [1.17.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.0...v1.17.1) (2024-07-08)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * icons attribute ([ce4a9e3](https://github.com/hattaalfaritzy/hzy-ui/commit/ce4a9e3e247355102d3c31bc5c41ce8b12d90b85))
-
-
-
-# [1.16.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.11...v1.16.0) (2024-07-01)
-
-
-### Features
-
-* add new icons ([ac9a3b4](https://github.com/hattaalfaritzy/hzy-ui/commit/ac9a3b4fdfd37691a3c93fbec00c0ef40db92a78))
 
 
 
