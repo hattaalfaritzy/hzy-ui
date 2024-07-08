@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { Message } from "../../commons";
+import { Message } from "@/components/commons";
 import type { InputHTMLAttributes, ReactNode } from "react";
 
 export interface IInputTextProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -32,9 +32,9 @@ export const InputText = ({
     <div className={cn("flex flex-col w-full", classNameWrapper)}>
       {label && (
         <div
-          className={cn(
-            classNameLabel || "block font-semibold text-sm text-dark pb-1.5"
-          )}
+          className={
+            (cn("block font-semibold text-sm text-dark pb-1.5"), classNameLabel)
+          }
         >
           {label}
           {label && important && (

@@ -31,9 +31,9 @@ export const InputTextarea = ({
     <div className={cn("flex flex-col w-full", classNameWrapper)}>
       {label && (
         <div
-          className={cn(
-            classNameLabel || "block font-semibold text-sm text-dark pb-1.5"
-          )}
+          className={
+            (cn("block font-semibold text-sm text-dark pb-1.5"), classNameLabel)
+          }
         >
           {label}
           {label && important && (
