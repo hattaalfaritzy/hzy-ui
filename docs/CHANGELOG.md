@@ -1,3 +1,12 @@
+# [1.17.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.2...v1.17.0) (2024-07-08)
+
+
+### Features
+
+* create new form input-switch ([4a139cd](https://github.com/hattaalfaritzy/hzy-ui/commit/4a139cdeac170fd21177b9b64b5f081b0674bb39))
+
+
+
 ## [1.16.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.1...v1.16.2) (2024-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * github token release ([45a77eb](https://github.com/hattaalfaritzy/hzy-ui/commit/45a77eb9eaab10f1ae11990d5a032fab81b0d7bd))
-
-
-
-## [1.15.10](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.15.9...v1.15.10) (2024-07-01)
-
-
-### Bug Fixes
-
-* remove tags ([9c80b1f](https://github.com/hattaalfaritzy/hzy-ui/commit/9c80b1f7d90c7c9d68b95ca80e747a1792c02ac6))
 
 
 
