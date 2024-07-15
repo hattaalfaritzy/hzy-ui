@@ -1,3 +1,7 @@
+## [1.17.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.4...v1.17.5) (2024-07-15)
+
+
+
 ## [1.17.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.3...v1.17.4) (2024-07-15)
 
 
@@ -26,15 +30,6 @@
 ### Bug Fixes
 
 * add additional icons ([f1a6945](https://github.com/hattaalfaritzy/hzy-ui/commit/f1a69451470e9caae5d02097454719788f0e35b0))
-
-
-
-# [1.17.0](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.2...v1.17.0) (2024-07-08)
-
-
-### Features
-
-* create new form input-switch ([4a139cd](https://github.com/hattaalfaritzy/hzy-ui/commit/4a139cdeac170fd21177b9b64b5f081b0674bb39))
 
 
 
