@@ -23,6 +23,7 @@ export const Message = ({
   if (!label) return null;
 
   const iconName: IconName = messageStyles.getIconType(variant);
+
   const style = messageStyles.getStylesType(variant);
 
   return (
