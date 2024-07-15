@@ -1,3 +1,7 @@
+## [1.17.4](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.3...v1.17.4) (2024-07-15)
+
+
+
 ## [1.17.3](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.2...v1.17.3) (2024-07-08)
 
 
@@ -31,15 +35,6 @@
 ### Features
 
 * create new form input-switch ([4a139cd](https://github.com/hattaalfaritzy/hzy-ui/commit/4a139cdeac170fd21177b9b64b5f081b0674bb39))
-
-
-
-## [1.16.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.16.1...v1.16.2) (2024-07-03)
-
-
-### Bug Fixes
-
-* autocomplete change data, n icons autocomplete, select, n search ([b968b07](https://github.com/hattaalfaritzy/hzy-ui/commit/b968b0787302438a4add090157f80a20961664f4))
 
 
 
