@@ -1,3 +1,13 @@
+## [1.17.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.5...v1.17.6) (2024-07-15)
+
+
+### Bug Fixes
+
+* **master:** add new lines enter ([4a12dc1](https://github.com/hattaalfaritzy/hzy-ui/commit/4a12dc1c0120fa54dbfb105421b6e83358555b3f))
+* **master:** add new lines enter ([7df69eb](https://github.com/hattaalfaritzy/hzy-ui/commit/7df69ebf038b5d94529e327d724ab2d9a4d6b9e5))
+
+
+
 ## [1.17.5](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.4...v1.17.5) (2024-07-15)
 
 
@@ -21,15 +31,6 @@
 ### Bug Fixes
 
 * import forms ([da4839b](https://github.com/hattaalfaritzy/hzy-ui/commit/da4839b65e73cead7cfc35819dad16307a0ae016))
-
-
-
-## [1.17.1](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.0...v1.17.1) (2024-07-08)
-
-
-### Bug Fixes
-
-* add additional icons ([f1a6945](https://github.com/hattaalfaritzy/hzy-ui/commit/f1a69451470e9caae5d02097454719788f0e35b0))
 
 
 
