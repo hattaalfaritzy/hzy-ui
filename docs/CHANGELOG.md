@@ -1,3 +1,7 @@
+## [1.17.7](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.6...v1.17.7) (2024-07-24)
+
+
+
 ## [1.17.6](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.5...v1.17.6) (2024-07-15)
 
 
@@ -22,15 +26,6 @@
 ### Bug Fixes
 
 * input switch bug ([4b32584](https://github.com/hattaalfaritzy/hzy-ui/commit/4b32584a86ae692c9d8895a2e3d00d8375f7a9f9))
-
-
-
-## [1.17.2](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.1...v1.17.2) (2024-07-08)
-
-
-### Bug Fixes
-
-* import forms ([da4839b](https://github.com/hattaalfaritzy/hzy-ui/commit/da4839b65e73cead7cfc35819dad16307a0ae016))
 
 
 
