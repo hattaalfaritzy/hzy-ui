@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import { useState } from "react";
-import { Icons } from "@/components/commons";
+import { Icons, Message } from "@/components/commons";
 import type { InputHTMLAttributes } from "react";
 
 export interface IInputDropzone extends InputHTMLAttributes<HTMLInputElement> {
@@ -116,7 +116,8 @@ export const InputDropzone = ({
             "bg-[#2842C8]/5 border-dark": isDragActive,
             "bg-[#2842C8]/5 border-[#001A41]": !isDragActive && !isDragReject,
             "border-red-500": isDragReject,
-          }
+          },
+          errorMessage && "border-error focus:border-error focus:ring-0"
         )}
       >
         <input
@@ -129,12 +130,25 @@ export const InputDropzone = ({
           {...props}
         />
         <div className="flex flex-row justify-center items-center w-full h-full space-x-2">
-          <Icons name="file-upload" className="w-6 h-6 fill-dark" />
+          <Icons
+            name="file-upload"
+            className={cn("w-6 h-6 fill-dark", errorMessage && "fill-error")}
+          />
           <div className="flex flex-col justify-start items-start">
-            <span className="text-dark font-medium text-xs">
+            <span
+              className={cn(
+                "text-dark font-medium text-xs",
+                errorMessage && "text-error"
+              )}
+            >
               Choose Document
             </span>
-            <span className="text-[#888888] font-light text-xs">
+            <span
+              className={cn(
+                "text-[#888888] font-light text-xs",
+                errorMessage && "text-error"
+              )}
+            >
               {isDragActive
                 ? "Drop the files here..."
                 : "Drag & drop files here, or click to select files"}
@@ -144,7 +158,10 @@ export const InputDropzone = ({
                 {fileNames.map((name, index) => (
                   <span
                     key={index}
-                    className="text-[#888888] font-light text-xs"
+                    className={cn(
+                      "text-[#888888] font-light text-xs",
+                      errorMessage && "text-error"
+                    )}
                   >
                     {name}
                   </span>
@@ -154,6 +171,7 @@ export const InputDropzone = ({
           </div>
         </div>
       </div>
+      {errorMessage && <Message className="mt-2" label={errorMessage} />}
     </div>
   );
 };
