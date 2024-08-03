@@ -30,10 +30,12 @@ import Loading from "./libs/loading";
 import LRT from "./libs/lrt";
 import Marker from "./libs/marker";
 import MRT from "./libs/mrt";
+import PaperClip from "./libs/paper-clip";
 import Search from "./libs/search";
 import StoreMarker from "./libs/store-marker";
 import Store from "./libs/store";
 import Train from "./libs/train";
+import TrashOutline from "./libs/trash-outline";
 import Trash from "./libs/trash";
 import UserMultiple from "./libs/user-multiple";
 import User from "./libs/user";
@@ -74,10 +76,12 @@ export type IconName =
   | "lrt"
   | "marker"
   | "mrt"
+  | "paper-clip"
   | "search"
   | "store-marker"
   | "store"
   | "train"
+  | "trash-outline"
   | "trash"
   | "user-multiple"
   | "user";
@@ -115,10 +119,12 @@ export const icons: Record<string, IconComponent> = {
   lrt: LRT,
   marker: Marker,
   mrt: MRT,
+  "paper-clip": PaperClip,
   search: Search,
   "store-marker": StoreMarker,
   store: Store,
   train: Train,
+  "trash-outline": TrashOutline,
   trash: Trash,
   "user-multiple": UserMultiple,
   user: User,

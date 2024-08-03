@@ -8,12 +8,14 @@ export interface IInputDropzone extends InputHTMLAttributes<HTMLInputElement> {
   classNameLabel?: string;
   classNameWrapper?: string;
   label?: string;
+  notes?: string;
   errorMessage?: string;
   onFilesDrop: (files: FileList) => void;
   accept?: string;
   maxFiles?: number;
   important?: boolean;
   disabled?: boolean;
+  multiple?: boolean;
 }
 
 export const InputDropzone = ({
@@ -21,12 +23,14 @@ export const InputDropzone = ({
   classNameLabel,
   classNameWrapper,
   label,
+  notes,
   errorMessage,
   onFilesDrop,
   accept = "",
-  maxFiles = 1,
+  maxFiles = 3,
   important = false,
   disabled,
+  multiple = false,
   ...props
 }: IInputDropzone) => {
   const [isDragActive, setIsDragActive] = useState(false);
@@ -47,6 +51,13 @@ export const InputDropzone = ({
     setIsDragActive(false);
   };
 
+  // Utility function to create a FileList from an array of File objects
+  function createFileList(files: File[]): FileList {
+    const dataTransfer = new DataTransfer();
+    files.forEach((file) => dataTransfer.items.add(file));
+    return dataTransfer.files;
+  }
+
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     setIsDragActive(false);
@@ -54,7 +65,9 @@ export const InputDropzone = ({
 
     if (
       accept &&
-      !Array.from(files).every((file) => accept.split(",").includes(file.type))
+      !Array.from(files).every(
+        (file) => file && accept.split(",").includes(file.type)
+      )
     ) {
       setIsDragReject(true);
       return;
@@ -62,24 +75,60 @@ export const InputDropzone = ({
 
     setIsDragReject(false);
 
-    if (files.length > maxFiles) {
-      return;
-    }
+    const newFiles = Array.from(files).filter((file): file is File => !!file);
 
-    setFileNames(Array.from(files).map((file) => file.name));
-    onFilesDrop(files);
+    const truncatedFiles = multiple
+      ? newFiles.slice(0, maxFiles)
+      : [newFiles[0]];
+
+    // Ensure truncatedFiles contains only File objects
+    const validFiles = truncatedFiles.filter((file): file is File => !!file);
+
+    const combinedFileNames = multiple
+      ? [...fileNames, ...validFiles.map((file) => file.name)].slice(
+          0,
+          maxFiles
+        )
+      : validFiles.map((file) => file.name);
+
+    setFileNames(combinedFileNames);
+
+    // Convert the new files array to FileList
+    const fileList = createFileList(validFiles);
+    onFilesDrop(fileList);
   };
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
-      if (files.length > maxFiles) {
-        return;
-      }
+      const newFiles = Array.from(files).filter((file): file is File => !!file);
 
-      setFileNames(Array.from(files).map((file) => file.name));
-      onFilesDrop(files);
+      const truncatedFiles = multiple
+        ? newFiles.slice(0, maxFiles)
+        : [newFiles[0]];
+
+      // Ensure truncatedFiles contains only File objects
+      const validFiles = truncatedFiles.filter((file): file is File => !!file);
+
+      const combinedFileNames = multiple
+        ? [...fileNames, ...validFiles.map((file) => file.name)].slice(
+            0,
+            maxFiles
+          )
+        : validFiles.map((file) => file.name);
+
+      setFileNames(combinedFileNames);
+
+      // Convert the new files array to FileList
+      const fileList = createFileList(validFiles);
+      onFilesDrop(fileList);
     }
+  };
+
+  const handleFileDelete = (fileName: string) => {
+    setFileNames((prevFileNames) =>
+      prevFileNames.filter((name) => name !== fileName)
+    );
   };
 
   const triggerFileInputClick = () => {
@@ -104,6 +153,40 @@ export const InputDropzone = ({
           )}
         </div>
       )}
+      <div className={cn("block font-light text-sm text-[#888888] pb-1.5")}>
+        *{" "}
+        {notes ? (
+          notes
+        ) : (
+          <>
+            Make sure your document
+            <span className="text-[#001A41]">
+              {" "}
+              has been saved before uploading.
+            </span>
+          </>
+        )}
+      </div>
+      {fileNames.length > 0 && (
+        <div className="flex flex-col w-full pb-2 space-y-1">
+          {fileNames.map((data, index) => (
+            <div
+              key={index}
+              className="flex flex-row justify-between items-center w-full p-1.5 bg-[#2842C8]/5 rounded"
+            >
+              <div className="flex flex-row justify-start items-center space-x-2">
+                <Icons name="paper-clip" className="fill-dark w-4 h-4" />
+                <span className="font-medium text-xs">{data}</span>
+              </div>
+              <Icons
+                name="trash-outline"
+                className="fill-error w-4 h-4 cursor-pointer"
+                onClick={() => handleFileDelete(data)}
+              />
+            </div>
+          ))}
+        </div>
+      )}
       <div
         onDragOver={handleDragOver}
         onDragEnter={handleDragEnter}
@@ -124,7 +207,7 @@ export const InputDropzone = ({
           id="file-input"
           type="file"
           accept={accept}
-          multiple={maxFiles > 1}
+          multiple={multiple}
           onChange={handleFileSelect}
           className="hidden"
           {...props}
@@ -153,21 +236,6 @@ export const InputDropzone = ({
                 ? "Drop the files here..."
                 : "Drag & drop files here, or click to select files"}
             </span>
-            {fileNames.length > 0 && (
-              <div className="flex flex-col justify-start items-start">
-                {fileNames.map((name, index) => (
-                  <span
-                    key={index}
-                    className={cn(
-                      "text-[#888888] font-light text-xs",
-                      errorMessage && "text-error"
-                    )}
-                  >
-                    {name}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>
