@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Icons, Message } from "@/components/commons";
 import type { InputHTMLAttributes } from "react";
 
-export interface IInputDropzone extends InputHTMLAttributes<HTMLInputElement> {
+export interface IInputDropzoneProps
+  extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   classNameLabel?: string;
   classNameWrapper?: string;
@@ -32,7 +33,7 @@ export const InputDropzone = ({
   disabled,
   multiple = false,
   ...props
-}: IInputDropzone) => {
+}: IInputDropzoneProps) => {
   const [isDragActive, setIsDragActive] = useState(false);
   const [isDragReject, setIsDragReject] = useState(false);
   const [fileNames, setFileNames] = useState<string[]>([]);
