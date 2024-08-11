@@ -1,22 +1,26 @@
-import { cn } from "@/utils/cn";
 import { useState } from "react";
+import { useDropzone, Accept } from "react-dropzone";
 import { Icons, Message } from "@/components/commons";
+import { cn } from "@/utils/cn";
 import type { InputHTMLAttributes } from "react";
 
 export interface IInputDropzoneProps
-  extends InputHTMLAttributes<HTMLInputElement> {
+  extends Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    "onDrop" | "onChange" | "value" | "accept"
+  > {
   className?: string;
   classNameLabel?: string;
   classNameWrapper?: string;
   label?: string;
   notes?: string;
-  errorMessage?: string;
-  onFilesDrop: (files: FileList) => void;
-  accept?: string;
-  maxFiles?: number;
   important?: boolean;
-  disabled?: boolean;
-  multiple?: boolean;
+  errorMessage?: string;
+  onDrop?: (acceptedFiles: File[]) => void;
+  onChange?: (acceptedFiles: File[]) => void;
+  value?: File[];
+  accept?: Accept;
+  maxFiles?: number;
 }
 
 export const InputDropzone = ({
@@ -25,119 +29,44 @@ export const InputDropzone = ({
   classNameWrapper,
   label,
   notes,
+  important,
   errorMessage,
-  onFilesDrop,
-  accept = "",
-  maxFiles = 3,
-  important = false,
-  disabled,
-  multiple = false,
+  onDrop,
+  onChange,
+  value = [],
+  accept,
+  maxFiles = 1,
   ...props
 }: IInputDropzoneProps) => {
-  const [isDragActive, setIsDragActive] = useState(false);
-  const [isDragReject, setIsDragReject] = useState(false);
-  const [fileNames, setFileNames] = useState<string[]>([]);
+  const [files, setFiles] = useState<File[]>(value);
 
-  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setIsDragActive(true);
-  };
+  const handleUpload = (acceptedFiles: File[]) => {
+    const newFiles = [...files, ...acceptedFiles];
+    setFiles(newFiles);
 
-  const handleDragEnter = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setIsDragActive(true);
-  };
-
-  const handleDragLeave = () => {
-    setIsDragActive(false);
-  };
-
-  // Utility function to create a FileList from an array of File objects
-  function createFileList(files: File[]): FileList {
-    const dataTransfer = new DataTransfer();
-    files.forEach((file) => dataTransfer.items.add(file));
-    return dataTransfer.files;
-  }
-
-  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setIsDragActive(false);
-    const files = event.dataTransfer.files;
-
-    if (
-      accept &&
-      !Array.from(files).every(
-        (file) => file && accept.split(",").includes(file.type)
-      )
-    ) {
-      setIsDragReject(true);
-      return;
+    if (onDrop) {
+      onDrop(acceptedFiles);
     }
-
-    setIsDragReject(false);
-
-    const newFiles = Array.from(files).filter((file): file is File => !!file);
-
-    const truncatedFiles = multiple
-      ? newFiles.slice(0, maxFiles)
-      : [newFiles[0]];
-
-    // Ensure truncatedFiles contains only File objects
-    const validFiles = truncatedFiles.filter((file): file is File => !!file);
-
-    const combinedFileNames = multiple
-      ? [...fileNames, ...validFiles.map((file) => file.name)].slice(
-          0,
-          maxFiles
-        )
-      : validFiles.map((file) => file.name);
-
-    setFileNames(combinedFileNames);
-
-    // Convert the new files array to FileList
-    const fileList = createFileList(validFiles);
-    onFilesDrop(fileList);
-  };
-
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files) {
-      const newFiles = Array.from(files).filter((file): file is File => !!file);
-
-      const truncatedFiles = multiple
-        ? newFiles.slice(0, maxFiles)
-        : [newFiles[0]];
-
-      // Ensure truncatedFiles contains only File objects
-      const validFiles = truncatedFiles.filter((file): file is File => !!file);
-
-      const combinedFileNames = multiple
-        ? [...fileNames, ...validFiles.map((file) => file.name)].slice(
-            0,
-            maxFiles
-          )
-        : validFiles.map((file) => file.name);
-
-      setFileNames(combinedFileNames);
-
-      // Convert the new files array to FileList
-      const fileList = createFileList(validFiles);
-      onFilesDrop(fileList);
+    if (onChange) {
+      onChange(newFiles);
     }
   };
 
-  const handleFileDelete = (fileName: string) => {
-    setFileNames((prevFileNames) =>
-      prevFileNames.filter((name) => name !== fileName)
-    );
-  };
+  const handleFileDelete = (fileToDelete: File) => {
+    const updatedFiles = files.filter((file) => file !== fileToDelete);
+    setFiles(updatedFiles);
 
-  const triggerFileInputClick = () => {
-    const fileInput = document.getElementById("file-input");
-    if (fileInput) {
-      fileInput.click();
+    if (onChange) {
+      onChange(updatedFiles);
     }
   };
+
+  const { getRootProps, getInputProps, isDragActive, isDragReject } =
+    useDropzone({
+      onDrop: handleUpload,
+      accept,
+      maxFiles,
+    });
 
   return (
     <div className={cn("flex flex-col w-full", classNameWrapper)}>
@@ -149,7 +78,7 @@ export const InputDropzone = ({
           )}
         >
           {label}
-          {label && important && (
+          {important && (
             <span className={cn("after:content-['*'] text-error")} />
           )}
         </div>
@@ -168,32 +97,28 @@ export const InputDropzone = ({
           </>
         )}
       </div>
-      {fileNames.length > 0 && (
+      {files.length > 0 && (
         <div className="flex flex-col w-full pb-2 space-y-1">
-          {fileNames.map((data, index) => (
+          {files.map((file, index) => (
             <div
               key={index}
               className="flex flex-row justify-between items-center w-full p-1.5 bg-[#2842C8]/5 rounded"
             >
               <div className="flex flex-row justify-start items-center space-x-2">
                 <Icons name="paper-clip" className="fill-dark w-4 h-4" />
-                <span className="font-medium text-xs">{data}</span>
+                <span className="font-medium text-xs">{file.name}</span>
               </div>
               <Icons
                 name="trash-outline"
                 className="fill-error w-4 h-4 cursor-pointer"
-                onClick={() => handleFileDelete(data)}
+                onClick={() => handleFileDelete(file)}
               />
             </div>
           ))}
         </div>
       )}
       <div
-        onDragOver={handleDragOver}
-        onDragEnter={handleDragEnter}
-        onDragLeave={handleDragLeave}
-        onDrop={handleDrop}
-        onClick={triggerFileInputClick}
+        {...getRootProps()}
         className={cn(
           "border border-dashed rounded-lg p-4 text-center transition-colors cursor-pointer h-[130px]",
           {
@@ -204,15 +129,7 @@ export const InputDropzone = ({
           errorMessage && "border-error focus:border-error focus:ring-0"
         )}
       >
-        <input
-          id="file-input"
-          type="file"
-          accept={accept}
-          multiple={multiple}
-          onChange={handleFileSelect}
-          className="hidden"
-          {...props}
-        />
+        <input {...getInputProps()} {...props} type="file" className="hidden" />
         <div className="flex flex-row justify-center items-center w-full h-full space-x-2">
           <Icons
             name="file-upload"

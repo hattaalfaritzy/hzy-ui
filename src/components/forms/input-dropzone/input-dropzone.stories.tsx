@@ -4,23 +4,25 @@ import { InputDropzone } from ".";
 
 const meta: Meta<typeof InputDropzone> = {
   title: "Components/Forms/Input Dropzone",
-  component: InputDropzone as Meta<typeof InputDropzone>["component"],
+  component: InputDropzone,
   tags: ["autodocs"],
   args: {
-    maxFiles: 3,
-    label: "Input Dropdown",
+    label: "Input Dropzone",
     important: true,
+    accept: {
+      "image/jpeg": [".jpeg", ".png"],
+    },
   },
 };
 
 export default meta;
 
 const Template: StoryFn<typeof InputDropzone> = (args) => {
-  const handleFilesDrop = (files: FileList) => {
-    console.log("Files dropped:", files);
+  const handleDrop = (acceptedFiles: File[]) => {
+    console.log("Dropped files:", acceptedFiles);
   };
 
-  return <InputDropzone {...args} onFilesDrop={handleFilesDrop} />;
+  return <InputDropzone {...args} onDrop={handleDrop} />;
 };
 
 export const Base = Template.bind({});
