@@ -1,5 +1,6 @@
 export * from "./input-autocomplete";
 export * from "./input-checkbox";
+export * from "./input-dropzone";
 export * from "./input-password";
 export * from "./input-search";
 export * from "./input-select";
