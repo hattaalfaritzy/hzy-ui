@@ -15,27 +15,27 @@ export const messageStyles = {
   getStylesType: (variant: TypeVariant) => {
     return {
       dark: {
-        container: "bg-dark text-dark",
+        container: "bg-dark/30 text-dark",
         iconColor: "fill-dark",
       },
       light: {
-        container: "bg-light text-light",
+        container: "bg-light/30 text-light",
         iconColor: "fill-light",
       },
       success: {
-        container: "bg-success text-success",
+        container: "bg-success/30 text-success",
         iconColor: "fill-success",
       },
       informative: {
-        container: "bg-informative text-informative",
+        container: "bg-informative/30 text-informative",
         iconColor: "fill-informative",
       },
       warning: {
-        container: "bg-warning text-warning",
+        container: "bg-warning/30 text-warning",
         iconColor: "fill-warning",
       },
       error: {
-        container: "bg-error text-error",
+        container: "bg-error/30 text-error",
         iconColor: "fill-error",
       },
     }[variant];

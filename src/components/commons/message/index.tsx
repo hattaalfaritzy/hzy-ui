@@ -28,7 +28,7 @@ export const Message = ({
   return (
     <div
       className={cn(
-        "flex justify-center items-center rounded-lg px-3 py-1.5 bg-opacity-30 w-full space-x-2",
+        "flex justify-center items-center rounded-lg px-3 py-1.5 w-full space-x-2",
         style.container,
         className
       )}
