@@ -19,6 +19,7 @@ import EyeOutline from "./libs/eye-outline";
 import EyeSlashOutline from "./libs/eye-slash-outline";
 import EyeSlash from "./libs/eye-slash";
 import Eye from "./libs/eye";
+import FileDownload from "./libs/file-download";
 import FileUpload from "./libs/file-upload";
 import FilterList from "./libs/filter-list";
 import Gear from "./libs/gear";
@@ -65,6 +66,7 @@ export type IconName =
   | "eye-outline-slash"
   | "eye-slash"
   | "eye"
+  | "file-download"
   | "file-upload"
   | "filter-list"
   | "gear"
@@ -108,6 +110,7 @@ export const icons: Record<string, IconComponent> = {
   "eye-outline": EyeOutline,
   "eye-slash": EyeSlash,
   eye: Eye,
+  "file-download": FileDownload,
   "file-upload": FileUpload,
   "filter-list": FilterList,
   gear: Gear,
