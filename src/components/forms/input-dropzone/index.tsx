@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDropzone, Accept } from "react-dropzone";
 import { Icons, Message } from "@/components/commons";
 import { cn } from "@/utils/cn";
@@ -39,8 +39,23 @@ export const InputDropzone = ({
   ...props
 }: IInputDropzoneProps) => {
   const [files, setFiles] = useState<File[]>(value);
+  const [localErrorMessage, setLocalErrorMessage] = useState<string | null>(
+    null
+  );
+
+  useEffect(() => {
+    // Clear the local error message when files change
+    setLocalErrorMessage(null);
+  }, [files]);
 
   const handleUpload = (acceptedFiles: File[]) => {
+    if (files.length + acceptedFiles.length > maxFiles) {
+      setLocalErrorMessage(
+        `You can only upload up to ${maxFiles} file${maxFiles > 1 ? "s" : ""}.`
+      );
+      return;
+    }
+
     const newFiles = [...files, ...acceptedFiles];
     setFiles(newFiles);
 
@@ -67,6 +82,8 @@ export const InputDropzone = ({
       accept,
       maxFiles,
     });
+
+  const showErrorMessage = errorMessage || localErrorMessage;
 
   return (
     <div className={cn("flex flex-col w-full", classNameWrapper)}>
@@ -126,20 +143,24 @@ export const InputDropzone = ({
             "bg-[#2842C8]/5 border-[#001A41]": !isDragActive && !isDragReject,
             "border-red-500": isDragReject,
           },
-          errorMessage && "border-error focus:border-error focus:ring-0"
+          (errorMessage || localErrorMessage) &&
+            "border-error focus:border-error focus:ring-0"
         )}
       >
         <input {...getInputProps()} {...props} type="file" className="hidden" />
         <div className="flex flex-row justify-center items-center w-full h-full space-x-2">
           <Icons
             name="file-upload"
-            className={cn("w-6 h-6 fill-dark", errorMessage && "fill-error")}
+            className={cn(
+              "w-6 h-6 fill-dark",
+              (errorMessage || localErrorMessage) && "fill-error"
+            )}
           />
           <div className="flex flex-col justify-start items-start">
             <span
               className={cn(
                 "text-dark font-medium text-xs",
-                errorMessage && "text-error"
+                (errorMessage || localErrorMessage) && "text-error"
               )}
             >
               Choose Document
@@ -147,7 +168,7 @@ export const InputDropzone = ({
             <span
               className={cn(
                 "text-[#888888] font-light text-xs",
-                errorMessage && "text-error"
+                (errorMessage || localErrorMessage) && "text-error"
               )}
             >
               {isDragActive
@@ -157,7 +178,9 @@ export const InputDropzone = ({
           </div>
         </div>
       </div>
-      {errorMessage && <Message className="mt-2" label={errorMessage} />}
+      {showErrorMessage && (
+        <Message className="mt-2" label={showErrorMessage} />
+      )}
     </div>
   );
 };
