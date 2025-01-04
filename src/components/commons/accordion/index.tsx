@@ -13,11 +13,11 @@ export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   classNameTitle?: string;
   classNameContent?: string;
-  withIcon?: React.ReactNode;
   title?: string;
   children: ReactNode;
   defaultOpen?: boolean;
   disabled?: boolean;
+  withIcon?: React.ReactNode;
 }
 
 export const Accordion = ({
@@ -25,11 +25,11 @@ export const Accordion = ({
   className,
   classNameTitle,
   classNameContent,
-  withIcon,
   title,
   children,
   defaultOpen = false,
   disabled,
+  withIcon,
   onClick,
   ...props
 }: IAccordionProps) => {
@@ -68,14 +68,14 @@ export const Accordion = ({
           isOpen && "border-b border-light pb-4",
           className
         )}
+        onClick={handleToggle}
+        onKeyDown={handleKeyDown}
       >
         <div
           className={cn(
             "flex flex-row justify-start items-center w-full",
             withIcon && "space-x-4"
           )}
-          onClick={handleToggle}
-          onKeyDown={handleKeyDown}
         >
           {withIcon && withIcon}
           <span className={cn(classNameTitle || "text-sm")}>{title}</span>

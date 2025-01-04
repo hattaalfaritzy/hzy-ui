@@ -1,0 +1,177 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+} from "@storybook/blocks";
+import * as ButtonStories from "./button.stories";
+import { Button } from ".";
+
+<Meta title="Button docs" of={ButtonStories} />
+
+# Button
+
+The `Button` component provides a flexible and customizable button for various use cases in your UI. Built by extending `HTMLButtonElement`, it inherits all standard `HTML` button attributes, so you can apply native `HTML` button props like `onClick`, `disabled`, `type`, `aria-\*` attributes, and more, making it highly adaptable to different requirements. Additionally, the `Button` component offers specific props such as `label`, `loading` state, `rounded` edges, `icons`, and multiple `size` and `variant` options. Designed with accessibility in mind, it supports keyboard navigation and screen readers, ensuring it integrates seamlessly into any project.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Label](#label)
+- [Loading](#loading)
+- [Rounded](#rounded)
+- [Disabled](#disabled)
+- [Full Width](#full-width)
+- [Variant](#variant)
+- [Outline](#outline)
+- [Size](#size)
+- [Icon](#icon)
+- [Custom Button](#custom-button)
+- [On Click](#on-click)
+
+## Import
+
+To use the `Button` component, import it from `@hattaalfaritzy/hzy-ui` as shown below.
+
+```tsx
+import { Button } from "@hattaalfaritzy/hzy-ui";
+```
+
+## Usage
+
+_desc for usage button_
+
+<br />
+
+### Default Usage
+
+The `Button` component is simple to use. Just add the `Button` component and set properties like label for text. This makes it ideal for common use cases such as form submission or navigating between pages.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonDefault} />
+</div>
+
+<Source dark code={`
+import { Button } from "@hattaalfaritzy/hzy-ui";
+
+<Button label="Button" />
+`} />
+
+### Label
+
+The `label` prop specifies the text displayed on the button. This prop is required to give context to the button’s action.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonLabel} />
+  <Story of={ButtonStories.ButtonChildren} />
+</div>
+
+```tsx
+<Button label="Click Me" />
+<Button>
+    <span>Click Me</span>
+</Button>
+```
+
+### Loading
+
+Use the `loading` prop to indicate that an action is in progress. When set to true, the button shows a loading indicator and becomes `disabled`.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonLoading} />
+</div>
+
+```tsx
+<Button label="Loading" loading />
+```
+
+### Rounded
+
+The `rounded` prop applies rounded corners to the button, adding a softer look and feel. This is especially useful for modern, friendly interfaces.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonRounded} />
+</div>
+
+```tsx
+<Button label="Rounded Button" rounded />
+```
+
+### Disabled
+
+The `disabled` prop visually and functionally disables the button, preventing user interaction. Useful for form validation or when actions are temporarily unavailable.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonDisabled} />
+</div>
+
+```tsx
+<Button label="Disabled Button" disabled />
+```
+
+### Full Width
+
+Set the `fullWidth` prop to make the button expand to the full width of its container, ideal for mobile devices or sections needing centered alignment.
+
+<div class="custom-canvas full">
+  <Story of={ButtonStories.ButtonFullWidth} />
+</div>
+
+```tsx
+<Button label="Full Width Button" fullWidth />
+```
+
+### Variant
+
+The `variant` prop allows customization of the button’s style. Buttons can have different variant colors by setting the `variant` prop. The default variant is `informative`.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonDark} />
+  <Story of={ButtonStories.ButtonLight} />
+  <Story of={ButtonStories.ButtonInformative} />
+  <Story of={ButtonStories.ButtonSuccess} />
+  <Story of={ButtonStories.ButtonWarning} />
+  <Story of={ButtonStories.ButtonError} />
+</div>
+
+```tsx
+<Button label="Dark Button" variant="dark" />
+<Button label="Light Button" variant="light" />
+<Button label="Informative Button" variant="informative" />
+<Button label="Success Button" variant="success" />
+<Button label="Warning Button" variant="warning" />
+<Button label="Error Button" variant="error" />
+```
+
+### Size
+
+The `size` prop adjusts the button size, with options like small, and medium, making it adaptable for different contexts within the UI.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonSmall} />
+  <Story of={ButtonStories.ButtonMedium} />
+</div>
+
+```tsx
+<Button label="Small Button" size="sm" />
+<Button label="Medium Button" size="md" />
+```
+
+### Button With Icon
+
+The `icon` prop allows you to add an `icon` on either the left or right side of the label for added context. This is useful for actions that benefit from a visual cue.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonIconLeft} />
+  <Story of={ButtonStories.ButtonIconRight} />
+</div>
+
+```tsx
+<Button label="Edit Data" iconLeft={<Icons name="edit" />} />
+<Button label="Add Cart" iconRight={<Icons name="cart" />} />
+```

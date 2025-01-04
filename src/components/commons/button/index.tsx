@@ -14,14 +14,15 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
   rounded?: boolean;
   disabled?: boolean;
+  fullWidth?: boolean;
   variant?: TypeVariant;
-  align?: TypeAligns;
   size?: ButtonSizes;
-  onClick?: () => void;
+  align?: TypeAligns;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
   children?: ReactNode;
   stopPropagation?: boolean;
+  onClick?: () => void;
 }
 
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
@@ -34,14 +35,15 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       outline,
       rounded,
       disabled = false,
+      fullWidth = false,
       variant = "informative",
-      align = "center",
       size = "md",
-      onClick = () => {},
+      align = "center",
       iconLeft,
       iconRight,
       children,
       stopPropagation = true,
+      onClick = () => {},
       ...props
     },
     ref
@@ -61,6 +63,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
           buttonStyles.getVariantStyle(variant, outline),
           buttonStyles.getSizeStyle(size),
           rounded ? "rounded-full" : "rounded-lg",
+          fullWidth && "w-full",
           className
         )}
         disabled={loading || disabled}

@@ -1,0 +1,183 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as AccordionStories from "./accordion.stories";
+import { Accordion } from ".";
+
+<Meta title="Accordion docs" of={AccordionStories} />
+
+# Accordion
+
+The `Accordion` component provides a collapsible container that allows toggling the visibility of content. It features a customizable title, content, and optional icon, while offering accessibility enhancements such as keyboard interactions (e.g., Enter or Space to toggle). The component is highly customizable with class names for the wrapper, title, and content areas, and supports additional states such as default open and disabled. This makes it a versatile choice for creating collapsible sections in your UI
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Title](#default-open)
+- [Children](#children)
+- [Default Open](#default-open)
+- [Disabled](#disabled)
+- [With Icon](#with-icon)
+- [On Click](#on-click)
+
+## Import
+
+To use the `Accordion` component, import it from `@hattaalfaritzy/hzy-ui` as shown below.
+
+```tsx
+import { Accordion } from "@hattaalfaritzy/hzy-ui";
+```
+
+## Usage
+
+The `Accordion` component provides an easy way to create collapsible sections in your UI. Simply wrap your content in the Accordion component, specify a title, and customize it as needed with optional props like icons, default open state, or custom classes. This makes it ideal for organizing content that can be hidden or shown on demand.
+
+<br />
+
+### Default Usage
+
+Here is an example of the default setup for the `Accordion` component. This configuration includes a 'title' and 'children' and is collapsible by clicking on the title.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionDefault} />
+</div>
+
+<Source dark code={`
+import { Accordion } from "@/hattaalfaritzy/hzy-ui";
+
+<Accordion title="Example Accordion">
+  <span>This is the content inside the accordion.</span>
+</Accordion>
+`} />
+
+### Title
+
+The `Accordion` component uses the `title` prop to define the clickable area that toggles the visibility of the content. It can be any React element or text and is usually displayed as the header of the accordion.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionTitle} />
+</div>
+
+```tsx
+<Accordion title="Title Accordion">
+  <span>This is the content inside the accordion.</span>
+</Accordion>
+```
+
+### Children
+
+The `Accordion` component uses the `children` prop to define the content that is displayed inside the accordion when it is open. This prop can contain any React element, and it will only be visible once the accordion is toggled open. The `children` prop provides flexibility, allowing you to add complex content, such as text, images, or even other components.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionChildren} />
+</div>
+
+```tsx
+<Accordion title="Title Accordion">
+  <span>This is the content inside the accordion.</span>
+</Accordion>
+```
+
+### Default Open
+
+The `Accordion` component can start in an open state by setting the `defaultOpen` prop to `true`. This is useful if you want the content to be visible on the initial render.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionOpened} />
+</div>
+
+```tsx
+<Accordion title="Open by Default" defaultOpen>
+  <span>This accordion starts open.</span>
+</Accordion>
+```
+
+### Disabled
+
+The `Accordion` can be disabled by setting the `disabled` prop to `true`. This prevents the user from toggling it open or closed.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionDisabled} />
+</div>
+
+```tsx
+<Accordion title="Disabled Accordion" disabled>
+  <span>This accordion cannot be toggled.</span>
+</Accordion>
+```
+
+### With Icon
+
+To add an icon, pass a custom icon component to the `withIcon` prop. This icon can be customized further to toggle when the accordion is opened or closed.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionWithIcon} />
+</div>
+
+```tsx
+<Accordion title="Accordion with Icon" withIcon={<Icons name="gear" />}>
+  <span>This accordion has an icon.</span>
+</Accordion>
+```
+
+### On Click
+
+You can add custom click behavior to the `Accordion` by using the `onClick` prop. This is useful for executing additional actions whenever the accordion is toggled.
+
+<div class="custom-canvas full">
+  <Story of={AccordionStories.AccordionOnClick} />
+</div>
+
+```tsx
+import { useState } from "react";
+import { Accordion, Icons } from "@hattaalfaritzy/hzy-ui";
+
+const [toggle, setToggle] = useState<boolean>(false);
+
+const handleToggle = () => {
+  setToggle((prev) => !prev);
+};
+
+return (
+  <Accordion
+    title="Accordion Title"
+    withIcon={
+      <Icons name={toggle ? "eye" : "eye-slash"} className="fill-black" />
+    }
+    onClick={handleToggle}
+  >
+    <span className="text-sm">Accordion Content</span>
+  </Accordion>
+);
+```
+
+### Properties
+
+- **`<Accordion>`** properties:
+
+<Markdown>
+  {`
+| prop    | type     | default    | description 
+|---------|----------|------------|
+| classNameWrapper | string   | -      | Custom class name for styling the outer wrapper container of the Accordion.
+| className    | string   | -      | Custom class name for styling the title container of the Accordion.
+| classNameTitle  | string  | -      | Custom class name for styling the text within the Accordion's title.
+| classNameContent  | string  | -      | Custom class name for styling the content container when the Accordion is open.
+| withIcon  | React.ReactNode  | -      | Allows passing a custom icon component or node to be displayed alongside the title.
+| title  | React.ReactNode | -      | The title of the Accordion, which is the clickable area to toggle its open/closed state.
+| children*  | ReactNode  | false      | The content displayed inside the Accordion when it is open.
+| defaultOpen  | boolean  | false      | Determines if the Accordion starts in an open state when rendered.
+| disabled  | string  | false      | Disables the Accordion, preventing it from toggling open or closed.
+| onClick  | (e: MouseEvent<HTMLDivElement>) => void  | -      | A callback function triggered when the Accordion title is clicked.
+`}
+</Markdown>

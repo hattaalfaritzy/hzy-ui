@@ -1,0 +1,103 @@
+/* Sidebar subheading */
+.sidebar-subheading.sidebar-subheading {
+  font-weight: bold;
+  letter-spacing: normal;
+  color: inherit;
+  text-transform: none;
+  font-size: 1.25rem;
+}
+
+.sidebar-subheading button {
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+/* Sidebar items */
+.sidebar-item.sidebar-item {
+  padding-left: 1rem;
+  height: 2rem;
+}
+
+/* Sidebar common items */
+.sidebar-item.sidebar-item[data-item-id="components-commons"] {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  font-size: 1rem;
+  height: 2.25rem;
+}
+
+/* Sidebar form items */
+.sidebar-item.sidebar-item[data-item-id="components-forms"] {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  font-size: 1rem;
+  height: 2.25rem;
+}
+
+/* Getting started */
+.sidebar-item.sidebar-item[data-item-id="getting-started--docs"] {
+  font-weight: bold;
+  letter-spacing: normal;
+  color: inherit;
+  text-transform: none;
+  padding: 0;
+  height: 2.25rem;
+}
+
+.sidebar-item.sidebar-item[data-item-id="getting-started--docs"] a {
+  font-size: 1rem;
+  padding: 0.5rem !important;
+}
+
+.sidebar-item a {
+  padding: 0 1rem !important;
+}
+
+.sidebar-item span {
+  opacity: 0 1rem !important;
+}
+
+.sidebar-item.sidebar-item:focus {
+  color: #5699ee;
+}
+
+.sidebar-item.sidebar-item[data-selected="true"] {
+  color: #ffffff;
+}
+
+button.sidebar-item.sidebar-item {
+  font-weight: 500;
+}
+
+/* Remove sidebar items icons */
+.sidebar-item svg,
+.sidebar-subheading svg,
+.sidebar-subheading-action.sidebar-subheading-action,
+.sidebar-subheading span {
+  display: none;
+}
+
+/* Custom classes */
+.custom-canvas {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  padding: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  border: 1px solid hsla(203, 50%, 30%, 0.15);
+  border-radius: 4px;
+}
+
+.custom-canvas.columns {
+  flex-direction: column;
+}
+
+.custom-canvas.full > .sb-story {
+  width: 100%;
+}
