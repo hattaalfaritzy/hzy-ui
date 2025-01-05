@@ -98,3 +98,5 @@ export const Accordion = forwardRef<HTMLDivElement, IAccordionProps>(
     );
   }
 );
+
+export default Accordion;

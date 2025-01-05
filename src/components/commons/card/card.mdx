@@ -1,0 +1,118 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as CardStories from "./card.stories";
+import { Card } from ".";
+
+<Meta title="Card docs" of={CardStories} />
+
+# Card
+
+The `Card` component provides a flexible and customizable container with options for shadow, rounded corners, and additional styling via class names. It is ideal for creating UI elements such as dashboards, widgets, or content sections. The component allows users to define content and behavior with props like `children`, `onClick`, and more.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Shadow](#shadow)
+- [Rounded](#rounded)
+- [Children](#children)
+- [On Click](#on-click)
+
+## Import
+
+To use the `Card` component, import it as shown below.
+
+```tsx
+import { Card } from "@hattaalfaritzy/hzy-ui";
+```
+
+## Usage
+
+The `Card` component is designed to provide a styled container that can be easily customized and extended. It supports additional props for shadows, rounded corners, and click behavior, making it versatile for various use cases.
+
+### Default Usage
+
+Here is an example of the default setup for the Card component.
+
+<div class="custom-canvas full">
+  <Story of={CardStories.CardDefault} />
+</div>
+
+<Source dark code={`
+import { Card } from "@/hattaalfaritzy/hzy-ui";
+
+<Card>
+  <span className="text-xs">Card Default</span>
+</Card>
+`} />
+
+### Shadow
+
+The `Card` component supports a `withShadow` prop, which adds a shadow to the card for better visual hierarchy.
+
+<div class="custom-canvas full">
+  <Story of={CardStories.CardShadow} />
+</div>
+
+```tsx
+<Card withShadow>
+  <span className="text-xs">Card With Shadow</span>
+</Card>
+```
+
+### Rounded
+
+The `Card` component allows for rounded corners via the `rounded` prop. By default, the corners are rounded, but you can disable this by setting `rounded` to `false`.
+
+<div class="custom-canvas full">
+  <Story of={CardStories.CardRounded} />
+</div>
+
+```tsx
+<Card rounded>
+  <span className="text-xs">Card Rounded</span>
+</Card>
+```
+
+### OnClick
+
+You can use the `onClick` prop to make the card interactive. This is useful for cases where the card needs to trigger actions, such as navigation or state changes.
+
+<div class="custom-canvas full">
+  <Story of={CardStories.CardOnClick} />
+</div>
+
+```tsx
+<Card onClick={() => alert("Card clicked!")}>
+  <p>Click me to trigger an action!</p>
+</Card>
+```
+
+### Properties
+
+- **`<Card>`** properties:
+
+<Markdown>
+  {`
+| prop    | type     | default    | description 
+|---------|----------|------------|
+| className | string | - | Custom class name for styling the card container. 
+| withShadow | boolean | false | Adds a shadow to the card for better visual emphasis. 
+| rounded | boolean | true | Enables rounded corners for the card. 
+| children* | ReactNode | - | The content of the card. 
+| onClick | () => void | - | Callback function triggered when the card is clicked. 
+`}
+</Markdown>
+
+To see all available properties for the `Card` component, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.

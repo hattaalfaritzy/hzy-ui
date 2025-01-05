@@ -7,12 +7,8 @@ const config: StorybookConfig = {
   features: {
     argTypeTargetsV7: true,
   },
-  stories: [
-    "../src/**/*.mdx",
-    "../src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    "@storybook/addon-docs",
     "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-onboarding",
     "@storybook/addon-links",

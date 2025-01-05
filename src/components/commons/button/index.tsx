@@ -23,7 +23,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
-  function Button(
+  (
     {
       className,
       classNameLabel,
@@ -43,7 +43,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       ...props
     },
     ref
-  ) {
+  ) => {
     const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
       if (loading) return;
       e.stopPropagation();
