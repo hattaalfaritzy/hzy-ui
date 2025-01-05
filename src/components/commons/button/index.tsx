@@ -4,24 +4,21 @@ import type { ButtonHTMLAttributes, MouseEvent, ReactNode } from "react";
 import { buttonStyles } from "./button-styles";
 import Icons from "../icons";
 
-export type ButtonSizes = "sm" | "md";
-
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   classNameLabel?: string;
   label?: string;
   loading?: boolean;
-  outline?: boolean;
   rounded?: boolean;
   disabled?: boolean;
   fullWidth?: boolean;
   variant?: TypeVariant;
-  size?: ButtonSizes;
+  outline?: boolean;
+  size?: TypeSizes;
   align?: TypeAligns;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
   children?: ReactNode;
-  stopPropagation?: boolean;
   onClick?: () => void;
 }
 
@@ -42,7 +39,6 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       iconLeft,
       iconRight,
       children,
-      stopPropagation = true,
       onClick = () => {},
       ...props
     },
@@ -50,7 +46,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
   ) {
     const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
       if (loading) return;
-      stopPropagation && e.stopPropagation();
+      e.stopPropagation();
       onClick();
     };
 
@@ -58,7 +54,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "text-white font-normal border",
+          "font-normal border text-xs",
           buttonStyles.getDisabledClass(!!(disabled || loading), outline),
           buttonStyles.getVariantStyle(variant, outline),
           buttonStyles.getSizeStyle(size),

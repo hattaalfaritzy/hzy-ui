@@ -6,6 +6,7 @@ import {
   Source,
   Description,
   Heading,
+  Markdown,
 } from "@storybook/blocks";
 import * as ButtonStories from "./button.stories";
 import { Button } from ".";
@@ -28,10 +29,11 @@ The `Button` component provides a flexible and customizable button for various u
 - [Disabled](#disabled)
 - [Full Width](#full-width)
 - [Variant](#variant)
-- [Outline](#outline)
+- [Outline](#outline) 
 - [Size](#size)
+- [Align](#align)
 - [Icon](#icon)
-- [Custom Button](#custom-button)
+- [Children](#children)
 - [On Click](#on-click)
 
 ## Import
@@ -68,14 +70,10 @@ The `label` prop specifies the text displayed on the button. This prop is requir
 
 <div class="custom-canvas">
   <Story of={ButtonStories.ButtonLabel} />
-  <Story of={ButtonStories.ButtonChildren} />
 </div>
 
 ```tsx
 <Button label="Click Me" />
-<Button>
-    <span>Click Me</span>
-</Button>
 ```
 
 ### Loading
@@ -131,12 +129,7 @@ Set the `fullWidth` prop to make the button expand to the full width of its cont
 The `variant` prop allows customization of the button’s style. Buttons can have different variant colors by setting the `variant` prop. The default variant is `informative`.
 
 <div class="custom-canvas">
-  <Story of={ButtonStories.ButtonDark} />
-  <Story of={ButtonStories.ButtonLight} />
-  <Story of={ButtonStories.ButtonInformative} />
-  <Story of={ButtonStories.ButtonSuccess} />
-  <Story of={ButtonStories.ButtonWarning} />
-  <Story of={ButtonStories.ButtonError} />
+  <Story of={ButtonStories.ButtonVariant} />
 </div>
 
 ```tsx
@@ -148,6 +141,23 @@ The `variant` prop allows customization of the button’s style. Buttons can hav
 <Button label="Error Button" variant="error" />
 ```
 
+### Outline
+
+The `outline` prop applies a border and removes the background fill, giving the button a minimalist and clean appearance. This is especially useful for creating secondary or less prominent actions in your UI.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonVariantOutline} />
+</div>
+
+```tsx
+<Button label="Dark Button" variant="dark" outline />
+<Button label="Light Button" variant="light" outline />
+<Button label="Informative Button" variant="informative" outline />
+<Button label="Success Button" variant="success" outline />
+<Button label="Warning Button" variant="warning" outline />
+<Button label="Error Button" variant="error" outline />
+```
+
 ### Size
 
 The `size` prop adjusts the button size, with options like small, and medium, making it adaptable for different contexts within the UI.
@@ -155,11 +165,27 @@ The `size` prop adjusts the button size, with options like small, and medium, ma
 <div class="custom-canvas">
   <Story of={ButtonStories.ButtonSmall} />
   <Story of={ButtonStories.ButtonMedium} />
+    <Story of={ButtonStories.ButtonLarge} />
 </div>
 
 ```tsx
 <Button label="Small Button" size="sm" />
 <Button label="Medium Button" size="md" />
+<Button label="Large Button" size="lg" />
+```
+
+### Align
+
+The `align` prop controls the alignment of the button's content (label and icons). Use it to set the alignment to `left`, `center`, or `right` to better suit your design requirements.
+
+<div className="custom-canvas full columns">
+  <Story of={ButtonStories.ButtonAlign} />
+</div>
+
+```tsx
+<Button label="Start Button" />
+<Button label="Center Button" />
+<Button label="End Button" />
 ```
 
 ### Button With Icon
@@ -175,3 +201,46 @@ The `icon` prop allows you to add an `icon` on either the left or right side of 
 <Button label="Edit Data" iconLeft={<Icons name="edit" />} />
 <Button label="Add Cart" iconRight={<Icons name="cart" />} />
 ```
+
+### Children
+
+The `children` prop allows you to fully customize the button's content. Instead of a `label`, you can pass JSX elements such as text wrapped in a `<span>`, icons, or even a combination of both. This gives you full control over the button's design and content.
+
+<div class="custom-canvas">
+  <Story of={ButtonStories.ButtonChildren} />
+</div>
+
+```tsx
+<Button>
+  <span>Click Me</span>
+</Button>
+```
+
+### Properties
+
+- **`<Button>`** properties:
+
+<Markdown>
+  {`
+| prop            | type                            | default     | description 
+|-----------------|---------------------------------|-------------|-------------
+| className       | string                          | -           | Custom class name for styling the button.
+| classNameLabel  | string                          | -           | Custom class name for styling the button's label.
+| label           | string                          | -           | The text displayed inside the button as its label.
+| loading         | boolean                         | false       | Shows a loading state inside the button (e.g., spinner or indicator).
+| outline         | boolean                         | false       | Applies an outline style to the button, without background fill.
+| rounded         | boolean                         | false       | Adds rounded corners to the button.
+| disabled        | boolean                         | false       | Disables the button, preventing interaction.
+| fullWidth       | boolean                         | false       | Makes the button span the full width of its container.
+| variant         | TypeVariant                     | -           | Defines the style variant of the button (e.g., primary, secondary).
+| size            | ButtonSizes                     | -           | Sets the size of the button (e.g., small, medium, large).
+| align           | TypeAligns                      | -           | Controls the alignment of the button's label and icon.
+| iconLeft        | React.ReactNode                 | -           | Adds an icon to the left side of the button's label.
+| iconRight       | React.ReactNode                 | -           | Adds an icon to the right side of the button's label.
+| children*       | ReactNode                       | false       | The content inside the button, usually the label text or elements.
+| onClick         | () => void                      | -           | A callback function triggered when the button is clicked.
+`}
+</Markdown>
+
+To see all properties available for `Button`, including those inherited from `ButtonHTMLAttributes<HTMLButtonElement>`.<br />
+Check the [HTMLButtonElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement) for additional attributes.

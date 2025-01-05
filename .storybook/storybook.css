@@ -87,10 +87,7 @@ button.sidebar-item.sidebar-item {
   justify-content: "flex-start";
   align-items: center;
   gap: 1.5rem;
-  position: relative;
   padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
-  border: 1px solid hsla(203, 50%, 30%, 0.15);
   border-radius: 4px;
 }
 

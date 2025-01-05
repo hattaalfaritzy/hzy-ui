@@ -1,4 +1,3 @@
-import React from "react";
 import type { Meta, StoryFn } from "@storybook/react";
 import { Button } from "./";
 import Icons from "../icons";
@@ -40,28 +39,45 @@ export const ButtonFullWidth: StoryFn<typeof Button> = (args) => {
   return <Button label="Full Width Button" fullWidth {...args} />;
 };
 
-export const ButtonDark: StoryFn<typeof Button> = (args) => {
-  return <Button label="Dark Button" variant="dark" {...args} />;
+export const ButtonVariant: StoryFn<typeof Button> = (args) => {
+  return (
+    <div className="custom-canvas">
+      <Button label="Dark Button" variant="dark" {...args} />
+      <Button label="Light Button" variant="light" {...args} />
+      <Button label="Informative Button" variant="informative" {...args} />
+      <Button label="Success Button" variant="success" {...args} />
+      <Button label="Warning Button" variant="warning" {...args} />
+      <Button label="Error Button" variant="error" {...args} />
+    </div>
+  );
 };
 
-export const ButtonLight: StoryFn<typeof Button> = (args) => {
-  return <Button label="Light Button" variant="light" {...args} />;
+export const ButtonVariantOutline: StoryFn<typeof Button> = (args) => {
+  return (
+    <div className="custom-canvas">
+      <Button label="Dark Button" variant="dark" outline {...args} />
+      <Button label="Light Button" variant="light" outline {...args} />
+      <Button
+        label="Informative Button"
+        variant="informative"
+        outline
+        {...args}
+      />
+      <Button label="Success Button" variant="success" outline {...args} />
+      <Button label="Warning Button" variant="warning" outline {...args} />
+      <Button label="Error Button" variant="error" outline {...args} />
+    </div>
+  );
 };
 
-export const ButtonInformative: StoryFn<typeof Button> = (args) => {
-  return <Button label="Informative Button" variant="informative" {...args} />;
-};
-
-export const ButtonSuccess: StoryFn<typeof Button> = (args) => {
-  return <Button label="Success Button" variant="success" {...args} />;
-};
-
-export const ButtonWarning: StoryFn<typeof Button> = (args) => {
-  return <Button label="Warning Button" variant="warning" {...args} />;
-};
-
-export const ButtonError: StoryFn<typeof Button> = (args) => {
-  return <Button label="Error Button" variant="error" {...args} />;
+export const ButtonAlign: StoryFn<typeof Button> = (args) => {
+  return (
+    <div className="custom-canvas">
+      <Button label="Start Button" align="start" fullWidth {...args} />
+      <Button label="Center Button" align="center" fullWidth {...args} />
+      <Button label="End Button" align="end" fullWidth {...args} />
+    </div>
+  );
 };
 
 export const ButtonSmall: StoryFn<typeof Button> = (args) => {
@@ -70,6 +86,10 @@ export const ButtonSmall: StoryFn<typeof Button> = (args) => {
 
 export const ButtonMedium: StoryFn<typeof Button> = (args) => {
   return <Button label="Medium Button" size="md" {...args} />;
+};
+
+export const ButtonLarge: StoryFn<typeof Button> = (args) => {
+  return <Button label="Large Button" size="lg" {...args} />;
 };
 
 export const ButtonIconLeft: StoryFn<typeof Button> = (args) => {
@@ -81,5 +101,15 @@ export const ButtonIconLeft: StoryFn<typeof Button> = (args) => {
 export const ButtonIconRight: StoryFn<typeof Button> = (args) => {
   return (
     <Button label="Add Cart" iconRight={<Icons name="cart" />} {...args} />
+  );
+};
+
+export const ButtonOnClick: StoryFn<typeof Button> = (args) => {
+  return (
+    <Button
+      label="Click Me"
+      onClick={() => alert("Button clicked!")}
+      {...args}
+    />
   );
 };

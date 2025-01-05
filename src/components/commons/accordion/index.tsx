@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { useRef, useState } from "react";
+import { forwardRef, useState } from "react";
 import type {
   HTMLAttributes,
   KeyboardEvent,
@@ -20,79 +20,81 @@ export interface IAccordionProps extends HTMLAttributes<HTMLDivElement> {
   withIcon?: React.ReactNode;
 }
 
-export const Accordion = ({
-  classNameWrapper,
-  className,
-  classNameTitle,
-  classNameContent,
-  title,
-  children,
-  defaultOpen = false,
-  disabled,
-  withIcon,
-  onClick,
-  ...props
-}: IAccordionProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(defaultOpen);
-  const rootRef = useRef<HTMLDivElement>(null);
+export const Accordion = forwardRef<HTMLDivElement, IAccordionProps>(
+  (
+    {
+      classNameWrapper,
+      className,
+      classNameTitle,
+      classNameContent,
+      title,
+      children,
+      defaultOpen = false,
+      disabled,
+      withIcon,
+      onClick,
+      ...props
+    },
+    ref
+  ) => {
+    const [isOpen, setIsOpen] = useState<boolean>(defaultOpen);
 
-  const handleToggle = (e: MouseEvent<HTMLDivElement>) => {
-    if (!disabled) {
-      setIsOpen(!isOpen);
-    }
-    onClick?.(e);
-  };
+    const handleToggle = (e: MouseEvent<HTMLDivElement>) => {
+      if (!disabled) {
+        setIsOpen(!isOpen);
+      }
+      onClick?.(e);
+    };
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      rootRef.current?.click();
-    }
-  };
+    const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        (ref as React.RefObject<HTMLDivElement>)?.current?.click?.();
+      }
+    };
 
-  return (
-    <div
-      ref={rootRef}
-      className={cn(
-        "flex flex-col w-full bg-white p-4 rounded shadow",
-        classNameWrapper
-      )}
-      role="button"
-      tabIndex={0}
-      aria-expanded={isOpen}
-      {...props}
-    >
+    return (
       <div
+        ref={ref}
         className={cn(
-          "flex flex-row justify-start items-center w-full",
-          isOpen && "border-b border-light pb-4",
-          className
+          "flex flex-col w-full bg-white p-4 rounded shadow",
+          classNameWrapper
         )}
-        onClick={handleToggle}
-        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isOpen}
+        {...props}
       >
         <div
           className={cn(
             "flex flex-row justify-start items-center w-full",
-            withIcon && "space-x-4"
+            isOpen && "border-b border-light pb-4",
+            className
           )}
+          onClick={handleToggle}
+          onKeyDown={handleKeyDown}
         >
-          {withIcon && withIcon}
-          <span className={cn(classNameTitle || "text-sm")}>{title}</span>
+          <div
+            className={cn(
+              "flex flex-row justify-start items-center w-full",
+              withIcon && "space-x-4"
+            )}
+          >
+            {withIcon && withIcon}
+            <span className={cn(classNameTitle || "text-sm")}>{title}</span>
+          </div>
+          <Icon
+            name="chevron-down"
+            className={cn(
+              "fill-black cursor-pointer",
+              isOpen && "transform rotate-180"
+            )}
+          />
         </div>
-        <Icon
-          name="chevron-down"
-          className={cn(
-            "fill-black cursor-pointer",
-            isOpen && "transform rotate-180"
-          )}
-        />
+        {isOpen && (
+          <div className={cn(classNameContent || "pt-4")}>{children}</div>
+        )}
       </div>
-      {isOpen && (
-        <div className={cn(classNameContent || "pt-4")}>{children}</div>
-      )}
-    </div>
-  );
-};
-
-export default Accordion;
+    );
+  }
+);
