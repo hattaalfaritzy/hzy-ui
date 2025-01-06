@@ -105,6 +105,6 @@ button.sidebar-item.sidebar-item {
 
 .important-message p {
   color: #cf3f24;
-  font-size: 8;
-  margin: 0;
+  font-size: 12px;
+  margin: -16px 0 0 0;
 }
