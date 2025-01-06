@@ -98,3 +98,13 @@ button.sidebar-item.sidebar-item {
 .custom-canvas.full > .sb-story {
   width: 100%;
 }
+
+.custom-canvas.no-padding {
+  padding: 0;
+}
+
+.important-message p {
+  color: #cf3f24;
+  font-size: 8;
+  margin: 0;
+}

@@ -1,0 +1,97 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as IconStories from "./icons.stories";
+import { Icons } from ".";
+
+<Meta title="Icons docs" of={IconStories} />
+
+# Icons
+
+The `Icons` component is a versatile solution for rendering SVG-based icons in your UI. It allows for customization of size, color, and additional styles via class names or props. The component supports a predefined set of icons, ensuring consistent and efficient usage.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Icon List](#icon-list)
+- [Properties](#properties)
+
+## Import
+
+To use the `Icons` component, import it from `@hattaalfaritzy/hzy-ui` as shown below.
+
+<Source dark code={`
+import { Icons } from "@hattaalfaritzy/hzy-ui";
+`} />
+
+## Usage
+
+The `Icons` component provides a flexible way to include SVG icons in your application. You can specify the desired icon by name and customize its size, color, or additional styling.
+
+<br />
+
+### Default Usage
+
+Here is an example of how to render an icon using the `Icons` component. Pass the desired icon name via the `name` prop.
+
+<div class="custom-canvas full">
+  <Story of={IconStories.IconDefault} />
+</div>
+
+<Source dark code={`
+import { Icons } from "@/hattaalfaritzy/hzy-ui";
+
+ <Icons name="activity" />
+`} />
+
+### Customization
+
+You can customize the appearance of an icon by applying additional class names or props, such as size and color. <br />
+<span className="important-message">
+  *The `activity` icon can be styled with TailwindCSS stroke classes.*
+</span>
+
+<div class="custom-canvas full">
+  <Story of={IconStories.IconCustomized} />
+</div>
+
+<Source dark code={`
+<Icons name="broken-image" className="w-8 h-8 text-blue-500" />
+<Icons name="activity" className="w-8 h-8 stroke-blue-500" />
+`} />
+
+### Icon List
+
+Below is a list of available icons you can use with the `Icons` component. Replace the `name` prop value with one of the following:
+
+<div class="custom-canvas full no-padding">
+  <Story of={IconStories.IconLists} />
+</div>
+
+### Properties
+
+- **`<Icons>`** properties:
+
+<Markdown> 
+{` 
+| prop    | type     | default    | description 
+|---------|----------|------------|
+| className | string | - | Custom class name for styling the SVG icon.
+| name* | IconName | - | The name of the icon to render. Must be one of the predefined keys in the \`icons\` object.
+| ...props | ISvgProps | - | Additional props passed down to the SVG component, such as \`width\`, \`height\`, or \`fill\`.
+`} 
+</Markdown>
+
+To see all properties available for `Icons`, including those inherited from `SVGAttributes<SVGElement>`.<br />
+Check the [SVGElement documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element) for additional attributes.
