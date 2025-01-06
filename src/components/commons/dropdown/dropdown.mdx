@@ -1,0 +1,198 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as DropdownStories from "./dropdown.stories";
+import { Dropdown } from ".";
+
+<Meta title="Dropdown docs" of={DropdownStories} />
+
+# Dropdown
+
+The `Dropdown` component is a versatile and customizable dropdown menu for selecting options. It supports features like labels, placeholders, custom styling, and more. You can use it to enhance your UI with intuitive dropdown functionality.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Label](#label)
+- [Important](#important)
+- [Placeholder](#placeholder)
+- [Options](#options)
+- [Initial Selected](#initial-selected)
+- [On Select](#on-select)
+
+## Import
+
+To use the `Dropdown` component, import it as shown below.
+
+```tsx
+import { Dropdown } from "@hattaalfaritzy/hzy-ui";
+```
+
+## Usage
+
+The `Dropdown` component is designed to provide a dropdown menu that can be styled and customized easily. It supports additional props for labels, placeholders, initial selection, and more.
+
+### Default Usage
+
+Here is an example of the default setup for the `Dropdown` component.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownDefault} />
+</div>
+
+<Source dark code={`
+import { DropdownStories } from "@/hattaalfaritzy/hzy-ui";
+
+<Dropdown
+  label="Dropdown"
+  placeholder="Select an option"
+  options={[
+    { label: "Option 1", value: "1" },
+    { label: "Option 2", value: "2" },
+  ]}
+  onSelect={(option) => alert("Selected: " + option.label)}
+/>
+`} />
+
+### Label
+
+The `Dropdown` supports an optional `label` prop to display a title or name for the dropdown menu.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownLabel} />
+</div>
+
+<Source dark code={`
+<Dropdown
+  label="Dropdown Label"
+  placeholder="Select an option"
+  options={[
+    { label: "Option 1", value: "1" },
+    { label: "Option 2", value: "2" },
+  ]}
+/>
+`} />
+
+### Important
+
+Use the `important` prop to append an asterisk (*) to the label, indicating that the field is required.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownLabel} />
+</div>
+
+<Source dark code={`
+<Dropdown
+  label="Required Field"
+  important
+  placeholder="Select an option"
+  options={[
+    { label: "Option 1", value: "1" },
+    { label: "Option 2", value: "2" },
+  ]}
+/>
+`} />
+
+### Placeholder
+
+Customize the `placeholder` text using the placeholder prop. It will appear when no option is selected.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownPlaceholder} />
+</div>
+
+<Source dark code={`
+<Dropdown
+  placeholder="Choose an option"
+  options={[
+    { label: "Option A", value: "A" },
+    { label: "Option B", value: "B" },
+  ]}
+/>
+`} />
+
+### Options
+
+The options `prop` is an array of objects with `label` and `value` fields. These define the options displayed in the dropdown menu.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownOption} />
+</div>
+
+<Source dark code={`
+<Dropdown
+  options={[
+    { label: "First Option", value: "1" },
+    { label: "Second Option", value: "2" },
+  ]}
+/>
+`} />
+
+### Initial Selected
+
+Use the `initialSelected` prop to set a preselected option.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownInitialSelected} />
+</div>
+
+<Source dark code={`
+<Dropdown
+  initialSelected={{ label: "Option 1", value: "1" }}
+  options={[
+    { label: "Option 1", value: "1" },
+    { label: "Option 2", value: "2" },
+  ]}
+/>
+`} />
+
+### On Select
+
+The `onSelect` prop is a callback function triggered when an option is selected. It returns the selected `Option`.
+
+<div class="custom-canvas full">
+  <Story of={DropdownStories.DropdownOnSelect} />
+</div>
+
+<Source dark code={`
+<Dropdown
+  options={[
+    { label: "Option 1", value: "1" },
+    { label: "Option 2", value: "2" },
+  ]}
+  onSelect={(option) => alert("Selected: " + option.label)}
+/>
+`} />
+
+### Properties
+
+- **`<Dropdown>`** properties:
+
+<Markdown>
+  {`
+| prop               | type                                | default               | description                                                                                         
+|--------------------|-------------------------------------|-----------------------|
+| className          | string                             | -                     | Custom class name for styling the button of the Dropdown.                                          
+| classNameWrapper   | string                             | -                     | Custom class name for styling the outer wrapper container of the Dropdown.                         
+| classNameLabel     | string                             | -                     | Custom class name for styling the label text of the Dropdown.                                      
+| label              | string                             | -                     | The label text displayed above the Dropdown.                                                       
+| important          | boolean                            | false                 | Indicates whether the label is marked as important (adds an asterisk).                             
+| placeholder        | string                             | "Select an option"    | Placeholder text displayed when no option is selected.                                             
+| options*           | { label: string; value: string }[] | -                     | Array of options to display in the Dropdown. Each option must have a "label" and a "value".        
+| initialSelected    | { label: string; value: string }   | null                  | The initially selected option, if any.                                                             
+| onSelect*          | (option: { label: string; value: string }) => void | -     | A callback function triggered when an option is selected.                                                                                         |
+`}
+</Markdown>
+
+To see all properties available for `Dropdown`, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.
