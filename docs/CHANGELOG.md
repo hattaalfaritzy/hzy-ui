@@ -1,3 +1,7 @@
+## [1.17.20](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.19...v1.17.20) (2025-01-05)
+
+
+
 ## [1.17.19](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.18...v1.17.19) (2025-01-05)
 
 
@@ -11,10 +15,6 @@
 
 
 ## [1.17.16](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.15...v1.17.16) (2024-08-11)
-
-
-
-## [1.17.15](https://github.com/hattaalfaritzy/hzy-ui/compare/v1.17.14...v1.17.15) (2024-08-11)
 
 
 
