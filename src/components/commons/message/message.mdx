@@ -1,0 +1,119 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as MessageStories from "./message.stories";
+import { Message } from ".";
+
+<Meta title="Message docs" of={MessageStories} />
+
+# Message
+
+The `Message` component is a flexible and customizable alert/notification element. It supports different variants, labels, and click behaviors. This component is ideal for displaying system messages, error notifications, or other contextual information.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Variants](#variants)
+- [Label](#label)
+- [On Click](#on-click)
+- [Properties](#properties)
+
+## Import
+
+To use the `Message` component, import it as shown below.
+
+<Source dark code={`
+import { Message } from "@hattaalfaritzy/hzy-ui";
+`} />
+
+## Usage
+
+The `Message` component is designed to provide a styled alert or message notification. It supports customization through props such as `variant`, `label`, and `onClick`.
+
+### Default Usage
+
+Here is an example of the default setup for the `Message` component.
+
+<div class="custom-canvas full">
+  <Story of={MessageStories.MessageDefault} />
+</div>
+
+<Source dark code={`
+import { Message } from "@/hattaalfaritzy/hzy-ui";
+
+<Message label="Default Message" />
+`} />
+
+### Variants
+
+The `Message` component supports different variants to represent various types of notifications. These variants include `dark`, `light`, `informative`, and more.
+
+<div class="custom-canvas full">
+  <Story of={MessageStories.MessageVariant} />
+</div>
+
+<Source dark code={`
+<Message label="Dark Message" variant="dark" />
+<Message label="Light Message" variant="light" />
+<Message label="Informative Message" variant="informative" />
+<Message label="Success Message" variant="success" />
+<Message label="Error Message" variant="error" />
+<Message label="Warning Message" variant="warning" />
+`} />
+
+### Label
+
+The `label` prop allows you to set the text content of the message. If no label is provided, the component will not render.
+
+<div class="custom-canvas full">
+  <Story of={MessageStories.MessageLabel} />
+</div>
+
+<Source dark code={`
+<Message label="This is a message label" />
+`} />
+
+### OnClick
+
+You can use the `onClick` prop to add interactivity to the `Message` component, such as dismissing the message or triggering an action.
+
+<div class="custom-canvas full">
+  <Story of={MessageStories.MessageOnClick} />
+</div>
+
+<Source dark code={`
+<Message
+  label="Click me to trigger an action!"
+  variant="warning"
+  onClick={() => alert("Message clicked!")}
+/>
+`} />
+
+### Properties
+
+- **`<Message>`** properties:
+
+<Markdown> 
+  {`
+| prop    | type     | default    | description 
+|---------|----------|------------|
+| className | string | - | Custom class name for styling the container. 
+| classNameLabel | string | - | Custom class name for styling the label text.
+| label* | string | - | The message text to display.
+| variant | TypeVariant | "error" | Determines the visual style of the message.
+| onClick | () => void | - | Callback function triggered when the message is clicked.
+`} 
+</Markdown>
+
+To see all available properties for the `Message` component, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.

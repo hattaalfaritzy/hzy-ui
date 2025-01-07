@@ -7,6 +7,7 @@ import BusStop from "./libs/bus-stop";
 import CaretDown from "./libs/caret-down";
 import CaretUp from "./libs/caret-up";
 import Cart from "./libs/cart";
+import CheckCircle from "./libs/check-circle";
 import ChevronDown from "./libs/chevron-down";
 import ChevronLeft from "./libs/chevron-left";
 import ChevronRight from "./libs/chevron-right";
@@ -54,6 +55,7 @@ export type IconName =
   | "caret-down"
   | "caret-up"
   | "cart"
+  | "check-circle"
   | "chevron-down"
   | "chevron-left"
   | "chevron-right"
@@ -98,6 +100,7 @@ export const icons: Record<string, IconComponent> = {
   "caret-down": CaretDown,
   "caret-up": CaretUp,
   cart: Cart,
+  "check-circle": CheckCircle,
   "chevron-down": ChevronDown,
   "chevron-left": ChevronLeft,
   "chevron-right": ChevronRight,
