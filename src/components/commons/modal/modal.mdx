@@ -1,0 +1,74 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as ModalStories from "./modal.stories";
+import { Modal } from ".";
+
+<Meta title="Modal docs" of={ModalStories} />
+
+# Modal
+
+The `Modal` component provides a versatile and customizable container for creating modals or dialog boxes. It supports features like size customization, backdrop click handling, and dynamic content rendering. The component ensures accessibility and seamless integration with your application.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Size](#size)
+- [Backdrop](#backdrop)
+- [On Close](#on-close)
+- [Children](#children)
+- [Is Open](#is-open)
+- [Properties](#properties)
+
+<br />
+
+## Import
+
+To use the `Modal` component, import it as shown below.
+
+<Source dark code={`
+import { Modal } from "@hattaalfaritzy/hzy-ui";
+`} />
+
+## Usage
+
+The `Modal` component is designed to create dialog boxes or overlays that are flexible and accessible. You can control its appearance, behavior, and content using the available props.
+
+### Default Usage
+
+Here is an example of the default setup for the `Modal` component.
+
+<div class="custom-canvas full">
+  <Story of={ModalStories.ModalDefault} />
+</div>
+
+<Source dark code={`
+import { Button, Modal } from "@hattaalfaritzy/hzy-ui";
+
+const modal = useModal();
+
+return (
+    <>
+      <Button label="Open Modal" onClick={modal.openModal} />
+      <Modal {...modal.props} className="p-10">
+        <span>Modal</span>
+        <span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </span>
+      </Modal>
+    </>
+  );
+`} />

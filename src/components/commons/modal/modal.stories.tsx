@@ -1,39 +1,14 @@
-import React from "react";
 import type { Meta, StoryFn } from "@storybook/react";
 import { Modal } from ".";
 import { Button } from "../button";
 import useModal from "../../../hooks/useModal";
 
-const meta: Meta<typeof Modal> = {
+export default {
   title: "Components/Commons/Modal",
   component: Modal as Meta<typeof Modal>["component"],
-  tags: ["autodocs"],
-  argTypes: {
-    className: {
-      control: { type: "text" },
-    },
-    classNameWrapper: {
-      control: { type: "text" },
-    },
-    classNameBackdrop: {
-      control: { type: "text" },
-    },
-    isOpen: {
-      control: { type: "boolean" },
-    },
-    backDrop: {
-      control: { type: "boolean" },
-    },
-    size: {
-      options: ["sm", "md", "lg"],
-      control: { type: "radio" },
-    },
-  },
-};
+} as Meta<typeof Modal>;
 
-export default meta;
-
-const Template: StoryFn<typeof Modal> = (args) => {
+export const ModalDefault: StoryFn<typeof Modal> = (args) => {
   const modal = useModal();
   return (
     <>
@@ -50,5 +25,3 @@ const Template: StoryFn<typeof Modal> = (args) => {
     </>
   );
 };
-
-export const Base = Template.bind({});
