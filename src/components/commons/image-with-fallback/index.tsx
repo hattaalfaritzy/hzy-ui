@@ -1,6 +1,6 @@
-import { cn } from "@/utils/cn";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import type { ImgHTMLAttributes, ReactNode } from "react";
+import { cn } from "@/utils/cn";
 import Icons from "../icons";
 
 export interface IImageWithFallbackProps
@@ -11,33 +11,23 @@ export interface IImageWithFallbackProps
   iconFallback?: ReactNode;
 }
 
-export const ImageWithFallback = ({
-  className,
-  src,
-  alt,
-  iconFallback,
-  ...props
-}: IImageWithFallbackProps) => {
-  const [isError, setIsError] = useState<boolean>(false);
+export const ImageWithFallback = forwardRef<
+  HTMLImageElement,
+  IImageWithFallbackProps
+>(({ className, src, alt, iconFallback, ...props }, ref) => {
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (!src || src.trim() === "") {
-      setIsError(true);
-    } else {
-      setIsError(false);
-    }
+    setIsError(!src || src.trim() === "");
   }, [src]);
 
-  if (isError || !src || src.trim() === "") {
+  if (isError) {
     return (
       <div
         className={cn("flex justify-center bg-light p-6 rounded-md", className)}
       >
         {iconFallback || (
-          <Icons
-            name="broken-image"
-            className={cn("fill-black text-3xl m-auto")}
-          />
+          <Icons name="broken-image" className="fill-black text-3xl m-auto" />
         )}
       </div>
     );
@@ -45,8 +35,8 @@ export const ImageWithFallback = ({
 
   return (
     <img
-      id={src}
-      src={src || ""}
+      ref={ref}
+      src={src}
       alt={alt}
       className={className}
       loading="lazy"
@@ -54,6 +44,6 @@ export const ImageWithFallback = ({
       {...props}
     />
   );
-};
+});
 
 export default ImageWithFallback;

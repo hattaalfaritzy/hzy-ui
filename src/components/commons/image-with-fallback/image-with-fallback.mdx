@@ -1,0 +1,116 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as ImageWithFallbackStories from "./image-with-fallback.stories";
+import { ImageWithFallback } from ".";
+
+<Meta title="ImageWithFallback docs" of={ImageWithFallbackStories} />
+
+# Image With Fallback
+
+The `ImageWithFallback` component provides a reliable way to display images with a fallback mechanism. It automatically displays a fallback icon or custom fallback content if the image fails to load or the `src` is empty. This is particularly useful for dynamic image loading scenarios or when working with user-uploaded content.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Fallback](#fallback)
+- [Custom Fallback](#custom-fallback)
+- [Properties](#properties)
+
+<br />
+
+## Import
+
+To use the `ImageWithFallback` component, import it as shown below.
+
+<Source dark code={`
+import { ImageWithFallback } from "@hattaalfaritzy/hzy-ui";
+`} />
+
+## Usage
+
+The `ImageWithFallback` component allows for error handling when loading images, ensuring that your UI remains consistent even if the image source is unavailable.
+
+### Default Usage
+
+Here is an example of the default setup for the `ImageWithFallback` component.
+
+<div class="custom-canvas full">
+  <Story of={ImageWithFallbackStories.ImageWithFallbackDefault} />
+</div>
+
+<Source dark code={`
+import { ImageWithFallback } from "@/hattaalfaritzy/hzy-ui";
+
+<ImageWithFallback
+    src="https://cdn.vectorstock.com/i/500p/17/06/htt-logo-design-template-with-strong-and-modern-vector-53241706.jpg"
+    alt="A valid image"
+    className="w-32 h-32 rounded-md"
+/>
+`} />
+
+### Fallback
+
+The `ImageWithFallback` component automatically displays a default fallback icon when the image fails to load or the `src` is empty.
+
+<div class="custom-canvas full">
+  <Story of={ImageWithFallbackStories.ImageWithFallbackEmpty} />
+</div>
+
+<Source dark code={`
+<ImageWithFallback 
+    src="" 
+    alt="Image failed to load" 
+    className="w-32 h-32 rounded-md" 
+/>
+`} />
+
+### Custom Fallback
+
+You can provide a custom fallback by passing a `ReactNode` to the `iconFallback` prop. This is useful for customizing the fallback content to better suit your application's design.
+
+<div class="custom-canvas full">
+  <Story of={ImageWithFallbackStories.ImageWithCustomFallback} />
+</div>
+
+<Source dark code={`
+<ImageWithFallback
+    src=""
+    alt="Image failed to load"
+    className="w-32 h-32 rounded-md"
+    iconFallback={
+    <div className="flex justify-center items-center text-center text-red-500 font-bold">
+        Custom Fallback
+    </div>
+    }
+/>
+`} />
+
+### Properties
+
+- **`<ImageWithFallback>`** properties:
+
+<Markdown> 
+  {`
+| prop    | type     | default    | description 
+|---------|----------|------------|
+| className | string | - | Custom class name for styling the image container.
+| src* | string | - | The source URL of the image. If empty or invalid, the fallback content will be displayed.
+| alt* | string | - | Alternate text for the image. Required for accessibility.
+| iconFallback | ReactNode | Default icon | Custom fallback content to display when the image fails to load.
+| ...props | ImgHTMLAttributes<HTMLImageElement> | - | Additional props for the "<img>" element (e.g., "loading", "width", "height", etc.).
+`} 
+</Markdown>
+
+To see all available properties for the `ImageWithFallback` component, including those inherited from `ImgHTMLAttributes<HTMLImageElement>`.<br />
+Check the [HTMLImageElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.
