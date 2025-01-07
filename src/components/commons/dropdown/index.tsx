@@ -70,7 +70,7 @@ export const Dropdown = forwardRef<HTMLDivElement, IDropdownProps>(
           <div
             className={cn(
               classNameLabel ||
-                "block font-semibold text-sm text-dark dark:text-light pb-1.5",
+                "block font-semibold text-xs text-dark dark:text-light pb-1.5",
               important && "after:content-['*'] text-error"
             )}
           >

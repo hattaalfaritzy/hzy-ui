@@ -34,9 +34,12 @@ The `Accordion` component provides a collapsible container that allows toggling 
 
 To use the `Accordion` component, import it from `@hattaalfaritzy/hzy-ui` as shown below.
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 import { Accordion } from "@hattaalfaritzy/hzy-ui";
-`} />
+`}
+/>
 
 ## Usage
 
@@ -68,11 +71,14 @@ The `Accordion` component uses the `title` prop to define the clickable area tha
   <Story of={AccordionStories.AccordionTitle} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Accordion title="Title Accordion">
   <span>This is the content inside the accordion.</span>
 </Accordion>
-`} />
+`}
+/>
 
 ### Children
 
@@ -82,11 +88,14 @@ The `Accordion` component uses the `children` prop to define the content that is
   <Story of={AccordionStories.AccordionChildren} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Accordion title="Title Accordion">
   <span>This is the content inside the accordion.</span>
 </Accordion>
-`} />
+`}
+/>
 
 ### Default Open
 
@@ -96,11 +105,14 @@ The `Accordion` component can start in an open state by setting the `defaultOpen
   <Story of={AccordionStories.AccordionOpened} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Accordion title="Open by Default" defaultOpen>
   <span>This accordion starts open.</span>
 </Accordion>
-`} />
+`}
+/>
 
 ### Disabled
 
@@ -110,11 +122,14 @@ The `Accordion` can be disabled by setting the `disabled` prop to `true`. This p
   <Story of={AccordionStories.AccordionDisabled} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Accordion title="Disabled Accordion" disabled>
   <span>This accordion cannot be toggled.</span>
 </Accordion>
-`} />
+`}
+/>
 
 ### With Icon
 
@@ -124,11 +139,14 @@ To add an icon, pass a custom icon component to the `withIcon` prop. This icon c
   <Story of={AccordionStories.AccordionWithIcon} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Accordion title="Accordion with Icon" withIcon={<Icons name="gear" />}>
   <span>This accordion has an icon.</span>
 </Accordion>
-`} />
+`}
+/>
 
 ### On Click
 

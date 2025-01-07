@@ -48,11 +48,11 @@ export const InputSwitch = ({
   }[variant];
 
   return (
-    <div className={cn("flex flex-col w-full", classNameWrapper)}>
+    <div className={cn("flex flex-col", classNameWrapper)}>
       {label && (
         <div
           className={cn(
-            "block font-semibold text-sm text-dark pb-1.5",
+            "block font-semibold text-xs text-dark dark:text-light pb-1.5",
             classNameLabel
           )}
         >

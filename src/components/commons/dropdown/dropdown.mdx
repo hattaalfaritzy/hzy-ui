@@ -34,9 +34,12 @@ The `Dropdown` component is a versatile and customizable dropdown menu for selec
 
 To use the `Dropdown` component, import it as shown below.
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 import { Dropdown } from "@hattaalfaritzy/hzy-ui";
-`} />
+`}
+/>
 
 ## Usage
 
@@ -72,7 +75,9 @@ The `Dropdown` supports an optional `label` prop to display a title or name for 
   <Story of={DropdownStories.DropdownLabel} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Dropdown
   label="Dropdown Label"
   placeholder="Select an option"
@@ -81,17 +86,20 @@ The `Dropdown` supports an optional `label` prop to display a title or name for 
     { label: "Option 2", value: "2" },
   ]}
 />
-`} />
+`}
+/>
 
 ### Important
 
-Use the `important` prop to append an asterisk (*) to the label, indicating that the field is required.
+Use the `important` prop to append an asterisk (\*) to the label, indicating that the field is required.
 
 <div class="custom-canvas full">
   <Story of={DropdownStories.DropdownLabel} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Dropdown
   label="Required Field"
   important
@@ -101,7 +109,8 @@ Use the `important` prop to append an asterisk (*) to the label, indicating that
     { label: "Option 2", value: "2" },
   ]}
 />
-`} />
+`}
+/>
 
 ### Placeholder
 
@@ -111,7 +120,9 @@ Customize the `placeholder` text using the placeholder prop. It will appear when
   <Story of={DropdownStories.DropdownPlaceholder} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Dropdown
   placeholder="Choose an option"
   options={[
@@ -119,7 +130,8 @@ Customize the `placeholder` text using the placeholder prop. It will appear when
     { label: "Option B", value: "B" },
   ]}
 />
-`} />
+`}
+/>
 
 ### Options
 
@@ -129,14 +141,17 @@ The options `prop` is an array of objects with `label` and `value` fields. These
   <Story of={DropdownStories.DropdownOption} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Dropdown
   options={[
     { label: "First Option", value: "1" },
     { label: "Second Option", value: "2" },
   ]}
 />
-`} />
+`}
+/>
 
 ### Initial Selected
 
@@ -146,7 +161,9 @@ Use the `initialSelected` prop to set a preselected option.
   <Story of={DropdownStories.DropdownInitialSelected} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Dropdown
   initialSelected={{ label: "Option 1", value: "1" }}
   options={[
@@ -154,7 +171,8 @@ Use the `initialSelected` prop to set a preselected option.
     { label: "Option 2", value: "2" },
   ]}
 />
-`} />
+`}
+/>
 
 ### On Select
 
@@ -164,7 +182,9 @@ The `onSelect` prop is a callback function triggered when an option is selected.
   <Story of={DropdownStories.DropdownOnSelect} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Dropdown
   options={[
     { label: "Option 1", value: "1" },
@@ -172,7 +192,8 @@ The `onSelect` prop is a callback function triggered when an option is selected.
   ]}
   onSelect={(option) => alert("Selected: " + option.label)}
 />
-`} />
+`}
+/>
 
 ### Properties
 

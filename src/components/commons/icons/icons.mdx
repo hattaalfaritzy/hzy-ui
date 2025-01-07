@@ -31,9 +31,12 @@ The `Icons` component is a versatile solution for rendering SVG-based icons in y
 
 To use the `Icons` component, import it from `@hattaalfaritzy/hzy-ui` as shown below.
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 import { Icons } from "@hattaalfaritzy/hzy-ui";
-`} />
+`}
+/>
 
 ## Usage
 
@@ -52,12 +55,15 @@ Here is an example of how to render an icon using the `Icons` component. Pass th
 <Source dark code={`
 import { Icons } from "@/hattaalfaritzy/hzy-ui";
 
- <Icons name="activity" />
+{" "}
+
+<Icons name="activity" />
 `} />
 
 ### Customization
 
 You can customize the appearance of an icon by applying additional class names or props, such as size and color. <br />
+
 <span className="important-message">
   *The activity icon can be styled with TailwindCSS stroke classes.*
 </span>
@@ -66,10 +72,13 @@ You can customize the appearance of an icon by applying additional class names o
   <Story of={IconStories.IconCustomized} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Icons name="broken-image" className="w-8 h-8 text-blue-500" />
 <Icons name="activity" className="w-8 h-8 stroke-blue-500" />
-`} />
+`}
+/>
 
 ### Icon List
 
@@ -83,14 +92,14 @@ Below is a list of available icons you can use with the `Icons` component. Repla
 
 - **`<Icons>`** properties:
 
-<Markdown> 
-{` 
-| prop    | type     | default    | description 
-|---------|----------|------------|
-| className | string | - | Custom class name for styling the SVG icon.
-| name* | IconName | - | The name of the icon to render. Must be one of the predefined keys in the \`icons\` object.
-| ...props | ISvgProps | - | Additional props passed down to the SVG component, such as \`width\`, \`height\`, or \`fill\`.
-`} 
+<Markdown>
+  {` 
+| prop            | type                            | default     | description 
+|-----------------|---------------------------------|-------------|-------------
+| className       | string                          | -           | Custom class name for styling the SVG icon.
+| name*           | IconName                        | -           | The name of the icon to render. Must be one of the predefined keys in the \`icons\` object.
+| ...props        | ISvgProps                       | -           | Additional props passed down to the SVG component, such as \`width\`, \`height\`, or \`fill\`.
+`}
 </Markdown>
 
 To see all properties available for `Icons`, including those inherited from `SVGAttributes<SVGElement>`.<br />

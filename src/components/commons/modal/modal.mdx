@@ -26,8 +26,6 @@ The `Modal` component provides a versatile and customizable container for creati
 - [Size](#size)
 - [Backdrop](#backdrop)
 - [On Close](#on-close)
-- [Children](#children)
-- [Is Open](#is-open)
 - [Properties](#properties)
 
 <br />
@@ -36,9 +34,12 @@ The `Modal` component provides a versatile and customizable container for creati
 
 To use the `Modal` component, import it as shown below.
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 import { Modal } from "@hattaalfaritzy/hzy-ui";
-`} />
+`}
+/>
 
 ## Usage
 
@@ -52,23 +53,107 @@ Here is an example of the default setup for the `Modal` component.
   <Story of={ModalStories.ModalDefault} />
 </div>
 
-<Source dark code={`
-import { Button, Modal } from "@hattaalfaritzy/hzy-ui";
+```tsx
+import { Button, Modal, useModal } from "@hattaalfaritzy/hzy-ui";
+import { useState } from "react";
 
-const modal = useModal();
+const [isOpen, setIsOpen] = useState<boolean>(false);
+
+const handleModal = () => {
+  setIsOpen((prev) => !prev);
+};
 
 return (
-    <>
-      <Button label="Open Modal" onClick={modal.openModal} />
-      <Modal {...modal.props} className="p-10">
-        <span>Modal</span>
-        <span>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </span>
-      </Modal>
-    </>
-  );
-`} />
+  <>
+    <Button label="Open Modal" onClick={handleModal} />
+    <Modal isOpen={isOpen} onClose={handleModal} className="p-10">
+      <span className="text-sm">Modal</span>
+      <span className="text-xs">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </span>
+    </Modal>
+  </>
+);
+```
+
+### Size
+
+The `Modal` component allows you to customize its size using the size prop. Supported sizes include `sm`, `md`, and `lg`.
+
+<div class="custom-canvas full">
+  <Story of={ModalStories.ModalSize} />
+</div>
+
+<Source
+  dark
+  code={`
+<Modal isOpen size="sm">
+  <p>This is a small modal</p>
+</Modal>
+<Modal isOpen size="md">
+  <p>This is a medium modal</p>
+</Modal>
+<Modal isOpen size="lg">
+  <p>This is a large modal</p>
+</Modal>
+`}
+/>
+
+### Backdrop
+
+The `backDrop` prop controls whether the modal includes a backdrop. You can toggle this feature for modals that require or omit background overlays.
+
+<div class="custom-canvas full">
+  <Story of={ModalStories.ModalBackdrop} />
+</div>
+
+<Source
+  dark
+  code={`
+<Modal isOpen backDrop={false}>
+  <p>This modal has no backdrop</p>
+</Modal>
+`}
+/>
+
+### On Close
+
+The `onClose` prop allows you to define a callback function that gets triggered when the user interacts with the modal's backdrop or a close button.
+
+<div class="custom-canvas full">
+  <Story of={ModalStories.ModalFallbackClose} />
+</div>
+
+<Source
+  dark
+  code={`
+<Modal isOpen onClose={() => alert("Modal closed!")}>
+  <p>Click the backdrop to close</p>
+</Modal>
+`}
+/>
+
+### Properties
+
+- **`<Modal>`** properties:
+
+<Markdown>
+  {` 
+| prop               | type                                | default               | description                                                                                         
+|--------------------|-------------------------------------|-----------------------|
+| className          | string                              | -                     | Custom class name for the modal container.
+| classNameWrapper   | string                              | -                     | Custom class name for the wrapper element.
+| classNameBackdrop  | string                              | -                     | Custom class name for the backdrop element.
+| isOpen*            | boolean                             | -                     | Controls whether the modal is visible.
+| onClose            | () => void                          | -                     | Callback triggered when the modal is closed.
+| backDrop           | boolean                             | true                  | Adds a background overlay when the modal is open.
+| size               | TypeSizes                           | "md"                  | Controls the size of the modal.
+| children*          | ReactNode                           | -                     | The content of the modal.
+ `}
+</Markdown>
+
+To see all properties available for `Modal`, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.

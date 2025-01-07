@@ -29,7 +29,7 @@ The `Button` component provides a flexible and customizable button for various u
 - [Disabled](#disabled)
 - [Full Width](#full-width)
 - [Variant](#variant)
-- [Outline](#outline) 
+- [Outline](#outline)
 - [Size](#size)
 - [Align](#align)
 - [Icon](#icon)
@@ -40,9 +40,12 @@ The `Button` component provides a flexible and customizable button for various u
 
 To use the `Button` component, import it from `@hattaalfaritzy/hzy-ui` as shown below.
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 import { Button } from "@hattaalfaritzy/hzy-ui";
-`} />
+`}
+/>
 
 ## Usage
 
@@ -72,9 +75,12 @@ The `label` prop specifies the text displayed on the button. This prop is requir
   <Story of={ButtonStories.ButtonLabel} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Click Me" />
-`} />
+`}
+/>
 
 ### Loading
 
@@ -84,9 +90,12 @@ Use the `loading` prop to indicate that an action is in progress. When set to tr
   <Story of={ButtonStories.ButtonLoading} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Loading" loading />
-`} />
+`}
+/>
 
 ### Rounded
 
@@ -96,9 +105,12 @@ The `rounded` prop applies rounded corners to the button, adding a softer look a
   <Story of={ButtonStories.ButtonRounded} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Rounded Button" rounded />
-`} />
+`}
+/>
 
 ### Disabled
 
@@ -108,9 +120,12 @@ The `disabled` prop visually and functionally disables the button, preventing us
   <Story of={ButtonStories.ButtonDisabled} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Disabled Button" disabled />
-`} />
+`}
+/>
 
 ### Full Width
 
@@ -120,9 +135,12 @@ Set the `fullWidth` prop to make the button expand to the full width of its cont
   <Story of={ButtonStories.ButtonFullWidth} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Full Width Button" fullWidth />
-`} />
+`}
+/>
 
 ### Variant
 
@@ -132,14 +150,17 @@ The `variant` prop allows customization of the button’s style. Buttons can hav
   <Story of={ButtonStories.ButtonVariant} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Dark Button" variant="dark" />
 <Button label="Light Button" variant="light" />
 <Button label="Informative Button" variant="informative" />
 <Button label="Success Button" variant="success" />
 <Button label="Warning Button" variant="warning" />
 <Button label="Error Button" variant="error" />
-`} />
+`}
+/>
 
 ### Outline
 
@@ -149,14 +170,17 @@ The `outline` prop applies a border and removes the background fill, giving the 
   <Story of={ButtonStories.ButtonVariantOutline} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Dark Button" variant="dark" outline />
 <Button label="Light Button" variant="light" outline />
 <Button label="Informative Button" variant="informative" outline />
 <Button label="Success Button" variant="success" outline />
 <Button label="Warning Button" variant="warning" outline />
 <Button label="Error Button" variant="error" outline />
-`} />
+`}
+/>
 
 ### Size
 
@@ -165,14 +189,17 @@ The `size` prop adjusts the button size, with options like small, and medium, ma
 <div class="custom-canvas">
   <Story of={ButtonStories.ButtonSmall} />
   <Story of={ButtonStories.ButtonMedium} />
-    <Story of={ButtonStories.ButtonLarge} />
+  <Story of={ButtonStories.ButtonLarge} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Small Button" size="sm" />
 <Button label="Medium Button" size="md" />
 <Button label="Large Button" size="lg" />
-`} />
+`}
+/>
 
 ### Align
 
@@ -182,11 +209,14 @@ The `align` prop controls the alignment of the button's content (label and icons
   <Story of={ButtonStories.ButtonAlign} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Start Button" align="start" fullWidth />
 <Button label="Center Button" align="center" fullWidth />
 <Button label="End Button" align="end" fullWidth />
-`} />
+`}
+/>
 
 ### Button With Icon
 
@@ -197,10 +227,13 @@ The `icon` prop allows you to add an `icon` on either the left or right side of 
   <Story of={ButtonStories.ButtonIconRight} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button label="Edit Data" iconLeft={<Icons name="edit" />} />
 <Button label="Add Cart" iconRight={<Icons name="cart" />} />
-`} />
+`}
+/>
 
 ### Children
 
@@ -210,11 +243,14 @@ The `children` prop allows you to fully customize the button's content. Instead 
   <Story of={ButtonStories.ButtonChildren} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Button>
   <span>Click Me</span>
 </Button>
-`} />
+`}
+/>
 
 ### Properties
 

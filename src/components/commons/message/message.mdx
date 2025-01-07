@@ -32,9 +32,12 @@ The `Message` component is a flexible and customizable alert/notification elemen
 
 To use the `Message` component, import it as shown below.
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 import { Message } from "@hattaalfaritzy/hzy-ui";
-`} />
+`}
+/>
 
 ## Usage
 
@@ -62,14 +65,17 @@ The `Message` component supports different variants to represent various types o
   <Story of={MessageStories.MessageVariant} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Message label="Dark Message" variant="dark" />
 <Message label="Light Message" variant="light" />
 <Message label="Informative Message" variant="informative" />
 <Message label="Success Message" variant="success" />
 <Message label="Error Message" variant="error" />
 <Message label="Warning Message" variant="warning" />
-`} />
+`}
+/>
 
 ### Label
 
@@ -79,9 +85,12 @@ The `label` prop allows you to set the text content of the message. If no label 
   <Story of={MessageStories.MessageLabel} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Message label="This is a message label" />
-`} />
+`}
+/>
 
 ### OnClick
 
@@ -91,28 +100,31 @@ You can use the `onClick` prop to add interactivity to the `Message` component, 
   <Story of={MessageStories.MessageOnClick} />
 </div>
 
-<Source dark code={`
+<Source
+  dark
+  code={`
 <Message
   label="Click me to trigger an action!"
   variant="warning"
   onClick={() => alert("Message clicked!")}
 />
-`} />
+`}
+/>
 
 ### Properties
 
 - **`<Message>`** properties:
 
-<Markdown> 
+<Markdown>
   {`
-| prop    | type     | default    | description 
-|---------|----------|------------|
-| className | string | - | Custom class name for styling the container. 
-| classNameLabel | string | - | Custom class name for styling the label text.
-| label* | string | - | The message text to display.
-| variant | TypeVariant | "error" | Determines the visual style of the message.
-| onClick | () => void | - | Callback function triggered when the message is clicked.
-`} 
+| prop            | type                            | default     | description 
+|-----------------|---------------------------------|-------------|-------------
+| className       | string                          | -           | Custom class name for styling the container. 
+| classNameLabel  | string                          | -           | Custom class name for styling the label text.
+| label*          | string                          | -           | The message text to display.
+| variant         | TypeVariant                     | "error"     | Determines the visual style of the message.
+| onClick         | () => void                      | -           | Callback function triggered when the message is clicked.
+`}
 </Markdown>
 
 To see all available properties for the `Message` component, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
