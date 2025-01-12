@@ -1,0 +1,144 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as TagStories from "./tag.stories";
+import { Tag } from ".";
+
+<Meta title="Tag docs" of={TagStories} />
+
+# Tag
+
+The Tag component is a flexible and lightweight UI element designed for labeling or categorizing content. It supports multiple variants for styling, along with additional customization options like class names and click functionality.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Variants](#variants)
+- [Custom Styling](#custom-styling)
+- [On Click](#on-click)
+- [Properties](#properties)
+
+## Import
+
+To use the Tag component, import it as shown below.
+
+<Source
+  dark
+  code={`
+import { Tag } from "@hattaalfaritzy/hzy-ui";
+`}
+/>
+
+## Usage
+
+The Tag component is highly versatile and can be used to display labels, tags, or status indicators. It supports a variety of customization options to fit your use case.
+
+### Default Usage
+
+Here is an example of the default setup for the Tag component.
+
+<div class="custom-canvas full">
+  <Story of={TagStories.TagDefault} />
+</div>
+
+<Source dark code={`
+import { Tag } from "@/hattaalfaritzy/hzy-ui";
+
+<Tag label="Default Tag" />
+`} />
+
+## Variants
+
+The Tag component supports multiple styling variants via the `variant` prop. Available variants include:
+
+- `dark`
+- `light`
+- `success`
+- `informative`
+- `warning`
+- `error`
+
+Each variant applies a different background and text color to the tag.
+
+<div class="custom-canvas full">
+  <Story of={TagStories.TagVariants} />
+</div>
+
+<Source
+  dark
+  code={`
+<Tag label="Dark Tag" variant="dark" />
+<Tag label="Light Tag" variant="light" />
+<Tag label="Informative Tag" variant="informative" />
+<Tag label="Success Tag" variant="success" />
+<Tag label="Warning Tag" variant="warning" />
+<Tag label="Error Tag" variant="error" />
+`}
+/>
+
+## Custom Styling
+
+You can apply custom styles to the Tag component using the `className` and `classNameLabel` props. This allows you to override or extend the default styles.
+
+### Example: Custom Class
+
+<div class="custom-canvas full">
+  <Story of={TagStories.TagCustomClass} />
+</div>
+
+<Source
+  dark
+  code={`<Tag
+      label="Custom Styled Tag"
+      className="bg-purple-500"
+      classNameLabel="text-white font-bold"
+    />`}
+/>
+
+## On Click
+
+The `onClick` prop allows you to define a click handler for the Tag component, enabling interaction such as triggering events or navigation.
+
+### Example: Clickable Tag
+
+<div class="custom-canvas full">
+  <Story of={TagStories.TagOnClick} />
+</div>
+
+<Source
+  dark
+  code={`<Tag
+      label="Clickable Tag"
+      variant="informative"
+      onClick={() => alert("Tag clicked!")}
+    />`}
+/>
+
+## Properties
+
+Here are the properties available for the **Tag** component:
+
+<Markdown>
+  {`
+| Prop         | Type                     | Default  | Description                                                |
+|--------------|--------------------------|----------|------------------------------------------------------------|
+| className    | string                   | -        | Custom class name for the outer container.        |
+| classNameLabel | string                 | -        | Custom class name for the label text.             |
+| label      | string                     | -        | The text to be displayed within the Tag.          |
+| variant    | TypeVariant                | "error"  | The styling variant of the Tag.                   |
+| onClick    | () => void                 | -        | Callback function triggered when the tag is clicked. |
+  `}
+</Markdown>
+
+To see all available properties for the Tag component, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.
