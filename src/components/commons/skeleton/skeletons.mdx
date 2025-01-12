@@ -1,0 +1,126 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as SkeletonStories from "./skeletons.stories";
+import { Skeleton } from ".";
+
+<Meta title="Skeleton docs" of={SkeletonStories} />
+
+# Skeleton
+
+The `Skeleton` component provides a loading placeholder for your UI. It can be customized with different sizes, shapes, and styles to match your design. It is ideal for creating skeleton screens while data is being loaded asynchronously.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Sizes](#sizes)
+- [Rounded](#rounded)
+- [Custom Styling](#custom-styling)
+- [Properties](#properties)
+
+## Import
+
+To use the `Skeleton` component, import it as shown below.
+
+<Source
+  dark
+  code={`
+import { Skeleton } from "@hattaalfaritzy/hzy-ui";
+`}
+/>
+
+## Usage
+
+The `Skeleton` component is designed to simulate the loading state for any content. By customizing its width, height, and styling, you can tailor it to match the placeholder for different parts of your UI.
+
+### Default Usage
+
+Here is an example of the default setup for the Skeleton component.
+
+<div class="custom-canvas full">
+  <Story of={SkeletonStories.SkeletonDefault} />
+</div>
+
+<Source
+  dark
+  code={`
+<Skeleton />
+`}
+/>
+
+## Sizes
+
+The `Skeleton` component allows you to define custom dimensions using the `width` and `height` props. This makes it suitable for various content placeholders like text, images, or cards.
+
+<div class="custom-canvas full">
+  <Story of={SkeletonStories.SkeletonSizes} />
+</div>
+
+<Source
+  dark
+  code={`
+<Skeleton width={200} height={100} />
+`}
+/>
+
+## Rounded
+
+The `Skeleton` component supports a `rounded` prop to create circular or pill-shaped skeletons. By default, it is square unless `rounded` is set to `true`.
+
+<div class="custom-canvas full">
+  <Story of={SkeletonStories.SkeletonRounded} />
+</div>
+
+<Source
+  dark
+  code={`
+<Skeleton width={100} height={100} rounded />
+`}
+/>
+
+## Custom Styling
+
+The `Skeleton` component supports additional styling via the `className` prop. You can use utility classes like TailwindCSS to achieve custom designs.
+
+<div class="custom-canvas full">
+  <Story of={SkeletonStories.SkeletonCustomStyling} />
+</div>
+
+<Source
+  dark
+  code={`
+<Skeleton
+  width={150}
+  height={20}
+  className="bg-gray-300/30 rounded-md"
+/>`}
+/>
+
+## Properties
+
+### **`<Skeleton>`** Properties
+
+<Markdown>
+  {`
+| Prop         | Type                     | Default  | Description                                                |
+|--------------|--------------------------|----------|------------------------------------------------------------|
+| className    | string                   | -        | Custom class name for styling the skeleton container.      |
+| width        | number                   | -        | The width of the skeleton in pixels.                       |
+| height       | number                   | -        | The height of the skeleton in pixels.                      |
+| rounded      | boolean                  | false    | If true, the skeleton will have rounded edges or be circular. |
+| ...props     | HTMLAttributes<HTMLDivElement> | - | Additional attributes passed to the skeleton container.    |
+`}
+</Markdown>
+
+To see all properties available for `Skeleton`, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.

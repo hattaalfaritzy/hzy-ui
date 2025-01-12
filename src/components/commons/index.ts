@@ -8,7 +8,7 @@ export * from "./message";
 export * from "./modal";
 export * from "./pagination";
 export * from "./popover";
-export * from "./skeletons";
+export * from "./skeleton";
 export * from "./table";
 export * from "./tag";
 export * from "./tooltip";
