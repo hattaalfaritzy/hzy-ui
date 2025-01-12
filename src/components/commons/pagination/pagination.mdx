@@ -1,0 +1,166 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Description,
+  Heading,
+  Markdown,
+} from "@storybook/blocks";
+import * as PaginationStories from "./pagination.stories";
+import { Pagination } from ".";
+
+<Meta title="Pagination docs" of={PaginationStories} />
+
+# Pagination
+
+The `Pagination` component enables navigation between pages of data in a user-friendly manner. It supports customizable page ranges, styles, and interaction via props like `currentPage`, `total`, and `onPageChange`.
+
+<br />
+
+## Table of Contents
+
+- [Import](#import)
+- [Usage](#usage)
+- [Page Ranges](#page-ranges)
+- [Custom Styling](#custom-styling)
+- [Event Handling](#event-handling)
+- [Variants](#variants)
+- [Properties](#properties)
+
+## Import
+
+To use the `Pagination` component, import it as shown below.
+
+<Source
+  dark
+  code={`
+import { Pagination } from "@hattaalfaritzy/hzy-ui";
+`}
+/>
+
+## Usage
+
+The `Pagination` component is designed to facilitate page navigation. It automatically calculates the total number of pages based on the `total` and `itemsPerPage` props and provides intuitive controls for navigating between them.
+
+### Default Usage
+
+Here is an example of the default setup for the Pagination component.
+
+<div class="custom-canvas full">
+  <Story of={PaginationStories.PaginationDefault} />
+</div>
+
+<Source
+  dark
+  code={`
+<Pagination
+  currentPage={1}
+  total={50}
+  itemsPerPage={10}
+  onPageChange={(pageNumber) => console.log("Page changed to:" + pageNumber)}
+/>
+`}
+/>
+
+## Page Ranges
+
+The `Pagination` component dynamically adjusts the visible page numbers. When the user is at the first or last page, it displays a larger range for better usability. Use the `currentPage` prop to control the active page and display appropriate ranges.
+
+<div class="custom-canvas full">
+  <Story of={PaginationStories.PaginationPageRanges} />
+</div>
+
+<Source
+  dark
+  code={`
+<Pagination
+  currentPage={5}
+  total={100}
+  itemsPerPage={10}
+  onPageChange={(pageNumber) => console.log("Page changed to:" + pageNumber)}
+/>`}
+/>
+
+## Custom Styling
+
+The `Pagination` component supports the `className` prop for additional styling. You can use utility classes like TailwindCSS to achieve custom designs.
+
+<div class="custom-canvas full">
+  <Story of={PaginationStories.PaginationCustomStyling} />
+</div>
+
+<Source
+  dark
+  code={`
+<Pagination
+  currentPage={1}
+  total={30}
+  className="bg-gray-100 p-4 rounded-md"
+  itemsPerPage={10}
+  onPageChange={(pageNumber) => console.log("Page changed to:" + pageNumber)}
+/>`}
+/>
+
+## Event Handling
+
+The `Pagination` component allows you to handle page changes via the `onPageChange` prop. This callback receives the selected page number as an argument.
+
+<div class="custom-canvas full">
+  <Story of={PaginationStories.PaginationEventHandling} />
+</div>
+
+<Source
+  dark
+  code={`
+<Pagination
+  currentPage={2}
+  total={60}
+  itemsPerPage={15}
+  onPageChange={(pageNumber) => alert("Navigated to page:" + pageNumber)}
+/>`}
+/>
+
+## Variants
+
+You can customize the `Pagination` component to fit different use cases, such as:
+
+1. **Compact Pagination:** Minimal UI with only essential controls.
+2. **Extended Pagination:** Displays a larger range of page numbers.
+
+<div class="custom-canvas full">
+  <Story of={PaginationStories.PaginationVariants} />
+</div>
+
+<Source
+  dark
+  code={`
+<Pagination
+  currentPage={1}
+  total={20}
+  itemsPerPage={5}
+  onPageChange={(pageNumber) => console.log("Page changed to:" + pageNumber)}
+/>`}
+/>
+
+## Properties
+
+### **`<Pagination>`** Properties
+
+<Markdown>
+  {`
+| Prop         | Type              | Default | Description                                                      |
+|--------------|-------------------|---------|------------------------------------------------------------------|
+| className    | string            | -       | Custom class name for styling the container.                     |
+| currentPage* | number            | -       | The current active page.                                         |
+| total*       | number            | -       | The total number of items.                                       |
+| itemsPerPage | number            | 10      | The number of items displayed per page.                          |
+| onPageChange*| (page: number) => void | -    | Callback function triggered when a page number is selected.      |
+`}
+</Markdown>
+
+To explore all available props and their use cases, refer to the examples above.
+
+To see all properties available for `Pagination`, including those inherited from `HTMLAttributes<HTMLDivElement>`.<br />
+Check the [HTMLDivElement documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) for additional attributes.
